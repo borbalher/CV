@@ -1,5 +1,20 @@
+doctype html
 html
   head
     title!= title
+    link(href='/css/main.css', rel='stylesheet')
+
+    script(href='/js/third-parties/modernizr.js')
+    script(href='/js/third-parties/skrollr.min.js')
   body
-    h1!= message
+    #main-container
+      #paralax-sections
+        #landing.paralax-section
+        #about-me.paralax-section
+        #work.paralax-section
+        #contact.paralax-section
+    #helper
+      .marker.red
+      .marker.blue
+      .marker.green
+      .marker.yellow
