@@ -5,7 +5,8 @@ html, body {
 /* full width/height container */
 #main-container {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 /* double the height/width of a viewport */
 #paralax-sections {
@@ -16,7 +17,7 @@ html, body {
   left: 0; }
 
 #landing, #about-me, #work, #contact {
-  background: #333; }
+  background: #e1e1e1; }
 
 #about-me {
   -webkit-transform: translate(0, 100%);
