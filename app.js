@@ -8,7 +8,10 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!'});
+  res.render('index', { title: 'Hi! I\'m Boris Ballester. Welcome to my site!',
+                        'about': 'About me', 'work': 'Work', 'contact': 'Contact',
+                        'intro': 'Computer engineering + design'
+                      });
 });
 
 
@@ -31,6 +34,11 @@ app.get('/js/skrollr-menu.js', function (req, res) {
 app.get('/js/skrollr-stylesheets.js', function (req, res) {
    res.sendFile(__dirname + '/node_modules/skrollr-stylesheets/dist/skrollr.stylesheets.min.js');
 });
+
+app.get('/imgs/signature.png', function (req, res) {
+   res.sendFile(__dirname + '/public/imgs/signature.png');
+});
+
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');

@@ -7,12 +7,25 @@ html
     script(href='/js/third-parties/modernizr.js')
   body
     #main-container
-      #paralax-sections
+      #paralax-sections(data-0="transform:translate(0%,0%);" data-50p="" data-150p="transform:translate(0%,-50%);" data-200p="" data-300p="transform:translate(0%,-100%);" data-350p="" data-450p="transform:translate(-50%,-100%);" data-500p="" data-600p="transform:translate(0%,-150%);")
         #landing.paralax-section
+          div#intro
+            p #{intro}
+            div.cf
+          nav#menu-nav
+            ul#menu
+              li
+                a(href="#about-me") #{about}
+              li
+                a(href="#work") #{work}
+              li
+                a(href="#contact") #{contact}
         #about-me.paralax-section
+        #formation.paralax-section
         #work.paralax-section
         #contact.paralax-section
     #helper
+      .marker.orange
       .marker.red
       .marker.blue
       .marker.green
