@@ -19,8 +19,22 @@ app.get('/css/normalize.css', function (req, res) {
    res.sendFile(__dirname + '/node_modules/normalize.css/normalize.css');
 });
 
+app.get('/css/animate.css', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/animate.css/animate.min.css');
+});
+
+
+app.get('/css/font-awesome.css', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/font-awesome/css/font-awesome.min.css');
+});
+
+
 app.get('/js/skrollr.js', function (req, res) {
    res.sendFile(__dirname + '/node_modules/skrollr/dist/skrollr.min.js');
+});
+
+app.get('/js/wow.js', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/wowjs/dist/wow.min.js');
 });
 
 app.get('/js/skrollr-ie.js', function (req, res) {
@@ -38,6 +52,23 @@ app.get('/js/skrollr-stylesheets.js', function (req, res) {
 app.get('/imgs/signature.png', function (req, res) {
    res.sendFile(__dirname + '/public/imgs/signature.png');
 });
+
+app.get('/imgs/signature.png', function (req, res) {
+   res.sendFile(__dirname + '/public/imgs/signature.png');
+});
+
+app.get('/fonts/fontawesome-webfont.woff2', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/font-awesome/fonts/fontawesome-webfont.woff2');
+});
+
+app.get('/fonts/fontawesome-webfont.woff', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/font-awesome/fonts/fontawesome-webfont.woff');
+});
+
+app.get('/fonts/fontawesome-webfont.ttf', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/font-awesome/fonts/fontawesome-webfont.ttf');
+});
+
 
 
 app.listen(3000, function () {

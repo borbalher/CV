@@ -1,8 +1,31 @@
-$bg: #e1e1e1;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$bg: #f5f5f5;
+$link: #0000b5;
+$linkhover: #2929ff;
+
+$smartphone: "only screen and (min-width : 320px)";
+$portrait-tablet: "only screen and (min-width: 641px)";
+$tablet: "only screen and (min-width: 961px)";
+$laptop: "only screen and (min-width: 1025px)";
+$bigscreens: "only screen and (min-width: 2560px)";
+
+//@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
+//@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+//@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+//@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+//@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+//@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+//@media (min-width:2560px) { /* 4k screens */ }
+
 
 html, body {
     width:100%;
     height:100%;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: $bg;
 }
 
 /* full width/height container */
@@ -36,10 +59,7 @@ html, body {
   background-color: pink;
 }
 
-#landing{
-  background: url('/imgs/signature.png') no-repeat 50% 20%;
-  background-size: 25%;
-}
+
 #about-me {
     -webkit-transform: translate(0,100%);
     -ms-transform: translate(0,100%);
@@ -65,9 +85,11 @@ html, body {
 }
 
 #intro{
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   width: 100%;
 
   p{
@@ -76,9 +98,10 @@ html, body {
   }
 
 }
+
 #menu-nav{
   position: absolute;
-  bottom:20%;
+  bottom:10%;
   width: 100%;
   text-align: center;
 
@@ -90,11 +113,33 @@ html, body {
     display: inline-block;
 
     li{
-      display:inline-block;
-
       a{
         display:block;
         padding: 1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $link;
+
+      }
+      /* unvisited link */
+      a:link {
+          color: $link;
+      }
+
+      /* visited link */
+      a:visited {
+          color: $link;
+      }
+
+      /* mouse over link */
+      a:hover {
+          color: $linkhover;
+          background: #e1e1e1;
+      }
+
+      /* selected link */
+      a:active {
+        color: $link;
       }
     }
   }
@@ -109,6 +154,27 @@ html, body {
     height:50%;
 }
 
+
+#about-me-bg{
+  background: url('http://nexceris.com/wp-content/uploads/2014/04/bokeh-cover-bg.jpg') no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+#landing-bg{
+  background: url('/imgs/signature.png') no-repeat;
+  background-position: 50% 35%;
+  background-size: 70%;
+}
+
+.bg-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 #helper {
     position:absolute;
     left:0;
@@ -118,7 +184,7 @@ html, body {
 }
 
 .marker {
-    height: 25%;
+    height: 20%;
     width: 100%;
 }
 .red {
@@ -161,4 +227,59 @@ html, body {
  */
 .cf {
     *zoom: 1;
+}
+
+#scroll-down{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+}
+
+@media #{$portrait-tablet} {
+  body #landing-bg{
+    background-size: 40%;
+  }
+  #menu li{
+    display:inline-block;
+  }
+
+  #landing #menu{
+    li{
+      a{
+        margin: 0 1em;
+      }
+    }
+  }
+
+}
+
+@media #{$tablet} {
+  #intro{
+    bottom: 35%;
+  }
+
+  #menu-nav{
+    bottom: 15%;
+  }
+}
+
+@media #{$laptop} {
+  body{
+    font-size: 1.2em;
+  }
+
+  body #landing-bg{
+    background-size: 25%;
+  }
+
+}
+
+@media #{$bigscreens} {
+  body{
+    font-size: 2em;
+  }
+
+  #landing #intro{
+    bottom: 30%;
+  }
 }

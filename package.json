@@ -2,7 +2,7 @@
   "name": "my-personal-page",
   "version": "1.0.0",
   "description": "My personal page and cv.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "build-css": "bin\\build-css.bat",
     "build-min-css": "bin\\build-css-min.bat",
@@ -12,14 +12,17 @@
   "author": "@borbalher",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "express": "^4.14.0",
+    "font-awesome": "^4.7.0",
     "jade": "^1.11.0",
     "modernizr": "^3.3.1",
     "normalize.css": "^5.0.0",
     "skrollr": "^0.6.26",
     "skrollr-ie": "github:prinzhorn/skrollr-ie",
     "skrollr-menu": "github:prinzhorn/skrollr-menu",
-    "skrollr-stylesheets": "github:prinzhorn/skrollr-stylesheets"
+    "skrollr-stylesheets": "github:prinzhorn/skrollr-stylesheets",
+    "wowjs": "git+github:matthieua/WOW"
   },
   "devDependencies": {
     "node-sass": "^3.13.0",
