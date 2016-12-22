@@ -13,7 +13,7 @@ html
     link(href='/css/font-awesome.css', rel='stylesheet')
     script(href='/js/third-parties/modernizr.js')
   body
-    div#landing-bg.bg-wrapper(data-top="transform:translate(0%, 0%); opacity: 1;" data-15p-start="transform:translate(0%, 5%); opacity: 0" data-anchor-target="#landing.paralax-section")
+    div#landing-bg.bg-wrapper(data-top="transform:translate(0%, 100%); opacity: 1; visibility: visible;" data--100p-top="transform:translate(0%, -100%); opacity: 0" data-anchor-target="#landing.paralax-section")
     #main-container
       #paralax-sections(data-0="transform:translate(0%,0%);" data-100p="transform:translate(0%,-50%);" data-150p="" data-250p="transform:translate(0%,-100%);" data-300p="" data-400p="transform:translate(-50%,-100%);" data-450p="" data-550p="transform:translate(0%,-150%);")
         #landing.paralax-section
@@ -28,8 +28,13 @@ html
                 a(href="#work" data-menu-top="250p") #[i.fa.fw.fa-briefcase] #{work}
               li
                 a(href="#contact" data-menu-top="550p") #[i.fa.fw.fa-envelope] #{contact}
-          i#scroll-down.fa.fw.fa-angle-double-down.animated.bounceInDown(aria-hidden="true")
+          i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
         #about-me.paralax-section
+          h1 #{about}
+          h2  #{whoamititle}
+          p #{whoamidesc}
+          h2  #{objetivestitle}
+          p #{objetivesdesc}
         #formation.paralax-section
         #work.paralax-section
         #contact.paralax-section

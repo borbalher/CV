@@ -46,7 +46,7 @@ html, body {
 }
 
 #about-me{
-  background-color: red;
+  background-color: $bg;
 }
 
 #contact{
@@ -91,7 +91,7 @@ html, body {
   position: absolute;
   bottom: 40%;
   width: 100%;
-
+  
   p{
     margin: 0 auto;
     display: inline-block;
@@ -155,16 +155,12 @@ html, body {
 }
 
 
-#about-me-bg{
-  background: url('http://nexceris.com/wp-content/uploads/2014/04/bokeh-cover-bg.jpg') no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-}
 
 #landing-bg{
   background: url('/imgs/signature.png') no-repeat;
   background-position: 50% 35%;
   background-size: 70%;
+  top: -100%;
 }
 
 .bg-wrapper{

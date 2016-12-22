@@ -10,7 +10,11 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function (req, res) {
   res.render('index', { title: 'Hi! I\'m Boris Ballester. Welcome to my site!',
                         'about': 'About me', 'work': 'Work', 'contact': 'Contact',
-                        'intro': 'Computer engineering + design'
+                        'intro': 'Computer engineering + design',
+                        'whoamititle' : 'Who am I?',
+                        'whoamidesc' : 'DESC',
+                        'objetivestitle' : 'My personal objetives',
+                        'objetivesdesc' : 'DESC'
                       });
 });
 
