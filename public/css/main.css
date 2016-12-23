@@ -22,8 +22,11 @@ html, body {
   top: 0;
   left: 0; }
 
-#about-me {
+#whoami {
   background-color: #f5f5f5; }
+
+#objetives {
+  background-color: red; }
 
 #contact {
   background-color: #f5f5f5; }
@@ -34,17 +37,33 @@ html, body {
 #formation {
   background-color: pink; }
 
-#about-me {
+#mypicture {
+  margin: 0 auto;
+  width: 50%; }
+  #mypicture img {
+    width: 100%; }
+
+#whoami {
   -webkit-transform: translate(0, 100%);
   -ms-transform: translate(0, 100%);
   transform: translate(0, 100%); }
+
+#objetives {
+  -webkit-transform: translate(100%, 100%);
+  -ms-transform: translate(100%, 100%);
+  transform: translate(100%, 100%); }
+
+#skills {
+  -webkit-transform: translate(200%, 100%);
+  -ms-transform: translate(200%, 100%);
+  transform: translate(200%, 100%); }
 
 #formation {
   -webkit-transform: translate(0%, 200%);
   -ms-transform: translate(0%, 200%);
   transform: translate(0%, 200%); }
 
-#work {
+#complementaryformation {
   -webkit-transform: translate(100%, 200%);
   -ms-transform: translate(100%, 200%);
   transform: translate(100%, 200%); }
@@ -64,6 +83,25 @@ html, body {
   #intro p {
     margin: 0 auto;
     display: inline-block; }
+
+p {
+  padding: 1em;
+  line-height: 1.5em;
+  text-align: justify; }
+
+ul {
+  padding: 0 1em 0 2em;
+  list-style-type: square; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-left: 0.5em; }
+
+.contentwrapper {
+  display: block;
+  padding: 0 1em; }
+
+.bold {
+  font-weight: bold; }
 
 #menu-nav {
   position: absolute;
@@ -121,11 +159,11 @@ html, body {
   position: absolute;
   left: 0;
   top: 0;
-  height: 750%;
+  height: 1100%;
   width: 20px; }
 
 .marker {
-  height: 20%;
+  height: 14.3%;
   width: 100%; }
 
 .red {
@@ -182,6 +220,10 @@ html, body {
   #landing #menu li a {
     margin: 0 1em; } }
 
+@media only screen and (min-width: 641px) {
+  #mypicture {
+    width: 30%; } }
+
 @media only screen and (min-width: 961px) {
   #intro {
     bottom: 35%; }
@@ -192,7 +234,11 @@ html, body {
   body {
     font-size: 1.2em; }
   body #landing-bg {
-    background-size: 25%; } }
+    background-size: 25%; }
+  #mypicture {
+    text-align: center; }
+    #mypicture img {
+      width: 55%; } }
 
 @media only screen and (min-width: 2560px) {
   body {

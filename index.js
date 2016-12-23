@@ -9,12 +9,12 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
   res.render('index', { title: 'Hi! I\'m Boris Ballester. Welcome to my site!',
-                        'about': 'About me', 'work': 'Work', 'contact': 'Contact',
+                        'about': 'About me', 'work': 'Work', 'contact': 'Contact me',
                         'intro': 'Computer engineering + design',
                         'whoamititle' : 'Who am I?',
-                        'whoamidesc' : 'DESC',
+                        'whoamidesc' : 'I\'m <span class="bold">Boris Ballester</span>, a young guy from a little paradise called <span class="bold">Canary Islands</span> and located in <span class="bold">Spain</span>. I\'ve been surrounded by <span class="bold">technology</span> all my life and is one of my passions along with <span class="bold">art</span> and <span class="bold">creating</span> things. <span class="bold">For me, do anything isn\'t impossible. It\'s just a matter of time!</span>',
                         'objetivestitle' : 'My personal objetives',
-                        'objetivesdesc' : 'DESC'
+                        'objetivesdesc' : '<li><span class="bold">Earning experience</span> as computer engineer in a laboral environment.</li><li><span class="bold">Learn the workflow</span> of an IT enterprise.</li><li><span class="bold">Mastering my skills or learn some new ones!</span></li>'
                       });
 });
 
@@ -57,9 +57,6 @@ app.get('/imgs/signature.png', function (req, res) {
    res.sendFile(__dirname + '/public/imgs/signature.png');
 });
 
-app.get('/imgs/signature.png', function (req, res) {
-   res.sendFile(__dirname + '/public/imgs/signature.png');
-});
 
 app.get('/fonts/fontawesome-webfont.woff2', function (req, res) {
    res.sendFile(__dirname + '/node_modules/font-awesome/fonts/fontawesome-webfont.woff2');

@@ -15,7 +15,7 @@ html
   body
     div#landing-bg.bg-wrapper(data-top="transform:translate(0%, 100%); opacity: 1; visibility: visible;" data--100p-top="transform:translate(0%, -100%); opacity: 0" data-anchor-target="#landing.paralax-section")
     #main-container
-      #paralax-sections(data-0="transform:translate(0%,0%);" data-100p="transform:translate(0%,-50%);" data-150p="" data-250p="transform:translate(0%,-100%);" data-300p="" data-400p="transform:translate(-50%,-100%);" data-450p="" data-550p="transform:translate(0%,-150%);")
+      #paralax-sections(data-0="transform:translate(0%,0%);" data-100p="transform:translate(0%,-50%);" data-150p="" data-250p="transform:translate(-50%,-50%);" data-300p="" data-400p="transform:translate(-100%,-50%);" data-450p="" data-550p="transform:translate(0%,-100%);" data-600p="" data-700p="transform:translate(-50%,-100%);" data-750p="" data-850p="transform:translate(-100%,-100%);" data-900p="" data-1000p="transform:translate(0%,-150%);")
         #landing.paralax-section
           div#intro(data-top="transform:translate(0%, 0%); opacity: 1;" data-50p-start="transform:translate(0%, 5%); opacity: 0" data-anchor-target="#landing.paralax-section")
             p #{intro}
@@ -29,20 +29,25 @@ html
               li
                 a(href="#contact" data-menu-top="550p") #[i.fa.fw.fa-envelope] #{contact}
           i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
-        #about-me.paralax-section
-          h1 #{about}
-          h2  #{whoamititle}
-          p #{whoamidesc}
-          h2  #{objetivestitle}
-          p #{objetivesdesc}
+        #whoami.paralax-section
+          div.contentwrapper
+            div#whoamicontent(data-top="opacity: 1;" data-50p-start="opacity: 0" data-anchor-target="#whoami.paralax-section")
+              h2(data--10p-top="transform:translate(0%, 0%); visibility: visible;" data--50p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section")  #{whoamititle}
+              p(data--10p-top="transform:translate(0%, 0%); visibility: visible;" data--50p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section") !{whoamidesc}
+            div#mypicture(data-top="opacity: 1;" data-50p-start="opacity: 0" data-anchor-target="#whoami.paralax-section")
+              img(src='imgs/me.png' title='That\'s me \:3' data-top="transform:translate(0%, 0%); opacity: 1;" data--50p-top="transform:translate(-100%, 0%); opacity: 0;" data-anchor-target="#whoami.paralax-section")
+        #objetives.paralax-section
+        #skills.paralax-section
         #formation.paralax-section
-        #work.paralax-section
+        #complementaryformation.paralax-section
         #contact.paralax-section
     #helper
       .marker.red
       .marker.red
       .marker.blue
       .marker.green
+      .marker.green
+      .marker.yellow
       .marker.yellow
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')
