@@ -12,9 +12,9 @@ app.get('/', function (req, res) {
                         'about': 'About me', 'work': 'Work', 'contact': 'Contact me',
                         'intro': 'Computer engineering + design',
                         'whoamititle' : 'Who am I?',
-                        'whoamidesc' : 'I\'m <span class="bold">Boris Ballester</span>, a young guy from a little paradise called <span class="bold">Canary Islands</span> and located in <span class="bold">Spain</span>. I\'ve been surrounded by <span class="bold">technology</span> all my life and is one of my passions along with <span class="bold">art</span> and <span class="bold">creating</span> things. <span class="bold">For me, do anything isn\'t impossible. It\'s just a matter of time!</span>',
-                        'objetivestitle' : 'My personal objetives',
-                        'objetivesdesc' : '<li><span class="bold">Earning experience</span> as computer engineer in a laboral environment.</li><li><span class="bold">Learn the workflow</span> of an IT enterprise.</li><li><span class="bold">Mastering my skills or learn some new ones!</span></li>'
+                        'whoamidesc' : 'I\'m <span class="bold">Boris Ballester</span>, a young guy from a little paradise called <span class="bold">Canary Islands</span> and located in <span class="bold">Spain</span>. I\'ve been surrounded by <span class="bold">technology</span> all my life and is one of my passions along with <span class="bold">digital art</span> and <span class="bold">creating</span> things. <span class="bold">For me, do anything isn\'t impossible. It\'s just a matter of time!</span>',
+                        'objectivestitle' : 'My career objectives',
+                        'objectivesdesc' : '<li><span class="bold">Earning experience</span> as computer engineer in a laboral environment.</li><li><span class="bold">Learn the workflow</span> of an IT enterprise.</li><li><span class="bold">Mastering my skills</span> or <span class="bold">learn some new ones.</span></li><li>And finally but not least: <span class="bold">do my best!</span>'
                       });
 });
 
@@ -27,7 +27,6 @@ app.get('/css/animate.css', function (req, res) {
    res.sendFile(__dirname + '/node_modules/animate.css/animate.min.css');
 });
 
-
 app.get('/css/font-awesome.css', function (req, res) {
    res.sendFile(__dirname + '/node_modules/font-awesome/css/font-awesome.min.css');
 });
@@ -39,6 +38,10 @@ app.get('/js/skrollr.js', function (req, res) {
 
 app.get('/js/wow.js', function (req, res) {
    res.sendFile(__dirname + '/node_modules/wowjs/dist/wow.min.js');
+});
+
+app.get('/js/chart.js', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/chart.js/dist/chart.min.js');
 });
 
 app.get('/js/skrollr-ie.js', function (req, res) {
@@ -56,7 +59,6 @@ app.get('/js/skrollr-stylesheets.js', function (req, res) {
 app.get('/imgs/signature.png', function (req, res) {
    res.sendFile(__dirname + '/public/imgs/signature.png');
 });
-
 
 app.get('/fonts/fontawesome-webfont.woff2', function (req, res) {
    res.sendFile(__dirname + '/node_modules/font-awesome/fonts/fontawesome-webfont.woff2');

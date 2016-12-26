@@ -16,26 +16,32 @@ html, body {
 /* double the height/width of a viewport, uses position-fixed so we dont need
 #skrollr-body for mobile support*/
 #paralax-sections {
-  width: 200%;
-  height: 200%;
+  width: 300%;
+  height: 300%;
   position: fixed;
   top: 0;
   left: 0; }
 
-#whoami {
+#whoami, #objectives {
   background-color: #f5f5f5; }
 
-#objetives {
-  background-color: red; }
+#skills {
+  background-color: blue; }
 
 #contact {
-  background-color: #f5f5f5; }
+  background-color: orange; }
 
 #work {
-  background-color: blue; }
+  background-color: purple; }
 
 #formation {
   background-color: pink; }
+
+#languages {
+  background-color: cyan; }
+
+#complementaryformation {
+  background: green; }
 
 #mypicture {
   margin: 0 auto;
@@ -48,7 +54,7 @@ html, body {
   -ms-transform: translate(0, 100%);
   transform: translate(0, 100%); }
 
-#objetives {
+#objectives {
   -webkit-transform: translate(100%, 100%);
   -ms-transform: translate(100%, 100%);
   transform: translate(100%, 100%); }
@@ -67,6 +73,11 @@ html, body {
   -webkit-transform: translate(100%, 200%);
   -ms-transform: translate(100%, 200%);
   transform: translate(100%, 200%); }
+
+#languages {
+  -webkit-transform: translate(200%, 200%);
+  -ms-transform: translate(200%, 200%);
+  transform: translate(200%, 200%); }
 
 #contact {
   -webkit-transform: translate(0%, 300%);
@@ -139,8 +150,24 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%; }
+  width: 33.333%;
+  height: 33.333%; }
+
+#bullseye {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 20%;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-duration: 5s;
+  -ms-animation-delay: 0s;
+  -ms-animation-iteration-count: infinite;
+  -moz-animation-duration: 5s;
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: infinite; }
+  #bullseye img {
+    width: 100%; }
 
 #landing-bg {
   background: url("/imgs/signature.png") no-repeat;
@@ -159,12 +186,15 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   top: 0;
-  height: 1100%;
+  height: 1150%;
   width: 20px; }
 
 .marker {
-  height: 14.3%;
+  height: 12.5%;
   width: 100%; }
+
+.black {
+  background-color: black; }
 
 .red {
   background-color: red; }
@@ -180,6 +210,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .orange {
   background-color: orange; }
+
+.cyan {
+  background-color: cyan; }
+
+.pink {
+  background-color: pink; }
 
 /**
  * For modern browsers
@@ -222,13 +258,18 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (min-width: 641px) {
   #mypicture {
-    width: 30%; } }
+    width: 30%; }
+  #bullseye {
+    width: 40%; } }
 
 @media only screen and (min-width: 961px) {
   #intro {
     bottom: 35%; }
   #menu-nav {
-    bottom: 15%; } }
+    bottom: 15%; }
+  #bullseye {
+    width: 30%;
+    margin-top: 10%; } }
 
 @media only screen and (min-width: 1025px) {
   body {
@@ -236,12 +277,16 @@ h1, h2, h3, h4, h5, h6 {
   body #landing-bg {
     background-size: 25%; }
   #mypicture {
-    text-align: center; }
-    #mypicture img {
-      width: 55%; } }
+    width: 20%; }
+  #bullseye {
+    margin-top: 5%; } }
 
 @media only screen and (min-width: 2560px) {
   body {
     font-size: 2em; }
   #landing #intro {
-    bottom: 30%; } }
+    bottom: 30%; }
+  #mypicture {
+    width: 15%; }
+  #bullseye {
+    width: 20%; } }

@@ -15,7 +15,7 @@ html
   body
     div#landing-bg.bg-wrapper(data-top="transform:translate(0%, 100%); opacity: 1; visibility: visible;" data--100p-top="transform:translate(0%, -100%); opacity: 0" data-anchor-target="#landing.paralax-section")
     #main-container
-      #paralax-sections(data-0="transform:translate(0%,0%);" data-100p="transform:translate(0%,-50%);" data-150p="" data-250p="transform:translate(-50%,-50%);" data-300p="" data-400p="transform:translate(-100%,-50%);" data-450p="" data-550p="transform:translate(0%,-100%);" data-600p="" data-700p="transform:translate(-50%,-100%);" data-750p="" data-850p="transform:translate(-100%,-100%);" data-900p="" data-1000p="transform:translate(0%,-150%);")
+      #paralax-sections(data-0="transform:translate(0%,0%);" data-100p="transform:translate(0%,-33.333%);" data-150p="" data-250p="transform:translate(-33.333%,-33.333%);" data-300p="" data-400p="transform:translate(-66.666%,-33.333%);" data-450p="" )
         #landing.paralax-section
           div#intro(data-top="transform:translate(0%, 0%); opacity: 1;" data-50p-start="transform:translate(0%, 5%); opacity: 0" data-anchor-target="#landing.paralax-section")
             p #{intro}
@@ -32,23 +32,33 @@ html
         #whoami.paralax-section
           div.contentwrapper
             div#whoamicontent(data-top="opacity: 1;" data-50p-start="opacity: 0" data-anchor-target="#whoami.paralax-section")
-              h2(data--10p-top="transform:translate(0%, 0%); visibility: visible;" data--50p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section")  #{whoamititle}
-              p(data--10p-top="transform:translate(0%, 0%); visibility: visible;" data--50p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section") !{whoamidesc}
+              h2(data--50p-top="transform:translate(0%, 0%); visibility: visible;" data--100p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section")  #{whoamititle}
+              p(data--50p-top="transform:translate(0%, 0%); visibility: visible;" data--100p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section") !{whoamidesc}
             div#mypicture(data-top="opacity: 1;" data-50p-start="opacity: 0" data-anchor-target="#whoami.paralax-section")
-              img(src='imgs/me.png' title='That\'s me \:3' data-top="transform:translate(0%, 0%); opacity: 1;" data--50p-top="transform:translate(-100%, 0%); opacity: 0;" data-anchor-target="#whoami.paralax-section")
-        #objetives.paralax-section
+              img(src='imgs/me.png' title='That\'s me \:3' data--50p-top="transform:translate(0%, 0%);" data--100p-top="transform:translate(-30%, 0%);" data-anchor-target="#whoami.paralax-section")
+        #objectives.paralax-section
+          div.contentwrapper
+            h2 #{objectivestitle}
+            ul !{objectivesdesc}
+            h2 #{otherinfotitle}
+            ul !{otherinfodesc}
+            div#bullseye.animated.swing
+              img(src='imgs/bulls-eye.svg' title='Bull\'s eye' data-200p="transform:rotate(0deg);" data-300p="transform:rotate(360deg);" data-anchor-target="#helper")
         #skills.paralax-section
         #formation.paralax-section
         #complementaryformation.paralax-section
+        #languages.paralax-section
         #contact.paralax-section
     #helper
       .marker.red
-      .marker.red
+      .marker.cyan
+      .marker.orange
       .marker.blue
       .marker.green
-      .marker.green
+      .marker.pink
       .marker.yellow
-      .marker.yellow
+      .marker.black
+    script(src='js/wow.js')
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')
     script(src='/js/skrollr-menu.js')
