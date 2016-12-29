@@ -4,8 +4,12 @@
   "description": "My personal page and cv.",
   "main": "index.js",
   "scripts": {
-    "build-css": "bin\\build-css.bat",
-    "build-min-css": "bin\\build-css-min.bat",
+    "build-all-css": "concurrently  \"npm run build-main-css\" \"npm run build-skrollr-css\"",
+    "build-main-css": "bin\\build-main-css.bat",
+    "build-skrollr-css": "bin\\build-skrollr-css.bat",
+    "build-all-css-min": "concurrently  \"npm run build-main-css-min\" \"npm run build-skrollr-css-min\"",
+    "build-main-css-min": "bin\\build-main-css-min.bat",
+    "build-skrollr-css-min": "bin\\build-skrollr-css-min.bat",
     "watch-css": "bin\\watch-css.bat",
     "build-modernizr": "modernizr -c modernizr-config.json"
   },
@@ -26,6 +30,7 @@
     "wowjs": "git+github:matthieua/WOW"
   },
   "devDependencies": {
+    "concurrently": "^3.1.0",
     "node-sass": "^3.13.0",
     "nodemon": "^1.11.0"
   }

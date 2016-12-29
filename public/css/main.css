@@ -22,11 +22,8 @@ html, body {
   top: 0;
   left: 0; }
 
-#whoami, #objectives {
+#whoami, #objectives, #skills {
   background-color: #f5f5f5; }
-
-#skills {
-  background-color: blue; }
 
 #contact {
   background-color: orange; }

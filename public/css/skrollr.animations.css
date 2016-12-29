@@ -1,0 +1,93 @@
+#paralax-sections {
+  -skrollr-animation-name: slideshow; }
+
+#intro {
+  -skrollr-animation-name: introanimation;
+  -skrollr-anchor-target: '#helper'; }
+
+#landing-bg {
+  -skrollr-animation-name: landingbg;
+  -skrollr-anchor-target: '#helper'; }
+
+#whoamicontent h2 {
+  -skrollr-animation-name: whoamicontent;
+  -skrollr-anchor-target: '#helper'; }
+
+#whoamicontent p {
+  -skrollr-animation-name: whoamicontent;
+  -skrollr-anchor-target: '#helper'; }
+
+#mypicture {
+  -skrollr-animation-name: mypicture;
+  -skrollr-anchor-target: '#helper'; }
+
+#bullseye img {
+  -skrollr-animation-name: bullseye;
+  -skrollr-anchor-target: '#helper'; }
+
+#rocket {
+  -skrollr-animation-name: rocket;
+  -skrollr-anchor-target: '#helper'; }
+
+@-skrollr-keyframes introanimation {
+  skrollr-0 {
+    transform: translate(0%, 0%);
+    opacity: 1; }
+  skrollr-50p {
+    transform: translate(0%, 5%);
+    opacity: 0; } }
+
+@-skrollr-keyframes landingbg {
+  skrollr-0 {
+    transform: translate(0%, 100%);
+    opacity: 1; }
+  skrollr-100p {
+    transform: translate(0%, -100%);
+    opacity: 0; } }
+
+@-skrollr-keyframes whoamicontent {
+  skrollr-100p {
+    transform: translate(0%, 0%); }
+  skrollr-250p {
+    transform: translate(110%, 0%); } }
+
+@-skrollr-keyframes mypicture {
+  skrollr-100p {
+    transform: translate(0%, 0%); }
+  skrollr-250p {
+    transform: translate(-110%, 0%); } }
+
+@-skrollr-keyframes bullseye {
+  skrollr-250p {
+    transform: rotate(0deg); }
+  skrollr-270p {
+    transform: rotate(-120deg); } }
+
+@-skrollr-keyframes rocket {
+  skrollr-400p {
+    color: #333; }
+  skrollr-410p {
+    color: #e50000;
+    transform: translate(0%, 0%); }
+  skrollr-550p {
+    transform: translate(300%, -500%); } }
+
+@-skrollr-keyframes slideshow {
+  skrollr-0p {
+    transform: translate(0%, 0%); }
+  skrollr-100p {
+    transform: translate(0%, -33.333%); }
+  skrollr-150p {
+    visibility: visible; }
+  skrollr-250p {
+    transform: translate(-33.333%, -33.333%); }
+  skrollr-300p {
+    visibility: visible; }
+  skrollr-400p {
+    transform: translate(-66.666%, -33.333%); }
+  skrollr-450p {
+    visibility: visible; }
+  skrollr-550p {
+    transform: translate(0, -66.666%); }
+  skrollr-600p {
+    visibility: visible; } }

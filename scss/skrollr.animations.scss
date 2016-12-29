@@ -1,0 +1,159 @@
+$slides_begin: 0;
+$slides_pause: 50;
+$landing_duration: 100;
+$slides_duration: 150;
+$whoami: $landing_duration;
+$objectives: $whoami + $slides_duration;
+$skills: $objectives + $slides_duration;
+$formation: $skills + $slides_duration;
+
+#paralax-sections{
+  -skrollr-animation-name:slideshow;
+}
+
+#intro{
+  -skrollr-animation-name:introanimation;
+  -skrollr-anchor-target: '#helper';
+}
+
+#landing-bg{
+  -skrollr-animation-name:landingbg;
+  -skrollr-anchor-target: '#helper';
+}
+
+#whoamicontent h2{
+  -skrollr-animation-name:whoamicontent;
+  -skrollr-anchor-target: '#helper';
+}
+
+#whoamicontent p{
+  -skrollr-animation-name:whoamicontent;
+  -skrollr-anchor-target: '#helper';
+}
+
+#mypicture{
+  -skrollr-animation-name:mypicture;
+  -skrollr-anchor-target: '#helper';
+}
+
+#bullseye img{
+  -skrollr-animation-name:bullseye;
+  -skrollr-anchor-target: '#helper';
+}
+
+#rocket{
+  -skrollr-animation-name:rocket;
+  -skrollr-anchor-target: '#helper';
+}
+
+@-skrollr-keyframes introanimation {
+    skrollr-#{$slides_begin} {
+      transform:translate(0%, 0%);
+      opacity: 1;
+    }
+
+    skrollr-#{$slides_begin + 50}p{
+      transform:translate(0%, 5%);
+      opacity: 0
+    }
+}
+
+@-skrollr-keyframes landingbg {
+    skrollr-#{$slides_begin} {
+      transform:translate(0%, 100%);
+      opacity: 1;
+    }
+
+    skrollr-#{$landing_duration}p{
+      transform:translate(0%, -100%);
+      opacity: 0;
+    }
+}
+
+
+
+@-skrollr-keyframes whoamicontent {
+    skrollr-#{$whoami}p {
+      transform:translate(0%, 0%);
+    }
+
+    skrollr-#{$objectives}p {
+      transform:translate(110%, 0%);
+    }
+}
+
+
+@-skrollr-keyframes mypicture {
+  skrollr-#{$whoami}p {
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$objectives}p {
+    transform:translate(-110%, 0%);
+  }
+}
+
+
+@-skrollr-keyframes bullseye {
+  skrollr-#{$objectives}p {
+    transform:rotate(0deg);
+  }
+
+  skrollr-#{$objectives+20}p {
+    transform:rotate(-120deg);
+  }
+}
+
+@-skrollr-keyframes rocket {
+  skrollr-#{$skills}p {
+    color: #333;
+  }
+
+  skrollr-#{$skills+10}p {
+    color: #e50000;
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$formation}p {
+    transform:translate(300%, -500%);
+  }
+}
+
+@-skrollr-keyframes slideshow {
+  skrollr-#{$slides_begin}p {
+    transform:translate(0%,0%);
+  }
+
+  skrollr-#{$whoami}p {
+    transform:translate(0%,-33.333%);
+  }
+
+  skrollr-#{$whoami+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$objectives}p {
+    transform:translate(-33.333%,-33.333%);
+  }
+
+  skrollr-#{$objectives+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$skills}p {
+    transform:translate(-66.666%,-33.333%);
+  }
+
+  skrollr-#{$skills+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$formation}p {
+    transform:translate(0,-66.666%);
+  }
+
+  skrollr-#{$formation+$slides_pause}p {
+    visibility: visible;
+  }
+
+}

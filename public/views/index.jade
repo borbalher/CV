@@ -7,17 +7,18 @@ html
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
+    link(href='/css/skrollr.animations.css', rel='stylesheet' data-skrollr-stylesheet)
     link(href='/css/main.css', rel='stylesheet')
     link(href='/css/animate.css', rel='stylesheet')
     link(href='/css/normalize.css', rel='stylesheet')
     link(href='/css/font-awesome.css', rel='stylesheet')
     script(href='/js/third-parties/modernizr.js')
   body
-    div#landing-bg.bg-wrapper(data-top="transform:translate(0%, 100%); opacity: 1; visibility: visible;" data--100p-top="transform:translate(0%, -100%); opacity: 0" data-anchor-target="#landing.paralax-section")
+    div#landing-bg.bg-wrapper
     #main-container
-      #paralax-sections(data-0="transform:translate(0%,0%);" data-100p="transform:translate(0%,-33.333%);" data-150p="" data-250p="transform:translate(-33.333%,-33.333%);" data-300p="" data-400p="transform:translate(-66.666%,-33.333%);" data-450p="" )
+      #paralax-sections
         #landing.paralax-section
-          div#intro(data-top="transform:translate(0%, 0%); opacity: 1;" data-50p-start="transform:translate(0%, 5%); opacity: 0" data-anchor-target="#landing.paralax-section")
+          div#intro
             p #{intro}
             div.cf
           nav#menu-nav
@@ -31,11 +32,11 @@ html
           i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
         #whoami.paralax-section
           div.contentwrapper
-            div#whoamicontent(data-top="opacity: 1;" data-50p-start="opacity: 0" data-anchor-target="#whoami.paralax-section")
-              h2(data--50p-top="transform:translate(0%, 0%); visibility: visible;" data--100p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section")  #{whoamititle}
-              p(data--50p-top="transform:translate(0%, 0%); visibility: visible;" data--100p-top="transform:translate(100%, 0%); visibility: hidden;" data-anchor-target="#whoami.paralax-section") !{whoamidesc}
-            div#mypicture(data-top="opacity: 1;" data-50p-start="opacity: 0" data-anchor-target="#whoami.paralax-section")
-              img(src='imgs/me.png' title='That\'s me \:3' data--50p-top="transform:translate(0%, 0%);" data--100p-top="transform:translate(-30%, 0%);" data-anchor-target="#whoami.paralax-section")
+            div#whoamicontent
+              h2 #{whoamititle}
+              p !{whoamidesc}
+            div#mypicture
+              img(src='imgs/me.png' title='That\'s me \:3')
         #objectives.paralax-section
           div.contentwrapper
             h2 #{objectivestitle}
@@ -43,8 +44,11 @@ html
             h2 #{otherinfotitle}
             ul !{otherinfodesc}
             div#bullseye.animated.swing
-              img(src='imgs/bulls-eye.svg' title='Bull\'s eye' data-200p="transform:rotate(0deg);" data-300p="transform:rotate(360deg);" data-anchor-target="#helper")
+              img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
+          div.contentwrapper
+            h2 !{skillstitle}
+            div#skillsdesc !{skillsdesc}
         #formation.paralax-section
         #complementaryformation.paralax-section
         #languages.paralax-section
@@ -58,9 +62,8 @@ html
       .marker.pink
       .marker.yellow
       .marker.black
-    script(src='js/wow.js')
+    script(src='/js/skrollr-stylesheets.js')
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')
     script(src='/js/skrollr-menu.js')
-    script(src='/js/skrollr-stylesheets.js')
     script(src='/js/load-skrollr.min.js')
