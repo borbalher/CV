@@ -29,6 +29,10 @@
   -skrollr-animation-name: rocket;
   -skrollr-anchor-target: '#helper'; }
 
+#educationimg {
+  -skrollr-animation-name: education;
+  -skrollr-anchor-target: '#helper'; }
+
 @-skrollr-keyframes introanimation {
   skrollr-0 {
     transform: translate(0%, 0%);
@@ -72,6 +76,12 @@
   skrollr-550p {
     transform: translate(300%, -500%); } }
 
+@-skrollr-keyframes education {
+  skrollr-0p {
+    @active : 0; }
+  skrollr-550p {
+    @active : 1; } }
+
 @-skrollr-keyframes slideshow {
   skrollr-0p {
     transform: translate(0%, 0%); }
@@ -90,4 +100,12 @@
   skrollr-550p {
     transform: translate(0, -66.666%); }
   skrollr-600p {
+    visibility: visible; }
+  skrollr-700p {
+    transform: translate(0%, -99.999%); }
+  skrollr-750p {
+    visibility: visible; }
+  skrollr-850p {
+    transform: translate(-33.333%, -99.999%); }
+  skrollr-900p {
     visibility: visible; } }

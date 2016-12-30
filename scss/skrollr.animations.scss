@@ -5,7 +5,9 @@ $slides_duration: 150;
 $whoami: $landing_duration;
 $objectives: $whoami + $slides_duration;
 $skills: $objectives + $slides_duration;
-$formation: $skills + $slides_duration;
+$education: $skills + $slides_duration;
+$cumplimentary_education: $education + $slides_duration;
+$languages: $cumplimentary_education + $slides_duration;
 
 #paralax-sections{
   -skrollr-animation-name:slideshow;
@@ -46,6 +48,11 @@ $formation: $skills + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
+#educationimg{
+  -skrollr-animation-name:education;
+  -skrollr-anchor-target: '#helper';
+}
+
 @-skrollr-keyframes introanimation {
     skrollr-#{$slides_begin} {
       transform:translate(0%, 0%);
@@ -54,7 +61,7 @@ $formation: $skills + $slides_duration;
 
     skrollr-#{$slides_begin + 50}p{
       transform:translate(0%, 5%);
-      opacity: 0
+      opacity: 0;
     }
 }
 
@@ -114,8 +121,17 @@ $formation: $skills + $slides_duration;
     transform:translate(0%, 0%);
   }
 
-  skrollr-#{$formation}p {
+  skrollr-#{$education}p {
     transform:translate(300%, -500%);
+  }
+}
+
+@-skrollr-keyframes education {
+  skrollr-#{$slides_begin}p {
+    @active: 0;
+  }
+  skrollr-#{$education}p {
+    @active: 1;
   }
 }
 
@@ -148,11 +164,27 @@ $formation: $skills + $slides_duration;
     visibility: visible;
   }
 
-  skrollr-#{$formation}p {
+  skrollr-#{$education}p {
     transform:translate(0,-66.666%);
   }
 
-  skrollr-#{$formation+$slides_pause}p {
+  skrollr-#{$education+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$cumplimentary_education}p {
+    transform:translate(0%,-99.999%);
+  }
+
+  skrollr-#{$cumplimentary_education+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$languages}p {
+    transform:translate(-33.333%,-99.999%);
+  }
+
+  skrollr-#{$languages+$slides_pause}p {
     visibility: visible;
   }
 

@@ -49,8 +49,16 @@ html
           div.contentwrapper
             h2 !{skillstitle}
             div#skillsdesc !{skillsdesc}
-        #formation.paralax-section
-        #complementaryformation.paralax-section
+        #education.paralax-section
+          div.contentwrapper
+            h2 #{educationtitle}
+            div.facontainer#educationimg
+              span.fa.fa-university(aria-hidden="true")
+            div#educationcontent !{educationdesc}
+        #cumplimentaryeducation.paralax-section
+          div.contentwrapper
+            h2 !{cumplimentaryeducationtitle}
+            div !{cumplimentaryeducationdesc}
         #languages.paralax-section
         #contact.paralax-section
     #helper

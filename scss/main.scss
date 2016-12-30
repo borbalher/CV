@@ -45,7 +45,7 @@ html, body {
     left: 0;
 }
 
-#whoami, #objectives,#skills{
+#whoami, #objectives,#skills,#education,#cumplimentaryeducation{
   background-color: $bg;
 }
 
@@ -55,16 +55,8 @@ html, body {
 #work{
   background-color: purple;
 }
-#formation{
-  background-color: pink;
-}
-
 #languages{
   background-color: cyan;
-}
-
-#complementaryformation{
-  background: green;
 }
 
 #mypicture{
@@ -92,28 +84,54 @@ html, body {
     -ms-transform: translate(200%,100%);
     transform: translate(200%,100%);
 }
-#formation {
+
+#education {
   -webkit-transform: translate(0%,200%);
   -ms-transform: translate(0%,200%);
   transform: translate(0%,200%);
+  h2{
+    margin-bottom: 0;
+  }
 }
 
- #complementaryformation {
-   -webkit-transform: translate(100%,200%);
-   -ms-transform: translate(100%,200%);
-   transform: translate(100%,200%);
+ #cumplimentaryeducation {
+   -webkit-transform: translate(0%,300%);
+   -ms-transform: translate(0%,300%);
+   transform: translate(0%,300%);
 }
 
 #languages {
-  -webkit-transform: translate(200%,200%);
-  -ms-transform: translate(200%,200%);
-  transform: translate(200%,200%);
+  -webkit-transform: translate(100%,300%);
+  -ms-transform: translate(100%,300%);
+  transform: translate(100%,300%);
 }
 
 #contact{
-  -webkit-transform: translate(0%,300%);
-  -ms-transform: translate(0%,300%);
-  transform: translate(0%,300%);
+  -webkit-transform: translate(0%,400%);
+  -ms-transform: translate(0%,400%);
+  transform: translate(0%,400%);
+}
+
+.facontainer{
+  padding: 1em 0;
+  text-align: center;
+}
+
+#educationimg{
+  span{
+    font-size: 30vw;
+  }
+}
+
+#educationimg[active="1"]{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
 }
 
 #intro{
@@ -132,7 +150,8 @@ html, body {
 }
 
 p{
-  padding: 1em;
+  padding: 0.5em 1em;
+  margin: 0 auto;
   line-height: 1.5em;
   text-align: justify;
 }
@@ -140,6 +159,11 @@ p{
 ul{
   padding: 0 1em 0 2em;
   list-style-type: square;
+  line-height: 1em;
+  text-align: justify;
+  li{
+    margin-bottom: 1em;
+  }
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -153,6 +177,10 @@ h1,h2,h3,h4,h5,h6{
 
 .bold{
   font-weight: bold;
+}
+
+.italic{
+  font-style: italic;
 }
 
 #menu-nav{
@@ -331,14 +359,23 @@ h1,h2,h3,h4,h5,h6{
     }
   }
 
-}
-
-@media #{$portrait-tablet} {
   #mypicture{
     width: 30%;
   }
   #bullseye{
     width: 40%;
+  }
+
+  #educationimg{
+    float:left;
+    margin: 0.5em 1em;
+    padding: 0;
+  }
+
+  #educationcontent{
+    float:left;
+    width: 55%;
+    margin-top: 10%;
   }
 }
 
@@ -355,6 +392,7 @@ h1,h2,h3,h4,h5,h6{
     width: 30%;
     margin-top: 10%;
   }
+
 }
 
 @media #{$laptop} {
