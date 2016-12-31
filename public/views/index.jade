@@ -34,31 +34,60 @@ html
           div.contentwrapper
             div#whoamicontent
               h2 #{whoamititle}
-              p !{whoamidesc}
+              p #{whoami.texts[0]} #[span.bold #{whoami.boldtexts[0]}]
+                | #{whoami.texts[1]} #[span.bold #{whoami.boldtexts[1]}]
+                | #{whoami.texts[2]} #[span.bold #{whoami.boldtexts[2]}]
+                | #{whoami.texts[3]} #[span.bold #{whoami.boldtexts[3]}]
+                | #{whoami.texts[4]} #[span.bold #{whoami.boldtexts[4]}]
+                | #{whoami.texts[5]} #[span.bold #{whoami.boldtexts[5]}]
+                | #[span.bold #{whoami.boldtexts[6]}]
             div#mypicture
               img(src='imgs/me.png' title='That\'s me \:3')
         #objectives.paralax-section
           div.contentwrapper
             h2 #{objectivestitle}
-            ul !{objectivesdesc}
-            h2 #{otherinfotitle}
-            ul !{otherinfodesc}
+            ul
+              li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
+              li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
+              li #[span.bold #{objectives.boldtexts[2]}]
+              li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
             div#bullseye.animated.swing
               img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
-            h2 !{skillstitle}
-            div#skillsdesc !{skillsdesc}
+            h2 !{skillstitle} #[i#rocket.fa.fw.fa-rocket(aria-hidden="true")]
+            div#skillsdesc
+                p #{skills.texts[0]} #[span.bold #{skills.boldtexts[0]}] #{skills.texts[1]}
+                ul
+                  for skill in skills.skills
+                    li.bold #{skill}
+                p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}]
+                p #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
         #education.paralax-section
           div.contentwrapper
             h2 #{educationtitle}
             div.facontainer#educationimg
               span.fa.fa-university(aria-hidden="true")
-            div#educationcontent !{educationdesc}
+            mixin fill_eduaction(name, institution, begin, end)
+              li
+                span.coursename.bold !{name} -
+                span.courseinstitution.italic  !{institution}
+                span.courseduration  [#{begin} - #{end}]
+            div#educationcontent
+              ul
+                each course, i in education.course_name
+                  +fill_eduaction(course,education.course_institution[i],education.course_begin[i],education.course_end[i])
         #cumplimentaryeducation.paralax-section
           div.contentwrapper
-            h2 !{cumplimentaryeducationtitle}
-            div !{cumplimentaryeducationdesc}
+            h2 #[i.fa.fw.fa-book(aria-hidden="true")] #{cumplimentaryeducationtitle}
+            mixin fill_cumplimentary_education(name, institution, hours, year)
+              li
+                span.coursename.bold !{name}:
+                span.courseinstitution.italic  !{institution}
+                span.courseduration  [#{hours} hours] [#{year}]
+            ul
+              each course, i in cumplimentaryeducation.course_name
+                +fill_cumplimentary_education(course,cumplimentaryeducation.course_institution[i],cumplimentaryeducation.course_hours[i],cumplimentaryeducation.course_year[i])
         #languages.paralax-section
         #contact.paralax-section
     #helper

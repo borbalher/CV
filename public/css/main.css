@@ -153,7 +153,8 @@ h1, h2, h3, h4, h5, h6 {
         padding: 1em;
         text-decoration: none;
         text-transform: uppercase;
-        color: #0000b5; }
+        color: #0000b5;
+        text-align: center; }
       #menu-nav #menu li a:link {
         color: #0000b5; }
       #menu-nav #menu li a:visited {
@@ -279,8 +280,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 40%; }
   #educationimg {
     float: left;
-    margin: 0.5em 1em;
-    padding: 0; }
+    margin: 0.5em 1em; }
   #educationcontent {
     float: left;
     width: 55%;

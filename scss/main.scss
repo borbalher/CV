@@ -203,7 +203,7 @@ h1,h2,h3,h4,h5,h6{
         text-decoration: none;
         text-transform: uppercase;
         color: $link;
-
+        text-align: center;
       }
       /* unvisited link */
       a:link {
@@ -369,7 +369,6 @@ h1,h2,h3,h4,h5,h6{
   #educationimg{
     float:left;
     margin: 0.5em 1em;
-    padding: 0;
   }
 
   #educationcontent{
