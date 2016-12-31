@@ -45,12 +45,13 @@ html
               img(src='imgs/me.png' title='That\'s me \:3')
         #objectives.paralax-section
           div.contentwrapper
-            h2 #{objectivestitle}
-            ul
-              li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
-              li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
-              li #[span.bold #{objectives.boldtexts[2]}]
-              li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
+            div#objectivescontent
+              h2 #{objectivestitle}
+              ul
+                li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
+                li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
+                li #[span.bold #{objectives.boldtexts[2]}]
+                li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
             div#bullseye.animated.swing
               img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
@@ -70,24 +71,29 @@ html
               span.fa.fa-university(aria-hidden="true")
             mixin fill_eduaction(name, institution, begin, end)
               li
-                span.coursename.bold !{name} -
-                span.courseinstitution.italic  !{institution}
-                span.courseduration  [#{begin} - #{end}]
+                span.coursename.bold !{name}
+                ul.institutionlist
+                  li.courseinstitution
+                    span.italic  !{institution}
+                    span.courseduration [#{begin} - #{end}]
             div#educationcontent
               ul
                 each course, i in education.course_name
                   +fill_eduaction(course,education.course_institution[i],education.course_begin[i],education.course_end[i])
         #cumplimentaryeducation.paralax-section
           div.contentwrapper
-            h2 #[i.fa.fw.fa-book(aria-hidden="true")] #{cumplimentaryeducationtitle}
-            mixin fill_cumplimentary_education(name, institution, hours, year)
-              li
-                span.coursename.bold !{name}:
-                span.courseinstitution.italic  !{institution}
-                span.courseduration  [#{hours} hours] [#{year}]
-            ul
-              each course, i in cumplimentaryeducation.course_name
-                +fill_cumplimentary_education(course,cumplimentaryeducation.course_institution[i],cumplimentaryeducation.course_hours[i],cumplimentaryeducation.course_year[i])
+            div#cumplimentaryeducationcontent
+              h2 #[i.fa.fw.fa-book(aria-hidden="true")] #{cumplimentaryeducationtitle}
+              mixin fill_cumplimentary_education(name, institution, hours, year)
+                li
+                  span.coursename.bold !{name}:
+                  ul.institutionlist
+                    li
+                      span.courseinstitution.italic  !{institution}
+                      span.courseduration    [#{hours} hours] [#{year}]
+              ul
+                each course, i in cumplimentaryeducation.course_name
+                  +fill_cumplimentary_education(course,cumplimentaryeducation.course_institution[i],cumplimentaryeducation.course_hours[i],cumplimentaryeducation.course_year[i])
         #languages.paralax-section
         #contact.paralax-section
     #helper

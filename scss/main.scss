@@ -22,7 +22,7 @@ $bigscreens: "only screen and (min-width: 2560px)";
 html, body {
     width:100%;
     height:100%;
-    font-size: 1em;
+    font-size: 0.95em;
     font-family: 'Roboto', sans-serif;
     color: #333;
     background-color: $bg;
@@ -343,7 +343,25 @@ h1,h2,h3,h4,h5,h6{
     left: 50%;
 }
 
+.courseduration{
+  font-size: 0.8em;
+  color: gray;
+}
+
+.courseduration::before{
+  content: " ";
+}
+
+.institutionlist{
+  list-style-type: none;
+  padding-left: 1em;
+}
+
 @media #{$portrait-tablet} {
+  body{
+      font-size: 1em;
+  }
+
   body #landing-bg{
     background-size: 40%;
   }
@@ -379,6 +397,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @media #{$tablet} {
+
   #intro{
     bottom: 35%;
   }

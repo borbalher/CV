@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 
   var education = {
-    "course_name": ["Computer Engineering Degree:  computation and artificial intelligence","Professional Training: Interactive Applications Development in 4th generation environments and CASE tools"],
+    "course_name": ["Computer Engineering Degree:  Computation and Artificial intelligence","Professional Training: Interactive Applications Development in 4th generation environments and CASE tools"],
     "course_institution": ["Universidad de La Laguna","IES Domingo P&eacute;rez Minik"],
     "course_begin":  [2011,2009],
     "course_end": [2016,2011]
@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
       "Google Act&iacute;vate: Developing Mobile Apps",
       "Google Act&iacute;vate: Cloud Computing",
       "Google Act&iacute;vate: Web Analytics",
-      "Google Act&iacute;vate Basic Marketing",
+      "Google Act&iacute;vate: Basic Marketing",
       "LaunchTF: Startup's pre-acceleration program",
       "Orientation and Introduction to Web Design Jobs",
       "E-commerce: an alternative for sales"
@@ -66,13 +66,13 @@ var whoami ={
   'texts': ["I'm ",
             ", a young guy from a little paradise called ",
             " and located in ",
-            ". I've been surrounded by ",
+            "I've been surrounded by ",
             " all my life and is one of my passions along with ",
             " and "
   ],
   'boldtexts': ["Boris Ballester",
                 "Canary Islands",
-                "Spain",
+                "Spain.",
                 "technology",
                 "digital art",
                 "creating things.",

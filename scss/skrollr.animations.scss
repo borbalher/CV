@@ -53,6 +53,21 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
+#menu{
+  -skrollr-animation-name:menuanimation;
+  -skrollr-anchor-target: '#helper';
+}
+
+#objectivescontent{
+  -skrollr-animation-name:objectivescontent;
+  -skrollr-anchor-target: '#helper';
+}
+
+#cumplimentaryeducationcontent{
+  -skrollr-animation-name:cumplimentaryeducationcontent;
+  -skrollr-anchor-target: '#helper';
+}
+
 @-skrollr-keyframes introanimation {
     skrollr-#{$slides_begin} {
       transform:translate(0%, 0%);
@@ -89,6 +104,25 @@ $languages: $cumplimentary_education + $slides_duration;
     }
 }
 
+@-skrollr-keyframes objectivescontent {
+    skrollr-#{$objectives}p {
+      transform:translate(0%, 0%);
+    }
+
+    skrollr-#{$education}p {
+      transform:translate(160%, 0%);
+    }
+}
+
+@-skrollr-keyframes cumplimentaryeducationcontent {
+    skrollr-#{$cumplimentary_education}p {
+      transform:translate(0%, 0%);
+    }
+
+    skrollr-#{$languages}p {
+      transform:translate(110%, 0%);
+    }
+}
 
 @-skrollr-keyframes mypicture {
   skrollr-#{$whoami}p {
@@ -133,6 +167,18 @@ $languages: $cumplimentary_education + $slides_duration;
   skrollr-#{$education}p {
     @active: 1;
   }
+}
+
+@-skrollr-keyframes menuanimation {
+    skrollr-#{$landing_duration - 30}p {
+      transform:translate(0%, 0%);
+      opacity: 1;
+    }
+
+    skrollr-#{$landing_duration - 20}p{
+      transform:translate(0%, -10%);
+      opacity: 0;
+    }
 }
 
 @-skrollr-keyframes slideshow {

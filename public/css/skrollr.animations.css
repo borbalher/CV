@@ -33,6 +33,18 @@
   -skrollr-animation-name: education;
   -skrollr-anchor-target: '#helper'; }
 
+#menu {
+  -skrollr-animation-name: menuanimation;
+  -skrollr-anchor-target: '#helper'; }
+
+#objectivescontent {
+  -skrollr-animation-name: objectivescontent;
+  -skrollr-anchor-target: '#helper'; }
+
+#cumplimentaryeducationcontent {
+  -skrollr-animation-name: cumplimentaryeducationcontent;
+  -skrollr-anchor-target: '#helper'; }
+
 @-skrollr-keyframes introanimation {
   skrollr-0 {
     transform: translate(0%, 0%);
@@ -53,6 +65,18 @@
   skrollr-100p {
     transform: translate(0%, 0%); }
   skrollr-250p {
+    transform: translate(110%, 0%); } }
+
+@-skrollr-keyframes objectivescontent {
+  skrollr-250p {
+    transform: translate(0%, 0%); }
+  skrollr-550p {
+    transform: translate(160%, 0%); } }
+
+@-skrollr-keyframes cumplimentaryeducationcontent {
+  skrollr-700p {
+    transform: translate(0%, 0%); }
+  skrollr-850p {
     transform: translate(110%, 0%); } }
 
 @-skrollr-keyframes mypicture {
@@ -81,6 +105,14 @@
     @active : 0; }
   skrollr-550p {
     @active : 1; } }
+
+@-skrollr-keyframes menuanimation {
+  skrollr-70p {
+    transform: translate(0%, 0%);
+    opacity: 1; }
+  skrollr-80p {
+    transform: translate(0%, -10%);
+    opacity: 0; } }
 
 @-skrollr-keyframes slideshow {
   skrollr-0p {
