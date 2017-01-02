@@ -56,7 +56,7 @@ html
               img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
-            h2 !{skillstitle} #[i#rocket.fa.fw.fa-rocket(aria-hidden="true")]
+            h2#skillstitle !{skillstitle} #[i#rocket.fa.fw.fa-rocket(aria-hidden="true")]
             div#skillsdesc
                 p #{skills.texts[0]} #[span.bold #{skills.boldtexts[0]}] #{skills.texts[1]}
                 ul
@@ -66,7 +66,7 @@ html
                 p #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
         #education.paralax-section
           div.contentwrapper
-            h2 #{educationtitle}
+            h2#eduactiontitle #{educationtitle}
             div.facontainer#educationimg
               span.fa.fa-university(aria-hidden="true")
             mixin fill_eduaction(name, institution, begin, end)
