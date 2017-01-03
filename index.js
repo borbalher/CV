@@ -66,7 +66,7 @@ var whoami ={
   'texts': ["I'm ",
             ", a young guy from a little paradise called ",
             " and located in ",
-            "I've been surrounded by ",
+            " I've been surrounded by ",
             " all my life and is one of my passions along with ",
             " and "
   ],

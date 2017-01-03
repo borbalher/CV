@@ -61,8 +61,10 @@ html
                   for skill in skills.skills
                     li.bold #{skill}
         #mskills.paralax-section
-          div#moreskillsdesc
-              p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}] #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
+          div.contentwrapper
+              div#moreskillsdesc
+                p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}]
+                p.centered #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
               div#msrocketcontainer #[i#msrocket.fa.fw.fa-rocket(aria-hidden="true")]
         #education.paralax-section
             div.contentwrapper

@@ -34,11 +34,6 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
-#mypicture{
-  -skrollr-animation-name:mypicture;
-  -skrollr-anchor-target: '#helper';
-}
-
 #bullseye img{
   -skrollr-animation-name:bullseye;
   -skrollr-anchor-target: '#helper';
@@ -59,10 +54,11 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
-#moreskillsdesc{
-  -skrollr-animation-name:moreskillscontent;
+#mypicture img{
+  -skrollr-animation-name:mypicture;
   -skrollr-anchor-target: '#helper';
 }
+
 #skillstitle{
   -skrollr-animation-name:skillscontent;
   -skrollr-anchor-target: '#helper';
@@ -99,15 +95,45 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
+@-skrollr-keyframes mypicture {
+    skrollr-#{$whoami}p {
+      opacity: 1;
+    }
 
-#cumplimentaryeducationcontent{
-  -skrollr-animation-name:cumplimentaryeducationcontent;
-  -skrollr-anchor-target: '#helper';
+
+    skrollr-#{$objectives + $slides_pause}p {
+      opacity: 0;
+    }
 }
 
-#cumplimentaryeducationimg{
-  -skrollr-animation-name:cumplimentaryeducationcontent;
-  -skrollr-anchor-target: '#helper';
+
+@-skrollr-keyframes educationcontent {
+    skrollr-#{$education + $slides_pause}p {
+      opacity: 1;
+    }
+
+
+    skrollr-#{$cumplimentary_education}p {
+      opacity: 0;
+    }
+}
+
+@-skrollr-keyframes msrocket {
+  skrollr-#{$mskills - $slides_pause}p {
+    color: #e50000;
+    opacity: 0;
+    transform:translate(-400%, -200%) rotate(90deg);
+  }
+
+  skrollr-#{$mskills}p {
+    opacity: 1;
+    transform:translate(-200%, -100%) rotate(80deg);
+  }
+
+  skrollr-#{$mskills + $slides_pause}p {
+    color: #333;
+    transform:translate(0%, 0%) rotate(-45deg);
+  }
 }
 
 @-skrollr-keyframes introanimation {
@@ -138,83 +164,35 @@ $languages: $cumplimentary_education + $slides_duration;
 
 @-skrollr-keyframes whoamicontent {
     skrollr-#{$whoami+$slides_pause}p {
-      transform:translate(0%, 0%);
       opacity: 1;
     }
 
 
     skrollr-#{$objectives}p {
-      transform:translate(-110%, 0%);
       opacity: 0;
     }
 }
 
 @-skrollr-keyframes objectivescontent {
     skrollr-#{$objectives+$slides_pause}p {
-      transform:translate(0%, 0%);
       opacity: 1;
     }
 
     skrollr-#{$skills}p {
-      transform:translate(-160%, 0%);
       opacity: 0;
     }
 }
 
 @-skrollr-keyframes skillscontent {
     skrollr-#{$skills+ $slides_pause}p {
-      transform:translate(0%, 0%);
       opacity: 1;
     }
 
-
-    skrollr-#{$mskills - $slides_pause}p {
-      transform:translate(0%, -10%);
-      opacity: 0;
-    }
-}
-
-@-skrollr-keyframes moreskillscontent {
     skrollr-#{$mskills - $slides_pause}p {
       opacity: 0;
     }
-
-
-    skrollr-#{$education}p {
-      opacity: 1;
-    }
 }
 
-@-skrollr-keyframes educationcontent {
-    skrollr-#{$education + $slides_pause}p {
-      opacity: 0;
-    }
-
-
-    skrollr-#{$cumplimentary_education}p {
-      opacity: 1;
-    }
-}
-
-@-skrollr-keyframes cumplimentaryeducationcontent {
-    skrollr-#{$cumplimentary_education + $slides_pause}p {
-      opacity: 0;
-    }
-
-    skrollr-#{$languages}p {
-      opacity: 1;
-    }
-}
-
-@-skrollr-keyframes mypicture {
-  skrollr-#{$whoami+ $slides_pause}p {
-    transform:translate(0%, 0%);
-  }
-
-  skrollr-#{$objectives}p {
-    transform:translate(-110%, 0%);
-  }
-}
 
 @-skrollr-keyframes bullseye {
   skrollr-#{$objectives}p {
@@ -248,32 +226,15 @@ $languages: $cumplimentary_education + $slides_duration;
 
 }
 
-@-skrollr-keyframes msrocket {
-  skrollr-#{$mskills + $slides_pause}p {
-    color: #e50000;
-    opacity: 0;
-    transform:translate(-400%, -200%) rotate(90deg);
-  }
-
-  skrollr-#{$education - $slides_pause}p {
-    opacity: 1;
-    transform:translate(-200%, -100%) rotate(80deg);
-  }
-
-  skrollr-#{$education}p {
-    color: #333;
-    transform:translate(0%, 0%) rotate(-45deg);
-  }
-
-}
-
 @-skrollr-keyframes activate_animation_education{
-  skrollr-#{$education}p {
+  skrollr-#{$slides_begin}p {
     @active: 0;
   }
-  skrollr-#{$cumplimentary_education}p {
+
+  skrollr-#{$education}p {
     @active: 1;
   }
+
 }
 
 @-skrollr-keyframes menuanimation {
@@ -294,7 +255,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$whoami}p {
-    transform:translate(0%,-33.333%);
+    transform:translate(0%,-25%);
   }
 
   skrollr-#{$whoami+$slides_pause}p {
@@ -302,7 +263,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$objectives}p {
-    transform:translate(-33.333%,-33.333%);
+    transform:translate(-25%,-25%);
   }
 
   skrollr-#{$objectives+$slides_pause}p {
@@ -310,15 +271,23 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$skills}p {
-    transform:translate(-66.666%,-33.333%);
+    transform:translate(-50%,-25%);
   }
 
   skrollr-#{$skills+$slides_pause}p {
     visibility: visible;
   }
 
+  skrollr-#{$mskills}p {
+    transform:translate(0%,-50%);
+  }
+
+  skrollr-#{$mskills+$slides_pause}p {
+    visibility: visible;
+  }
+
   skrollr-#{$education}p {
-    transform:translate(-66.666%,-66.666%);
+    transform:translate(-25%,-50%);
   }
 
   skrollr-#{$education+$slides_pause}p {
@@ -326,7 +295,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$cumplimentary_education}p {
-    transform:translate(-33.333%,-66.666%);
+    transform:translate(-25%,-75%);
   }
 
   skrollr-#{$cumplimentary_education+$slides_pause}p {
@@ -334,11 +303,10 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$languages}p {
-    transform:translate(0%,-66.666%);
+    transform:translate(0%,-75%);
   }
 
   skrollr-#{$languages+$slides_pause}p {
     visibility: visible;
   }
-
 }
