@@ -45,7 +45,7 @@ app.get('/', function (req, res) {
 var skills ={
   'texts': ["Through the years I\'ve been in touch with",
                  "but, in the present, I feel comfortable with the following:",
-                 "Those are the ones that I use the most but there are other programming languages that I can use to make awesome things:",
+                 "Those were the ones that I use the most but there are other programming languages that I can use to make awesome things:",
                  "and to a lesser extent",
                  "I just only need a"
   ],
@@ -92,7 +92,19 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'educationtitle' : 'Education',
                         'education' : education,
                         'cumplimentaryeducationtitle' : ' Cumplimentary education',
-                        'cumplimentaryeducation' : cumplimentary_education
+                        'cumplimentaryeducation' : cumplimentary_education,
+                        'english' : 'English',
+                        'selfassessment' : 'Self-assessment of language skills',
+                        'understanding' : 'Understanding',
+                        'speaking' : 'Speaking',
+                        'writing' : 'Writing',
+                        'listening' : 'Listening',
+                        'reading' : 'Reading',
+                        'spokenprod' : 'Spoken production',
+                        'spokenint' : 'Spoken interaction',
+                        'writing' : 'Writing',
+                        'linguistic' : 'Linguistic and intercultural experience'
+
                     });
 });
 

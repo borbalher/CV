@@ -18,10 +18,8 @@ html
     #main-container
       #paralax-sections
         #landing.paralax-section
-          div#intro
-            p #{intro}
-            div.cf
           nav#menu-nav
+            p#intro #{intro}
             ul#menu
               li
                 a(href="#about-me" data-menu-top="100p") #[i.fa.fw.fa-user-circle] #{about}
@@ -56,37 +54,39 @@ html
               img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
-            h2#skillstitle !{skillstitle} #[i#rocket.fa.fw.fa-rocket(aria-hidden="true")]
+            h2#skillstitle !{skillstitle} #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")]
             div#skillsdesc
                 p #{skills.texts[0]} #[span.bold #{skills.boldtexts[0]}] #{skills.texts[1]}
                 ul
                   for skill in skills.skills
                     li.bold #{skill}
-                p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}]
-                p #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
+        #mskills.paralax-section
+          div#moreskillsdesc
+              p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}] #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
+              div#msrocketcontainer #[i#msrocket.fa.fw.fa-rocket(aria-hidden="true")]
         #education.paralax-section
-          div.contentwrapper
-            h2#eduactiontitle #{educationtitle}
-            div.facontainer#educationimg
-              span.fa.fa-university(aria-hidden="true")
-            mixin fill_eduaction(name, institution, begin, end)
-              li
-                span.coursename.bold !{name}
-                ul.institutionlist
-                  li.courseinstitution
-                    span.italic  !{institution}
-                    span.courseduration [#{begin} - #{end}]
-            div#educationcontent
-              ul
-                each course, i in education.course_name
-                  +fill_eduaction(course,education.course_institution[i],education.course_begin[i],education.course_end[i])
+            div.contentwrapper
+              h2#educationtitle #{educationtitle}
+              div.facontainer#educationimg
+                span.fa.fa-university(aria-hidden="true")
+              mixin fill_eduaction(name, institution, begin, end)
+                li
+                  span.coursename.bold !{name}
+                  ul.institutionlist
+                    li.courseinstitution
+                      span.italic  !{institution}
+                      span.courseduration [#{begin} - #{end}]
+              div#educationcontent
+                ul
+                  each course, i in education.course_name
+                    +fill_eduaction(course,education.course_institution[i],education.course_begin[i],education.course_end[i])
         #cumplimentaryeducation.paralax-section
           div.contentwrapper
             div#cumplimentaryeducationcontent
               h2 #[i.fa.fw.fa-book(aria-hidden="true")] #{cumplimentaryeducationtitle}
               mixin fill_cumplimentary_education(name, institution, hours, year)
                 li
-                  span.coursename.bold !{name}:
+                  span.coursename.bold !{name}
                   ul.institutionlist
                     li
                       span.courseinstitution.italic  !{institution}
@@ -94,8 +94,33 @@ html
               ul
                 each course, i in cumplimentaryeducation.course_name
                   +fill_cumplimentary_education(course,cumplimentaryeducation.course_institution[i],cumplimentaryeducation.course_hours[i],cumplimentaryeducation.course_year[i])
+            div#cumplimentaryeducationimg.img-container
+                  img(src='imgs/cumplimentary_education.png' title='Cumplimentary courses')
         #languages.paralax-section
-        #contact.paralax-section
+          div.contentwrapper
+            table(cellspacing="0")
+              tr.mainheader
+                th(colspan="5") #{english}
+              tr
+                th.bold(colspan="5") #{selfassessment}
+              tr
+                th.uppercaseheader(colspan="2") #{understanding}
+                th.uppercaseheader(colspan="2") #{speaking}
+                th.uppercaseheader(colspan="1") #{writing}
+              tr
+                th #[i.fa.fw.fa-headphones] #{listening}
+                th #[i.fa.fw.fa-book] #{reading}
+                th #[i.fa.fw.fa-handshake-o] #{spokenint}
+                th #[i.fa.fw.fa-bullhorn] #{spokenprod}
+                th #[i.fa.fw.fa-pencil] #{writing}
+              tr
+                td B2
+                td B2
+                td B2
+                td B1
+                td B1
+              tr
+                th.bold(colspan="5") #{linguistic}
     #helper
       .marker.red
       .marker.cyan

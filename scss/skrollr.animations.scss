@@ -5,7 +5,8 @@ $slides_duration: 150;
 $whoami: $landing_duration;
 $objectives: $whoami + $slides_duration;
 $skills: $objectives + $slides_duration;
-$education: $skills + $slides_duration;
+$mskills: $skills + $slides_duration;
+$education: $mskills + $slides_duration;
 $cumplimentary_education: $education + $slides_duration;
 $languages: $cumplimentary_education + $slides_duration;
 
@@ -43,8 +44,13 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
-#rocket{
-  -skrollr-animation-name:rocket;
+#srocket{
+  -skrollr-animation-name:srocket;
+  -skrollr-anchor-target: '#helper';
+}
+
+#msrocket{
+  -skrollr-animation-name:msrocket;
   -skrollr-anchor-target: '#helper';
 }
 
@@ -53,15 +59,20 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
+#moreskillsdesc{
+  -skrollr-animation-name:moreskillscontent;
+  -skrollr-anchor-target: '#helper';
+}
 #skillstitle{
   -skrollr-animation-name:skillscontent;
   -skrollr-anchor-target: '#helper';
 }
 
 #educationimg{
-  -skrollr-animation-name:education;
+  -skrollr-animation-name:activate_animation_education;
   -skrollr-anchor-target: '#helper';
 }
+
 
 #menu{
   -skrollr-animation-name:menuanimation;
@@ -90,6 +101,11 @@ $languages: $cumplimentary_education + $slides_duration;
 
 
 #cumplimentaryeducationcontent{
+  -skrollr-animation-name:cumplimentaryeducationcontent;
+  -skrollr-anchor-target: '#helper';
+}
+
+#cumplimentaryeducationimg{
   -skrollr-animation-name:cumplimentaryeducationcontent;
   -skrollr-anchor-target: '#helper';
 }
@@ -128,7 +144,7 @@ $languages: $cumplimentary_education + $slides_duration;
 
 
     skrollr-#{$objectives}p {
-      transform:translate(110%, 0%);
+      transform:translate(-110%, 0%);
       opacity: 0;
     }
 }
@@ -140,7 +156,7 @@ $languages: $cumplimentary_education + $slides_duration;
     }
 
     skrollr-#{$skills}p {
-      transform:translate(160%, 0%);
+      transform:translate(-160%, 0%);
       opacity: 0;
     }
 }
@@ -152,34 +168,41 @@ $languages: $cumplimentary_education + $slides_duration;
     }
 
 
-    skrollr-#{$education - $slides_pause}p {
+    skrollr-#{$mskills - $slides_pause}p {
       transform:translate(0%, -10%);
       opacity: 0;
     }
 }
 
-@-skrollr-keyframes educationcontent {
-    skrollr-#{$education+$slides_pause}p {
-      transform:translate(0%, 0%);
+@-skrollr-keyframes moreskillscontent {
+    skrollr-#{$mskills - $slides_pause}p {
+      opacity: 0;
+    }
+
+
+    skrollr-#{$education}p {
       opacity: 1;
+    }
+}
+
+@-skrollr-keyframes educationcontent {
+    skrollr-#{$education + $slides_pause}p {
+      opacity: 0;
     }
 
 
     skrollr-#{$cumplimentary_education}p {
-      transform:translate(0%, -50%);
-      opacity: 0;
+      opacity: 1;
     }
 }
 
 @-skrollr-keyframes cumplimentaryeducationcontent {
     skrollr-#{$cumplimentary_education + $slides_pause}p {
-      transform:translate(0%, 0%);
-      opacity: 1;
+      opacity: 0;
     }
 
     skrollr-#{$languages}p {
-      transform:translate(110%, 0%);
-      opacity: 0;
+      opacity: 1;
     }
 }
 
@@ -209,7 +232,7 @@ $languages: $cumplimentary_education + $slides_duration;
 
 }
 
-@-skrollr-keyframes rocket {
+@-skrollr-keyframes srocket {
   skrollr-#{$skills}p {
     color: #333;
   }
@@ -219,16 +242,36 @@ $languages: $cumplimentary_education + $slides_duration;
     transform:translate(0%, 0%);
   }
 
-  skrollr-#{$education}p {
+  skrollr-#{$mskills}p {
     transform:translate(300%, -500%);
   }
+
 }
 
-@-skrollr-keyframes education {
-  skrollr-#{$slides_begin}p {
+@-skrollr-keyframes msrocket {
+  skrollr-#{$mskills + $slides_pause}p {
+    color: #e50000;
+    opacity: 0;
+    transform:translate(-400%, -200%) rotate(90deg);
+  }
+
+  skrollr-#{$education - $slides_pause}p {
+    opacity: 1;
+    transform:translate(-200%, -100%) rotate(80deg);
+  }
+
+  skrollr-#{$education}p {
+    color: #333;
+    transform:translate(0%, 0%) rotate(-45deg);
+  }
+
+}
+
+@-skrollr-keyframes activate_animation_education{
+  skrollr-#{$education}p {
     @active: 0;
   }
-  skrollr-#{$education}p {
+  skrollr-#{$cumplimentary_education}p {
     @active: 1;
   }
 }
@@ -275,7 +318,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$education}p {
-    transform:translate(0,-66.666%);
+    transform:translate(-66.666%,-66.666%);
   }
 
   skrollr-#{$education+$slides_pause}p {
@@ -283,7 +326,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$cumplimentary_education}p {
-    transform:translate(0%,-99.999%);
+    transform:translate(-33.333%,-66.666%);
   }
 
   skrollr-#{$cumplimentary_education+$slides_pause}p {
@@ -291,7 +334,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$languages}p {
-    transform:translate(-33.333%,-99.999%);
+    transform:translate(0%,-66.666%);
   }
 
   skrollr-#{$languages+$slides_pause}p {
