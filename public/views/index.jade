@@ -63,8 +63,7 @@ html
         #mskills.paralax-section
           div.contentwrapper
               div#moreskillsdesc
-                p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}]
-                p.centered #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
+                p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}] #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
               div#msrocketcontainer #[i#msrocket.fa.fw.fa-rocket(aria-hidden="true")]
         #education.paralax-section
             div.contentwrapper
@@ -82,11 +81,12 @@ html
                 ul
                   each course, i in education.course_name
                     +fill_eduaction(course,education.course_institution[i],education.course_begin[i],education.course_end[i])
-        #cumplimentaryeducation.paralax-section
+        #complementaryeducation.paralax-section
           div.contentwrapper
-            div#cumplimentaryeducationcontent
-              h2 #[i.fa.fw.fa-book(aria-hidden="true")] #{cumplimentaryeducationtitle}
-              mixin fill_cumplimentary_education(name, institution, hours, year)
+            div#complementaryeducationcontent
+              h2 #[i.fa.fw.fa-book(aria-hidden="true")] #{complementaryeducationtitle}
+              p #{complementaryeducation.texts[0]}  #[span.bold #{complementaryeducation.boldtexts[0]}]:
+              mixin fill_complementary_education(name, institution, hours, year)
                 li
                   span.coursename.bold !{name}
                   ul.institutionlist
@@ -94,35 +94,17 @@ html
                       span.courseinstitution.italic  !{institution}
                       span.courseduration    [#{hours} hours] [#{year}]
               ul
-                each course, i in cumplimentaryeducation.course_name
-                  +fill_cumplimentary_education(course,cumplimentaryeducation.course_institution[i],cumplimentaryeducation.course_hours[i],cumplimentaryeducation.course_year[i])
-            div#cumplimentaryeducationimg.img-container
-                  img(src='imgs/cumplimentary_education.png' title='Cumplimentary courses')
-        #languages.paralax-section
+                - for (var i = 0; i < 4; ++i) {
+                    +fill_complementary_education(complementaryeducation.course_name[i],complementaryeducation.course_institution[i],complementaryeducation.course_hours[i],complementaryeducation.course_year[i])
+                - }
+        #morecomplementaryeducation.paralax-section
           div.contentwrapper
-            table(cellspacing="0")
-              tr.mainheader
-                th(colspan="5") #{english}
-              tr
-                th.bold(colspan="5") #{selfassessment}
-              tr
-                th.uppercaseheader(colspan="2") #{understanding}
-                th.uppercaseheader(colspan="2") #{speaking}
-                th.uppercaseheader(colspan="1") #{writing}
-              tr
-                th #[i.fa.fw.fa-headphones] #{listening}
-                th #[i.fa.fw.fa-book] #{reading}
-                th #[i.fa.fw.fa-handshake-o] #{spokenint}
-                th #[i.fa.fw.fa-bullhorn] #{spokenprod}
-                th #[i.fa.fw.fa-pencil] #{writing}
-              tr
-                td B2
-                td B2
-                td B2
-                td B1
-                td B1
-              tr
-                th.bold(colspan="5") #{linguistic}
+            div#morecomplementaryeducationcontent
+              p #{complementaryeducation.texts[1]}  #[span.bold #{complementaryeducation.boldtexts[1]}]:
+              ul
+                - for (var i = 4; i < complementaryeducation.course_name.length; ++i) {
+                    +fill_complementary_education(complementaryeducation.course_name[i],complementaryeducation.course_institution[i],complementaryeducation.course_hours[i],complementaryeducation.course_year[i])
+                - }
     #helper
       .marker.red
       .marker.cyan

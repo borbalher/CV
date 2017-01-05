@@ -33,7 +33,7 @@
   -skrollr-animation-name: skillscontent;
   -skrollr-anchor-target: '#helper'; }
 
-#mypicture img {
+#mypicture {
   -skrollr-animation-name: mypicture;
   -skrollr-anchor-target: '#helper'; }
 
@@ -46,7 +46,7 @@
   -skrollr-anchor-target: '#helper'; }
 
 #menu {
-  -skrollr-animation-name: menuanimation;
+  -skrollr-animation-name: introanimation;
   -skrollr-anchor-target: '#helper'; }
 
 #objectivescontent {
@@ -65,12 +65,6 @@
   -skrollr-animation-name: educationcontent;
   -skrollr-anchor-target: '#helper'; }
 
-@-skrollr-keyframes mypicture {
-  skrollr-100p {
-    opacity: 1; }
-  skrollr-300p {
-    opacity: 0; } }
-
 @-skrollr-keyframes educationcontent {
   skrollr-750p {
     opacity: 1; }
@@ -78,19 +72,17 @@
     opacity: 0; } }
 
 @-skrollr-keyframes msrocket {
-  skrollr-500p {
+  skrollr-0p {
     color: #e50000;
-    opacity: 0;
-    transform: translate(-400%, -200%) rotate(90deg); }
-  skrollr-550p {
-    opacity: 1;
-    transform: translate(-200%, -100%) rotate(80deg); }
+    visibility: hidden; }
+  skrollr-500p {
+    visibility: visible;
+    transform: translate(0%, -400%) rotate(-45deg); }
   skrollr-600p {
-    color: #333;
     transform: translate(0%, 0%) rotate(-45deg); } }
 
 @-skrollr-keyframes introanimation {
-  skrollr-0 {
+  skrollr-0p {
     transform: translate(0%, 0%);
     opacity: 1; }
   skrollr-50p {
@@ -99,10 +91,16 @@
 
 @-skrollr-keyframes landingbg {
   skrollr-0 {
-    transform: translate(0%, 100%);
+    transform: translate(0%, 0%);
     opacity: 1; }
+  skrollr-50p {
+    transform: translate(0%, -10%);
+    opacity: 0; } }
+
+@-skrollr-keyframes mypicture {
   skrollr-100p {
-    transform: translate(0%, -100%);
+    opacity: 1; }
+  skrollr-300p {
     opacity: 0; } }
 
 @-skrollr-keyframes whoamicontent {
@@ -159,30 +157,30 @@
   skrollr-0p {
     transform: translate(0%, 0%); }
   skrollr-100p {
-    transform: translate(0%, -25%); }
+    transform: translate(0%, -50%); }
   skrollr-150p {
     visibility: visible; }
   skrollr-250p {
-    transform: translate(-25%, -25%); }
+    transform: translate(0%, -100%); }
   skrollr-300p {
     visibility: visible; }
   skrollr-400p {
-    transform: translate(-50%, -25%); }
+    transform: translate(0%, -150%); }
   skrollr-450p {
     visibility: visible; }
   skrollr-550p {
-    transform: translate(0%, -50%); }
+    transform: translate(-50%, -150%); }
   skrollr-600p {
     visibility: visible; }
   skrollr-700p {
-    transform: translate(-25%, -50%); }
+    transform: translate(0%, -200%); }
   skrollr-750p {
     visibility: visible; }
   skrollr-850p {
-    transform: translate(-25%, -75%); }
+    transform: translate(0%, -250%); }
   skrollr-900p {
     visibility: visible; }
   skrollr-1000p {
-    transform: translate(0%, -75%); }
+    transform: translate(-50%, -250%); }
   skrollr-1050p {
     visibility: visible; } }

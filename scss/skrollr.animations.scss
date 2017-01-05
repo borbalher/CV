@@ -7,8 +7,8 @@ $objectives: $whoami + $slides_duration;
 $skills: $objectives + $slides_duration;
 $mskills: $skills + $slides_duration;
 $education: $mskills + $slides_duration;
-$cumplimentary_education: $education + $slides_duration;
-$languages: $cumplimentary_education + $slides_duration;
+$complementary_education: $education + $slides_duration;
+$more_complementary_education: $complementary_education + $slides_duration;
 
 #paralax-sections{
   -skrollr-animation-name:slideshow;
@@ -54,7 +54,7 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
-#mypicture img{
+#mypicture{
   -skrollr-animation-name:mypicture;
   -skrollr-anchor-target: '#helper';
 }
@@ -71,7 +71,7 @@ $languages: $cumplimentary_education + $slides_duration;
 
 
 #menu{
-  -skrollr-animation-name:menuanimation;
+  -skrollr-animation-name:introanimation;
   -skrollr-anchor-target: '#helper';
 }
 
@@ -95,6 +95,59 @@ $languages: $cumplimentary_education + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
+
+
+
+@-skrollr-keyframes educationcontent {
+    skrollr-#{$education + $slides_pause}p {
+      opacity: 1;
+    }
+
+
+    skrollr-#{$complementary_education}p {
+      opacity: 0;
+    }
+}
+
+@-skrollr-keyframes msrocket {
+  skrollr-#{$slides_begin}p {
+    color: #e50000;
+    visibility: hidden;
+  }
+  skrollr-#{$mskills - $slides_pause}p {
+    visibility: visible;
+    transform:translate(0%, -400%) rotate(-45deg);
+  }
+
+  skrollr-#{$mskills + $slides_pause}p {
+    transform:translate(0%, 0%) rotate(-45deg);
+  }
+}
+
+@-skrollr-keyframes introanimation {
+    skrollr-#{$slides_begin}p {
+      transform:translate(0%, 0%);
+      opacity: 1;
+    }
+
+    skrollr-#{$whoami - 50}p{
+      transform:translate(0%, 5%);
+      opacity: 0;
+    }
+}
+
+@-skrollr-keyframes landingbg {
+    skrollr-#{$slides_begin} {
+      transform:translate(0%, 0%);
+      opacity: 1;
+    }
+
+    skrollr-#{$slides_begin + $slides_pause}p{
+      transform:translate(0%, -10%);
+      opacity: 0;
+    }
+}
+
 @-skrollr-keyframes mypicture {
     skrollr-#{$whoami}p {
       opacity: 1;
@@ -105,62 +158,6 @@ $languages: $cumplimentary_education + $slides_duration;
       opacity: 0;
     }
 }
-
-
-@-skrollr-keyframes educationcontent {
-    skrollr-#{$education + $slides_pause}p {
-      opacity: 1;
-    }
-
-
-    skrollr-#{$cumplimentary_education}p {
-      opacity: 0;
-    }
-}
-
-@-skrollr-keyframes msrocket {
-  skrollr-#{$mskills - $slides_pause}p {
-    color: #e50000;
-    opacity: 0;
-    transform:translate(-400%, -200%) rotate(90deg);
-  }
-
-  skrollr-#{$mskills}p {
-    opacity: 1;
-    transform:translate(-200%, -100%) rotate(80deg);
-  }
-
-  skrollr-#{$mskills + $slides_pause}p {
-    color: #333;
-    transform:translate(0%, 0%) rotate(-45deg);
-  }
-}
-
-@-skrollr-keyframes introanimation {
-    skrollr-#{$slides_begin} {
-      transform:translate(0%, 0%);
-      opacity: 1;
-    }
-
-    skrollr-#{$slides_begin + 50}p{
-      transform:translate(0%, 5%);
-      opacity: 0;
-    }
-}
-
-@-skrollr-keyframes landingbg {
-    skrollr-#{$slides_begin} {
-      transform:translate(0%, 100%);
-      opacity: 1;
-    }
-
-    skrollr-#{$landing_duration}p{
-      transform:translate(0%, -100%);
-      opacity: 0;
-    }
-}
-
-
 
 @-skrollr-keyframes whoamicontent {
     skrollr-#{$whoami+$slides_pause}p {
@@ -255,7 +252,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$whoami}p {
-    transform:translate(0%,-25%);
+    transform:translate(0%,-50%);
   }
 
   skrollr-#{$whoami+$slides_pause}p {
@@ -263,7 +260,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$objectives}p {
-    transform:translate(-25%,-25%);
+    transform:translate(0%,-100%);
   }
 
   skrollr-#{$objectives+$slides_pause}p {
@@ -271,7 +268,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$skills}p {
-    transform:translate(-50%,-25%);
+    transform:translate(0%,-150%);
   }
 
   skrollr-#{$skills+$slides_pause}p {
@@ -279,7 +276,7 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$mskills}p {
-    transform:translate(0%,-50%);
+    transform:translate(-50%,-150%);
   }
 
   skrollr-#{$mskills+$slides_pause}p {
@@ -287,26 +284,26 @@ $languages: $cumplimentary_education + $slides_duration;
   }
 
   skrollr-#{$education}p {
-    transform:translate(-25%,-50%);
+    transform:translate(0%,-200%);
   }
 
   skrollr-#{$education+$slides_pause}p {
     visibility: visible;
   }
 
-  skrollr-#{$cumplimentary_education}p {
-    transform:translate(-25%,-75%);
+  skrollr-#{$complementary_education}p {
+    transform:translate(0%,-250%);
   }
 
-  skrollr-#{$cumplimentary_education+$slides_pause}p {
+  skrollr-#{$complementary_education+$slides_pause}p {
     visibility: visible;
   }
 
-  skrollr-#{$languages}p {
-    transform:translate(0%,-75%);
+  skrollr-#{$more_complementary_education}p {
+    transform:translate(-50%,-250%);
   }
 
-  skrollr-#{$languages+$slides_pause}p {
+  skrollr-#{$more_complementary_education+$slides_pause}p {
     visibility: visible;
   }
 }

@@ -17,29 +17,32 @@ app.get('/', function (req, res) {
     "course_end": [2016,2011]
   };
 
-  var cumplimentary_education = {
+
+  var complementary_education = {
+    'texts' : ["Most of my complementary education is heavily based in ", " Besides that, I have also knowledge in other areas like " ],
+    'boldtexts' : ["computers and technology","e-commerce, marketing and business"],
     'course_name': [
       "Introduction to Web Development using CAKEPHP",
       "Google Act&iacute;vate: Developing Mobile Apps",
       "Google Act&iacute;vate: Cloud Computing",
+      "Google Act&iacute;vate: Introduction to Web Design",
       "Google Act&iacute;vate: Web Analytics",
       "Google Act&iacute;vate: Basic Marketing",
       "LaunchTF: Startup's pre-acceleration program",
-      "Orientation and Introduction to Web Design Jobs",
       "E-commerce: an alternative for sales"
     ],
     'course_institution': [
       "Fundaci&oacute;n General de la Universidad de La Laguna",
       "Universidad Complutense de Madrid",
       "Escuela de Organizaci&oacute;n Industrial",
-      "Escuela de Organizaci&oacute;n Industrial",
       "Instituto de Econom&iacute;a Internacional",
+      "Escuela de Organizaci&oacute;n Industrial",
       "Interactive Advertising Bureau",
       "Fundaci&oacute;n General de la Universidad de La Laguna",
       "C&aacute;mara de Comercio de Santa Cruz de Tenerife"
     ],
-    'course_hours': [10,40,40,40,40,70,4,4],
-    'course_year': [2013,2014,2014,2014,2014,2014,2016,2016]
+    'course_hours': [10,40,40,40,40,40,70,4],
+    'course_year': [2013,2014,2014,2014,2014,2014,2015,2016]
   };
 
 var skills ={
@@ -91,8 +94,8 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'skills' : skills,
                         'educationtitle' : 'Education',
                         'education' : education,
-                        'cumplimentaryeducationtitle' : ' Cumplimentary education',
-                        'cumplimentaryeducation' : cumplimentary_education,
+                        'complementaryeducationtitle' : ' Complementary education',
+                        'complementaryeducation' : complementary_education,
                         'english' : 'English',
                         'selfassessment' : 'Self-assessment of language skills',
                         'understanding' : 'Understanding',

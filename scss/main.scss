@@ -6,13 +6,16 @@ $linkhover: #2929ff;
 
 $smartphone: "only screen and (min-width : 320px)";
 $large-smartphone: "only screen and (min-width : 425px)";
-$portrait-tablet: "only screen and (min-width: 641px)";
+$portrait-tablet: "only screen and (min-width: 768px)";
 $tablet: "only screen and (min-width: 961px)";
-$laptop: "only screen and (min-width: 1025px)";
+$laptop: "only screen and (min-width: 1024px)";
+$laptop-large: "only screen and (min-width: 1440px)";
 $bigscreens: "only screen and (min-width: 2560px)";
 
-$ipad: "only screen and (min-width : 768px) and (min-height:1024px)";
 $landscape: "(orientation: landscape)";
+$portrait: "(orientation: portrait)";
+
+$dpi2: "(min-resolution: 2dppx)";
 //@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
 //@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
 //@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
@@ -21,15 +24,28 @@ $landscape: "(orientation: landscape)";
 //@media (min-width:1281px) { /* hi-res laptops and desktops */ }
 //@media (min-width:2560px) { /* 4k screens */ }
 
-@media #{$ipad}{
-  #landing-bg{
-    background-size: 75%;
+@media #{$dpi2}{
+  body{
+    font-size: 2vmax !important;
   }
 }
+
+@media #{$laptop-large} and #{$landscape}{
+    #landing-bg{
+      background-size: 35% !important;
+    }
+}
+
+@media #{$laptop-large} and #{$dpi2}{
+  body{
+    font-size: 1vmax !important;
+  }
+}
+
 html, body {
     width:100%;
     height:100%;
-    font-size: 0.93em;
+    font-size: 1.5vmax;
     font-family: 'Roboto', sans-serif;
     color: #333;
     background-color: $bg;
@@ -45,15 +61,11 @@ html, body {
 /* double the height/width of a viewport, uses position-fixed so we dont need
 #skrollr-body for mobile support*/
 #paralax-sections {
-    width: 400%;
-    height: 400%;
+    width: 200%;
+    height: 200%;
     position: fixed;
     top: 0;
     left: 0;
-}
-
-#whoami, #objectives,#skills,#mskills,#education,#cumplimentaryeducation,#languages{
-  background-color: $bg;
 }
 
 #contact{
@@ -68,10 +80,11 @@ html, body {
   width: 50%;
   text-align: center;
   img{
-    max-width: 80%;
-    max-height: 50vh;
+    max-width: 100%;
+    max-height: 55vh;
   }
 }
+
 
 #skillstitle{
     margin-bottom: 0px;
@@ -84,42 +97,45 @@ html, body {
 }
 
 #objectives {
-    -webkit-transform: translate(100%,100%);
-    -ms-transform: translate(100%,100%);
-    transform: translate(100%,100%);
+    -webkit-transform: translate(0%,200%);
+    -ms-transform: translate(0%,200%);
+    transform: translate(0%,200%);
 }
 
 #skills {
-    -webkit-transform: translate(200%,100%);
-    -ms-transform: translate(200%,100%);
-    transform: translate(200%,100%);
+    -webkit-transform: translate(0%,300%);
+    -ms-transform: translate(0%,300%);
+    transform: translate(0%,300%);
 }
 
 #mskills {
-  -webkit-transform: translate(0%,200%);
-  -ms-transform: translate(0%,200%);
-  transform: translate(0%,200%);
+  -webkit-transform: translate(100%,300%);
+  -ms-transform: translate(100%,300%);
+  transform: translate(100%,300%);
   h2{
     margin-bottom: 0;
   }
 }
 
  #education {
-   -webkit-transform: translate(100%,200%);
-   -ms-transform: translate(100%,200%);
-   transform: translate(100%,200%);
+   -webkit-transform: translate(0%,400%);
+   -ms-transform: translate(0%,400%);
+   transform: translate(0%,400%);
 }
 
-#cumplimentaryeducation {
-  -webkit-transform: translate(100%,300%);
-  -ms-transform: translate(100%,300%);
-  transform: translate(100%,300%);
+#complementaryeducation {
+  -webkit-transform: translate(0%,500%);
+  -ms-transform: translate(0%,500%);
+  transform: translate(0%,500%);
+  ul{
+    margin-top:0;
+  }
 }
 
-#languages{
-  -webkit-transform: translate(0%,300%);
-  -ms-transform: translate(0%,300%);
-  transform: translate(0%,300%);
+#morecomplementaryeducation{
+  -webkit-transform: translate(100%,500%);
+  -ms-transform: translate(100%,500%);
+  transform: translate(100%,500%);
 }
 
 .facontainer{
@@ -129,7 +145,7 @@ html, body {
 
 #educationimg{
   span{
-    font-size: 25vw;
+    font-size: 20vw;
   }
 }
 
@@ -209,7 +225,9 @@ h1,h2,h3,h4,h5,h6{
 
 .contentwrapper{
     display: block;
-    padding: 0 1em;
+    margin: 0 auto;
+    margin-top: 4%;
+    width: 80%;
     height: 100%;
 }
 
@@ -274,13 +292,13 @@ h1,h2,h3,h4,h5,h6{
     position:absolute;
     top:0;
     left:0;
-    width:25%;
-    height:25%;
+    width:50%;
+    height:50%;
 }
 
 
 #bullseye{
-  margin: 0.5em auto 0 auto;
+  margin: 1.5em auto 0 auto;
   width: 50%;
   text-align: center;
   -webkit-animation-duration: 5s;
@@ -305,15 +323,17 @@ h1,h2,h3,h4,h5,h6{
   background: url('/imgs/signature.png') no-repeat;
   background-position: 50% 20%;
   background-size: 55%;
-  top: -100%;
 }
 
 .bg-wrapper{
-  position: fixed;
-  top: 0;
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transform: translate(0%,-100%);
+  -ms-transform: translate(0%,-100%);
+  transform: translate(0%,-100%);
 }
 
 #helper {
@@ -379,13 +399,6 @@ h1,h2,h3,h4,h5,h6{
     *zoom: 1;
 }
 
-#cumplimentaryeducationimg{
-  visibility: hidden;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
-
 #scroll-down{
     position: absolute;
     bottom: 5%;
@@ -408,8 +421,9 @@ h1,h2,h3,h4,h5,h6{
 
 #msrocketcontainer{
   position: absolute;
-  bottom: 20%;
-  width: 100%;
+  width: 80%;
+  bottom: 10%;
+  margin: 0 auto;
   text-align: center;
   font-size: 20vh;
 }
@@ -418,60 +432,10 @@ h1,h2,h3,h4,h5,h6{
   text-align: center;
 }
 
-
 #moreskillsdesc{
   p{
-    padding: 2em 4em;
+    padding: 2em;
     padding-bottom: 0;
-    margin: 0 auto;
-    width: 60%;
-  }
-}
-
-@media #{$landscape}{
-  #landing-bg{
-    background-size: 50%;
-  }
-}
-
-@media #{$landscape} and (max-height: 360px){
-  #cumplimentaryeducationcontent{
-    ul{
-      font-size: 0.9em;
-    }
-  }
-}
-
-
-
-@media #{$portrait-tablet} {
-
-  body{
-      font-size: 1em;
-  }
-
-  body #landing-bg{
-    background-size: 40%;
-  }
-
-
-
-  #landing #menu{
-    li{
-      a{
-        margin: 0 1em;
-      }
-    }
-  }
-  #educationimg{
-    float:left;
-    margin: 0.5em 1em;
-  }
-
-  #educationcontent{
-    float:left;
-    width: 55%;
-    margin-top: 10%;
   }
 }
 
@@ -486,6 +450,20 @@ h1,h2,h3,h4,h5,h6{
     display: inline-block;
 }
 
+@media #{$portrait}{
+  #menu-nav{
+    bottom: 25%;
+  }
+}
+
+@media #{$landscape}{
+
+  #landing-bg{
+    background-size: 50%;
+  }
+
+}
+
 @media #{$tablet} {
 
   #menu-nav{
@@ -494,36 +472,5 @@ h1,h2,h3,h4,h5,h6{
 
   .img-container:before {
     height: 100vh;
-  }
-
-  #cumplimentaryeducationcontent{
-    float:left;
-    width:60%;
-  }
-  #cumplimentaryeducationimg{
-    float:left;
-    width:40%;
-    visibility: visible;
-    img{
-      max-width: 100%;
-      max-height: 40vh;
-    }
-  }
-}
-
-@media #{$laptop} {
-  body{
-    font-size: 1.1em;
-  }
-
-  body #landing-bg{
-    background-size: 25%;
-  }
-
-}
-
-@media #{$bigscreens} {
-  body{
-    font-size: 2em;
   }
 }
