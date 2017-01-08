@@ -40,13 +40,13 @@ html, body {
 #work {
   background-color: purple; }
 
-#mypicture {
-  margin: 0 auto;
-  width: 50%;
+.imgrespheight {
+  width: 100%;
+  height: 50%;
   text-align: center; }
-  #mypicture img {
-    max-width: 100%;
-    max-height: 55vh; }
+  .imgrespheight img {
+    max-width: 65vw;
+    height: 100%; }
 
 #skillstitle {
   margin-bottom: 0px; }
@@ -94,27 +94,62 @@ html, body {
   padding: 1em 0;
   text-align: center; }
 
+#languages {
+  -webkit-transform: translate(0%, 600%);
+  -ms-transform: translate(0%, 600%);
+  transform: translate(0%, 600%); }
+
+#morelanguages {
+  -webkit-transform: translate(100%, 600%);
+  -ms-transform: translate(100%, 600%);
+  transform: translate(100%, 600%); }
+  #morelanguages h3, #morelanguages h4, #morelanguages h5, #morelanguages h6 {
+    margin-left: 0; }
+
+.halflangbox {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em 0; }
+
+.englishcontainer h2, .englishcontainer h3, .englishcontainer h4, .englishcontainer h5, .englishcontainer h6 {
+  margin: 0.5em 0 0.5em; }
+
+.fulllangbox {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em 0; }
+
+.middleborder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  border-right: 1px solid #0000b5;
+  height: 75%;
+  margin: 0.5em 0; }
+
+.langboxcontainer {
+  position: relative;
+  border-top: 1px solid #0000b5;
+  border-bottom: 1px solid #0000b5; }
+
 #educationimg span {
-  font-size: 20vw; }
+  font-size: 22vw; }
 
 .uppercaseheader {
   text-transform: uppercase; }
 
 .mainheader {
-  background-color: #b0b0b0;
+  background-color: #d7d7d7;
   text-transform: uppercase;
-  font-size: 0.8em; }
+  color: #333 !important;
+  font-weight: bold; }
 
-table {
-  margin: 0 auto;
-  width: 70%;
-  font-size: 0.8em; }
-  table tbody tr td, table tbody tr th {
-    margin: 0;
-    border: 1px solid #cecece;
-    padding: 1em 0.5em;
-    font-weight: normal;
-    text-align: center; }
+.langtitle {
+  font-weight: bold;
+  color: #0000b5; }
 
 #educationimg[active="1"] {
   -webkit-animation-duration: 1s;
@@ -151,6 +186,9 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   margin-left: 0.5em; }
+
+h2 {
+  color: #0000b5; }
 
 .contentwrapper {
   display: block;
@@ -208,9 +246,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 50%; }
 
 #bullseye {
-  margin: 1.5em auto 0 auto;
-  width: 50%;
-  text-align: center;
   -webkit-animation-duration: 5s;
   -webkit-animation-delay: 0s;
   -webkit-animation-iteration-count: infinite;
@@ -220,9 +255,6 @@ h1, h2, h3, h4, h5, h6 {
   -moz-animation-duration: 5s;
   -moz-animation-delay: 0s;
   -moz-animation-iteration-count: infinite; }
-  #bullseye img {
-    width: 100%;
-    max-height: 45vh; }
 
 #landing-bg {
   background: url("/imgs/signature.png") no-repeat;
@@ -243,11 +275,11 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   top: 0;
-  height: 1150%;
+  height: 1450%;
   width: 20px; }
 
 .marker {
-  height: 12.5%;
+  height: 10%;
   width: 100%; }
 
 .black {
@@ -319,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
 #msrocketcontainer {
   position: absolute;
   width: 80%;
-  bottom: 10%;
+  bottom: 30%;
   margin: 0 auto;
   text-align: center;
   font-size: 20vh; }
@@ -342,7 +374,11 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (orientation: portrait) {
   #menu-nav {
-    bottom: 25%; } }
+    bottom: 25%; }
+  body {
+    font-size: 2vmax; }
+  #educationimg span {
+    font-size: 50vw; } }
 
 @media (orientation: landscape) {
   #landing-bg {

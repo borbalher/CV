@@ -9,6 +9,8 @@ $mskills: $skills + $slides_duration;
 $education: $mskills + $slides_duration;
 $complementary_education: $education + $slides_duration;
 $more_complementary_education: $complementary_education + $slides_duration;
+$languages: $more_complementary_education + $slides_duration;
+$more_languages: $languages + $slides_duration;
 
 #paralax-sections{
   -skrollr-animation-name:slideshow;
@@ -207,12 +209,9 @@ $more_complementary_education: $complementary_education + $slides_duration;
 
 }
 
+
 @-skrollr-keyframes srocket {
   skrollr-#{$skills}p {
-    color: #333;
-  }
-
-  skrollr-#{$skills+10}p {
     color: #e50000;
     transform:translate(0%, 0%);
   }
@@ -304,6 +303,22 @@ $more_complementary_education: $complementary_education + $slides_duration;
   }
 
   skrollr-#{$more_complementary_education+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$languages}p {
+    transform:translate(0%,-300%);
+  }
+
+  skrollr-#{$languages+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$more_languages}p {
+    transform:translate(-50%,-300%);
+  }
+
+  skrollr-#{$more_languages+$slides_pause}p {
     visibility: visible;
   }
 }

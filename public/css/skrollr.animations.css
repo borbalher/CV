@@ -132,8 +132,6 @@
 
 @-skrollr-keyframes srocket {
   skrollr-400p {
-    color: #333; }
-  skrollr-410p {
     color: #e50000;
     transform: translate(0%, 0%); }
   skrollr-550p {
@@ -183,4 +181,12 @@
   skrollr-1000p {
     transform: translate(-50%, -250%); }
   skrollr-1050p {
+    visibility: visible; }
+  skrollr-1150p {
+    transform: translate(0%, -300%); }
+  skrollr-1200p {
+    visibility: visible; }
+  skrollr-1300p {
+    transform: translate(-50%, -300%); }
+  skrollr-1350p {
     visibility: visible; } }

@@ -39,7 +39,7 @@ html
                 | #{whoami.texts[4]} #[span.bold #{whoami.boldtexts[4]}]
                 | #{whoami.texts[5]} #[span.bold #{whoami.boldtexts[5]}]
                 | #[span.bold #{whoami.boldtexts[6]}]
-            div#mypicture
+            div#mypicture.imgrespheight
               img(src='imgs/me.png' title='That\'s me \:3')
         #objectives.paralax-section
           div.contentwrapper
@@ -50,7 +50,7 @@ html
                 li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
                 li #[span.bold #{objectives.boldtexts[2]}]
                 li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
-            div#bullseye.animated.swing
+            div#bullseye.imgrespheight.animated.swing
               img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
@@ -84,7 +84,7 @@ html
         #complementaryeducation.paralax-section
           div.contentwrapper
             div#complementaryeducationcontent
-              h2 #[i.fa.fw.fa-book(aria-hidden="true")] #{complementaryeducationtitle}
+              h2 #{complementaryeducationtitle}
               p #{complementaryeducation.texts[0]}  #[span.bold #{complementaryeducation.boldtexts[0]}]:
               mixin fill_complementary_education(name, institution, hours, year)
                 li
@@ -105,6 +105,47 @@ html
                 - for (var i = 4; i < complementaryeducation.course_name.length; ++i) {
                     +fill_complementary_education(complementaryeducation.course_name[i],complementaryeducation.course_institution[i],complementaryeducation.course_hours[i],complementaryeducation.course_year[i])
                 - }
+        #languages.paralax-section
+          div.contentwrapper
+            h2 #[i.fa.fw.fa-comments(aria-hidden="true")] #{langtitle}
+            div#langimg.imgrespheight
+              img(src='imgs/langs.svg' title='My main languages')
+            div#languageskills.langboxcontainer
+              div.halflangbox
+                div.langtitle #{mothertonguetitle}
+                div.langvalue #{mothertongues}
+              div.halflangbox
+                div.langtitle #{otherlangtitle}
+                div.langvalue #{otherlangs}
+              div.middleborder
+
+        #morelanguages.paralax-section
+          div.contentwrapper
+            h2 #[i.fa.fw.fa-language(aria-hidden="true")] #{english}
+            h3 #{selfassessment} #[i.fa.fw.fa-check(aria-hidden="true")]
+            h4 #{understanding}
+            div#understandingskills.langboxcontainer
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-headphones(aria-hidden="true")] #{listening}
+                div.langvalue #{b2}
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-book(aria-hidden="true")] #{reading}:
+                div.langvalue #{b2}
+              div.middleborder
+            h4 #{speaking}
+            div#speakingskills.langboxcontainer
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-comments(aria-hidden="true")] #{spokenint}:
+                div.langvalue #{b2}
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-commenting(aria-hidden="true")] #{spokenprod}:
+                div.langvalue #{b1}
+              div.middleborder
+            h4 #{writing}
+            div#writingskills.langboxcontainer
+              div.fulllangbox
+                div.langtitle  #[i.fa.fw.fa-pencil(aria-hidden="true")] #{writing}:
+                div.langvalue #{b1}
     #helper
       .marker.red
       .marker.cyan
@@ -114,6 +155,8 @@ html
       .marker.pink
       .marker.yellow
       .marker.black
+      .marker.red
+      .marker.cyan
     script(src='/js/skrollr-stylesheets.js')
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')

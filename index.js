@@ -106,7 +106,14 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'spokenprod' : 'Spoken production',
                         'spokenint' : 'Spoken interaction',
                         'writing' : 'Writing',
-                        'linguistic' : 'Linguistic and intercultural experience'
+                        'linguistic' : 'Linguistic and intercultural experience',
+                        'b2' : 'B2 Independent User.',
+                        'b1' : 'B1 Independent User.',
+                        'langtitle' : 'Languages that I spoke',
+                        'mothertonguetitle' : 'Mother tongue',
+                        'mothertongues' : 'Spanish',
+                        'otherlangtitle' : 'Other languages',
+                        'otherlangs' : 'English'
 
                     });
 });
