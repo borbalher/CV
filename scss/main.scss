@@ -3,6 +3,7 @@
 $bg: #f5f5f5;
 $link: #0000b5;
 $linkhover: #2929ff;
+$red: #e50000;
 
 $smartphone: "only screen and (min-width : 320px)";
 $large-smartphone: "only screen and (min-width : 425px)";
@@ -143,6 +144,20 @@ html, body {
   text-align: center;
 }
 
+.experienceparagraph {
+    padding: 1em 3em;
+}
+
+.workexperience{
+  text-align: center;
+}
+
+.notfound{
+  font-size: 15vmax;
+  font-weight: bold;
+  color: $red;
+}
+
 #languages{
   -webkit-transform: translate(0%,600%);
   -ms-transform: translate(0%,600%);
@@ -154,8 +169,14 @@ html, body {
   -ms-transform: translate(100%,600%);
   transform: translate(100%,600%);
   h3,h4,h5,h6{
-      margin-left: 0;
+      margin: 0.8em 0;
   }
+}
+
+#workexperience{
+  -webkit-transform: translate(0%,700%);
+  -ms-transform: translate(0%,700%);
+  transform: translate(0%,700%);
 }
 
 .halflangbox{

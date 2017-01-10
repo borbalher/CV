@@ -118,7 +118,6 @@ html
                 div.langtitle #{otherlangtitle}
                 div.langvalue #{otherlangs}
               div.middleborder
-
         #morelanguages.paralax-section
           div.contentwrapper
             h2 #[i.fa.fw.fa-language(aria-hidden="true")] #{english}
@@ -146,6 +145,14 @@ html
               div.fulllangbox
                 div.langtitle  #[i.fa.fw.fa-pencil(aria-hidden="true")] #{writing}:
                 div.langvalue #{b1}
+        #workexperience.paralax-section
+          div.contentwrapper
+            h2 #{workexperiencetitle}
+            div.workexperience
+              span.notfound #{workexperience.texts[6]}
+              span #{workexperience.texts[7]}
+            p   #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}] #{workexperience.texts[2]} #[span.bold #{workexperience.boldtexts[2]}] #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}]. #{workexperience.texts[4]}:
+            p.experienceparagraph #[span.bold #{workexperience.boldtexts[4]}]
     #helper
       .marker.red
       .marker.cyan

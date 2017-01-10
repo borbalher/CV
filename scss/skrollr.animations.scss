@@ -11,6 +11,7 @@ $complementary_education: $education + $slides_duration;
 $more_complementary_education: $complementary_education + $slides_duration;
 $languages: $more_complementary_education + $slides_duration;
 $more_languages: $languages + $slides_duration;
+$work_experience: $more_languages + $slides_duration;
 
 #paralax-sections{
   -skrollr-animation-name:slideshow;
@@ -319,6 +320,14 @@ $more_languages: $languages + $slides_duration;
   }
 
   skrollr-#{$more_languages+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$work_experience}p {
+    transform:translate(0%,-350%);
+  }
+
+  skrollr-#{$work_experience+$slides_pause}p {
     visibility: visible;
   }
 }

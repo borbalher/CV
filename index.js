@@ -83,6 +83,14 @@ var whoami ={
   ]
 };
 
+var workexperience = {
+  'texts' : ['I haven\'t got','with a full-time job as programmer and','I’m very excited and looking forward to make big things. Nevertheless, I’ve been','as freelancer','These are some of the services I give', 'And now, I\'ll show you some of', '404', '"Real" work experience not found.'],
+  'boldtexts' : ['any work experience in a real laboral environment','I really want to start!','offering my services','since 2010', 'Logo and web design, e-commerce solutions, server and network configuration,  PC formatting and repairing, data recovery, virus/malware removal, private tutoring…', 'my latests projects']
+};
+
+
+
+
 res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!',
                         'about': 'About me', 'work': 'Work', 'contact': 'Contact me',
                         'intro': 'Computer engineering + design',
@@ -113,7 +121,9 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'mothertonguetitle' : 'Mother tongue',
                         'mothertongues' : 'Spanish',
                         'otherlangtitle' : 'Other languages',
-                        'otherlangs' : 'English'
+                        'otherlangs' : 'English',
+                        'workexperiencetitle' : 'Work experience',
+                        'workexperience' : workexperience
 
                     });
 });

@@ -94,6 +94,17 @@ html, body {
   padding: 1em 0;
   text-align: center; }
 
+.experienceparagraph {
+  padding: 1em 3em; }
+
+.workexperience {
+  text-align: center; }
+
+.notfound {
+  font-size: 15vmax;
+  font-weight: bold;
+  color: #e50000; }
+
 #languages {
   -webkit-transform: translate(0%, 600%);
   -ms-transform: translate(0%, 600%);
@@ -104,7 +115,12 @@ html, body {
   -ms-transform: translate(100%, 600%);
   transform: translate(100%, 600%); }
   #morelanguages h3, #morelanguages h4, #morelanguages h5, #morelanguages h6 {
-    margin-left: 0; }
+    margin: 0.8em 0; }
+
+#workexperience {
+  -webkit-transform: translate(0%, 700%);
+  -ms-transform: translate(0%, 700%);
+  transform: translate(0%, 700%); }
 
 .halflangbox {
   width: 50%;
