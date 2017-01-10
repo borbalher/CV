@@ -45,7 +45,7 @@ $dpi2: "(min-resolution: 2dppx)";
 
 html, body {
     width:100%;
-    height:100%;
+    height: 100% !important;
     font-size: 1.5vmax;
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -55,7 +55,7 @@ html, body {
 /* full width/height container */
 #main-container {
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     overflow: hidden;
 }
 
@@ -83,6 +83,16 @@ html, body {
   img{
     max-width: 65vw;
     height: 100%;
+  }
+}
+
+.imgrespwidth{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  img{
+    width: 100%;
   }
 }
 
@@ -139,6 +149,7 @@ html, body {
   transform: translate(100%,500%);
 }
 
+
 .facontainer{
   padding: 1em 0;
   text-align: center;
@@ -177,6 +188,18 @@ html, body {
   -webkit-transform: translate(0%,700%);
   -ms-transform: translate(0%,700%);
   transform: translate(0%,700%);
+}
+
+#myworks{
+  -webkit-transform: translate(0%,800%);
+  -ms-transform: translate(0%,800%);
+  transform: translate(0%,800%);
+}
+
+#logodesign{
+  -webkit-transform: translate(100%,800%);
+  -ms-transform: translate(100%,800%);
+  transform: translate(100%,800%);
 }
 
 .halflangbox{
@@ -287,12 +310,22 @@ h2{
 }
 .contentwrapper{
     display: block;
-    margin: 0 auto;
-    margin-top: 4%;
+    position: relative;
+    margin: 5% auto;
     width: 80%;
-    height: 100%;
+    height: 90% !important;
 }
 
+.myworkscontainer{
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  p{
+    display: block;
+    text-align: center;
+    font-size: 3vmax;
+  }
+}
 .bold{
   font-weight: bold;
 }
@@ -320,37 +353,43 @@ h2{
       a{
         display:block;
         padding: 1em;
-        text-decoration: none;
         text-transform: uppercase;
-        color: $link;
+
         text-align: center;
       }
-      /* unvisited link */
-      a:link {
-          color: $link;
-      }
 
-      /* visited link */
-      a:visited {
-          color: $link;
-      }
-
-      /* mouse over link */
-      a:hover {
-          color: $linkhover;
-          background: #e1e1e1;
-      }
-
-      /* selected link */
-      a:active {
-        color: $link;
-      }
     }
   }
 }
 
+a{
+  text-decoration: none;
+  color: $link;
+}
+
+/* unvisited link */
+a:link {
+    color: $link;
+}
+
+/* visited link */
+a:visited {
+    color: $link;
+}
+
+/* mouse over link */
+a:hover {
+    color: $linkhover;
+    background: #e1e1e1;
+}
+
+/* selected link */
+a:active {
+  color: $link;
+}
 
 .paralax-section {
+    display: block;
     position:absolute;
     top:0;
     left:0;
@@ -395,12 +434,12 @@ h2{
     position:absolute;
     left:0;
     top: 0;
-    height:1450%;
+    height:2950%;
     width: 20px;
 }
 
 .marker {
-    height: 10%;
+    height: 5%;
     width: 100%;
 }
 .black {

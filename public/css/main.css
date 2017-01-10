@@ -13,7 +13,7 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   font-size: 1.5vmax;
   font-family: 'Roboto', sans-serif;
   color: #333;
@@ -22,7 +22,7 @@ html, body {
 /* full width/height container */
 #main-container {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   overflow: hidden; }
 
 /* double the height/width of a viewport, uses position-fixed so we dont need
@@ -47,6 +47,14 @@ html, body {
   .imgrespheight img {
     max-width: 65vw;
     height: 100%; }
+
+.imgrespwidth {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  text-align: center; }
+  .imgrespwidth img {
+    width: 100%; }
 
 #skillstitle {
   margin-bottom: 0px; }
@@ -121,6 +129,16 @@ html, body {
   -webkit-transform: translate(0%, 700%);
   -ms-transform: translate(0%, 700%);
   transform: translate(0%, 700%); }
+
+#myworks {
+  -webkit-transform: translate(0%, 800%);
+  -ms-transform: translate(0%, 800%);
+  transform: translate(0%, 800%); }
+
+#logodesign {
+  -webkit-transform: translate(100%, 800%);
+  -ms-transform: translate(100%, 800%);
+  transform: translate(100%, 800%); }
 
 .halflangbox {
   width: 50%;
@@ -208,10 +226,19 @@ h2 {
 
 .contentwrapper {
   display: block;
-  margin: 0 auto;
-  margin-top: 4%;
+  position: relative;
+  margin: 5% auto;
   width: 80%;
-  height: 100%; }
+  height: 90% !important; }
+
+.myworkscontainer {
+  position: absolute;
+  top: 30%;
+  width: 100%; }
+  .myworkscontainer p {
+    display: block;
+    text-align: center;
+    font-size: 3vmax; }
 
 .bold {
   font-weight: bold; }
@@ -232,29 +259,36 @@ h2 {
     display: inline-block;
     text-align: center; }
     #menu-nav #menu li {
-      display: inline-block;
-      /* unvisited link */
-      /* visited link */
-      /* mouse over link */
-      /* selected link */ }
+      display: inline-block; }
       #menu-nav #menu li a {
         display: block;
         padding: 1em;
-        text-decoration: none;
         text-transform: uppercase;
-        color: #0000b5;
         text-align: center; }
-      #menu-nav #menu li a:link {
-        color: #0000b5; }
-      #menu-nav #menu li a:visited {
-        color: #0000b5; }
-      #menu-nav #menu li a:hover {
-        color: #2929ff;
-        background: #e1e1e1; }
-      #menu-nav #menu li a:active {
-        color: #0000b5; }
+
+a {
+  text-decoration: none;
+  color: #0000b5; }
+
+/* unvisited link */
+a:link {
+  color: #0000b5; }
+
+/* visited link */
+a:visited {
+  color: #0000b5; }
+
+/* mouse over link */
+a:hover {
+  color: #2929ff;
+  background: #e1e1e1; }
+
+/* selected link */
+a:active {
+  color: #0000b5; }
 
 .paralax-section {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -291,11 +325,11 @@ h2 {
   position: absolute;
   left: 0;
   top: 0;
-  height: 1450%;
+  height: 2950%;
   width: 20px; }
 
 .marker {
-  height: 10%;
+  height: 5%;
   width: 100%; }
 
 .black {

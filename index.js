@@ -123,7 +123,11 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'otherlangtitle' : 'Other languages',
                         'otherlangs' : 'English',
                         'workexperiencetitle' : 'Work experience',
-                        'workexperience' : workexperience
+                        'workexperience' : workexperience,
+                        'myworks' : 'But don\'t worry, I\'m going to show you some of my works',
+                        'logodesigntitle' : 'Logo design and digitazion',
+                        'logodesigndesc' : 'I guess this is a bit self-explanatory. I made almost all the graphic stuff in this page except the icons. Thanks to <a href="http://fontawesome.io/icons/" title="FontAwesome"> FontAwesome </a>for the CSS icons, they’re awesome!'
+
 
                     });
 });

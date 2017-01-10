@@ -153,6 +153,16 @@ html
               span #{workexperience.texts[7]}
             p   #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}] #{workexperience.texts[2]} #[span.bold #{workexperience.boldtexts[2]}] #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}]. #{workexperience.texts[4]}:
             p.experienceparagraph #[span.bold #{workexperience.boldtexts[4]}]
+        #myworks.paralax-section
+          div.contentwrapper
+            div.myworkscontainer
+              p #{myworks} #[i.fa.fw.fa-smile-o(aria-hidden="true")]
+        #logodesign.paralax-section
+          div.contentwrapper
+            h2.logotitle #{logodesigntitle} #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")]
+            p !{logodesigndesc}
+            div#logosimg.imgrespheight
+              img(src='imgs/showcase.png' title='Some of my logos')
     #helper
       .marker.red
       .marker.cyan
@@ -164,6 +174,16 @@ html
       .marker.black
       .marker.red
       .marker.cyan
+      .marker.orange
+      .marker.blue
+      .marker.green
+      .marker.pink
+      .marker.yellow
+      .marker.black
+      .marker.red
+      .marker.cyan
+      .marker.orange
+      .marker.blue
     script(src='/js/skrollr-stylesheets.js')
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')
