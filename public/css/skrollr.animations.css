@@ -65,30 +65,6 @@
   -skrollr-animation-name: educationcontent;
   -skrollr-anchor-target: '#helper'; }
 
-@-skrollr-keyframes educationcontent {
-  skrollr-750p {
-    opacity: 1; }
-  skrollr-850p {
-    opacity: 0; } }
-
-@-skrollr-keyframes msrocket {
-  skrollr-0p {
-    color: #e50000;
-    visibility: hidden; }
-  skrollr-500p {
-    visibility: visible;
-    transform: translate(0%, -400%) rotate(-45deg); }
-  skrollr-600p {
-    transform: translate(0%, 0%) rotate(-45deg); } }
-
-@-skrollr-keyframes introanimation {
-  skrollr-0p {
-    transform: translate(0%, 0%);
-    opacity: 1; }
-  skrollr-50p {
-    transform: translate(0%, 5%);
-    opacity: 0; } }
-
 @-skrollr-keyframes landingbg {
   skrollr-0 {
     transform: translate(0%, 0%);
@@ -97,29 +73,15 @@
     transform: translate(0%, -10%);
     opacity: 0; } }
 
-@-skrollr-keyframes mypicture {
-  skrollr-100p {
-    opacity: 1; }
-  skrollr-300p {
-    opacity: 0; } }
-
-@-skrollr-keyframes whoamicontent {
-  skrollr-150p {
-    opacity: 1; }
-  skrollr-250p {
-    opacity: 0; } }
-
-@-skrollr-keyframes objectivescontent {
-  skrollr-300p {
-    opacity: 1; }
-  skrollr-400p {
-    opacity: 0; } }
-
-@-skrollr-keyframes skillscontent {
-  skrollr-450p {
-    opacity: 1; }
-  skrollr-500p {
-    opacity: 0; } }
+@-skrollr-keyframes introanimation {
+  skrollr-0p {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    display: block; }
+  skrollr-50p {
+    transform: translate(0%, 5%);
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes bullseye {
   skrollr-250p {
@@ -137,19 +99,15 @@
   skrollr-550p {
     transform: translate(300%, -500%); } }
 
-@-skrollr-keyframes activate_animation_education {
+@-skrollr-keyframes msrocket {
   skrollr-0p {
-    @active : 0; }
-  skrollr-700p {
-    @active : 1; } }
-
-@-skrollr-keyframes menuanimation {
-  skrollr-70p {
-    transform: translate(0%, 0%);
-    opacity: 1; }
-  skrollr-80p {
-    transform: translate(0%, -10%);
-    opacity: 0; } }
+    color: #e50000;
+    visibility: hidden; }
+  skrollr-500p {
+    visibility: visible;
+    transform: translate(0%, -400%) rotate(-45deg); }
+  skrollr-600p {
+    transform: translate(0%, 0%) rotate(-45deg); } }
 
 @-skrollr-keyframes slideshow {
   skrollr-0p {
@@ -201,4 +159,24 @@
   skrollr-1750p {
     transform: translate(-50%, -400%); }
   skrollr-1800p {
+    visibility: visible; }
+  skrollr-2050p {
+    transform: translate(-50%, -450%); }
+  skrollr-2100p {
+    visibility: visible; }
+  skrollr-1900p {
+    transform: translate(0%, -450%); }
+  skrollr-1950p {
+    visibility: visible; }
+  skrollr-2200p {
+    transform: translate(0%, -500%); }
+  skrollr-2250p {
+    visibility: visible; }
+  skrollr-2350p {
+    transform: translate(-50%, -500%); }
+  skrollr-2400p {
+    visibility: visible; }
+  skrollr-2500p {
+    transform: translate(0%, -550%); }
+  skrollr-2550p {
     visibility: visible; } }

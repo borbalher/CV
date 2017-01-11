@@ -159,11 +159,36 @@ html
               p #{myworks} #[i.fa.fw.fa-smile-o(aria-hidden="true")]
         #logodesign.paralax-section
           div.contentwrapper
-            h2.logotitle #{logodesigntitle} #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")]
-            p !{logodesigndesc}
+            h2 #{logodesign.title} #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")]
+            p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}]
             div#logosimg.imgrespheight
               img(src='imgs/showcase.png' title='Some of my logos')
-    #helper
+        #bogui.paralax-section
+          div.contentwrapper
+            h2  #{bogui.title}
+            p #{bogui.texts[0]} !{bogui.links[0]} #{bogui.texts[1]} #[span.bold #{bogui.boldtexts[0]}] #{bogui.texts[2]} !{bogui.links[1]}
+        #scss.paralax-section
+          div.contentwrapper
+            h2 #{scss.title}
+            p #{scss.texts[0]} #[span.bold #{scss.boldtexts[0]}] #{scss.texts[1]} !{scss.links[0]} #{scss.texts[2]} !{scss.links[1]}
+        #ttt.paralax-section
+          div.contentwrapper
+            h2 #{ttt.title}
+            p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]
+        #recblock.paralax-section
+          div.contentwrapper
+            h2 #{recblock.title}
+            p #{recblock.texts[0]} #[span.bold #{recblock.boldtexts[0]}] #{recblock.texts[1]} #[span.bold #{recblock.boldtexts[1]}] #{recblock.texts[2]} #[span.bold #{recblock.boldtexts[2]}] #{recblock.texts[3]} !{recblock.links[0]}
+        #ateca.paralax-section
+          div.contentwrapper
+            h2 #{ateca.title}
+            p #{ateca.texts[0]} #[span.bold #{ateca.boldtexts[0]}]  #{ateca.texts[1]} #[span.bold #{ateca.boldtexts[1]}]  #{ateca.texts[2]} #[span.bold #{ateca.boldtexts[2]}]  #{ateca.texts[3]} #[span.bold #{ateca.boldtexts[3]}]  #{ateca.texts[4]}
+            ul
+              li #[span.bold #{ateca.boldtexts[4]}]
+              li #[span.bold #{ateca.boldtexts[5]}]
+              li #[span.bold #{ateca.boldtexts[6]}]
+              li #[span.bold #{ateca.boldtexts[7]}] #{ateca.texts[5]} !{ateca.links[0]}
+    div#helper
       .marker.red
       .marker.cyan
       .marker.orange

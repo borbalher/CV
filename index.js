@@ -88,8 +88,54 @@ var workexperience = {
   'boldtexts' : ['any work experience in a real laboral environment','I really want to start!','offering my services','since 2010', 'Logo and web design, e-commerce solutions, server and network configuration,  PC formatting and repairing, data recovery, virus/malware removal, private tutoring…', 'my latests projects']
 };
 
+var logodesign = {
+  'title' : 'Logo design and digitazion',
+  'texts' : ['I guess this is a bit','except the icons. Thanks to', 'for the CSS icons,'],
+  'boldtexts' : ['self-explanatory. I made almost all the graphic stuff in this page','they\'re awesome!'],
+  'links' : ['<a href="http://fontawesome.io/icons/" title="FontAwesome"> FontAwesome</a>']
+}
 
+var bogui = {
+  'title' : 'Bogui JS (2015)',
+  'texts' : ['This one was a little experiment I made with my friend', 'It\'s a simple online image editor using','You can check the project'],
+  'boldtexts' : ['JQuery and JQuery UI.'],
+  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="http://fontawesome.io/icons/" title="Bogui JS">here</a>.']
+}
 
+var scss = {
+  'title' : 'SCSS (2014)',
+  'texts' : ['It\'s a','It\'s similar to SASS and LESS and all that kind of CSS pre-processors. It was made during my university days with my friend','You can check the project'],
+  'boldtexts' : ['Domain Specific Language (DSL) for writing CSS, 100% in Javascript.'],
+  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="http://fontawesome.io/icons/" title="Simple CSS">here</a>.']
+}
+
+var ttt = {
+  'title' : 'Tenerife Trending Topic (2014-2015)',
+  'texts' : ['E-commerce website using',' I made all the geeky stuff: '],
+  'boldtexts' : ['Prestashop.','custom bootstrap template, web server configuration and Prestashop installation along some Prestashop modules modifications.']
+}
+
+var recblock = {
+  'title' : 'Recblock (2016)',
+  'texts' : ['This one was', 'It\'s a', 'that serves as a', ' You can get more info'],
+  'boldtexts' : ['my final career project.','Moodle PHP plug-in', 'recommendation block based on user\'s playing type and learning style.'],
+  'links' : ['<a href="https://github.com/borbalher/moodle-block_recblock" title="Recblock Moodle Plug-in">here</a>.']
+}
+
+var ateca = {
+  'title' : 'ATECA (2009-current)',
+  'texts' : ['They are ', 'in the', 'in terms of', 'I have made', 'other ones include:', 'You can give it a look'],
+  'boldtexts' : ['one of the referents','Canary Islands', 'industrial services.', 'many works with them as computer technician,', 'Logo digitazion (2009)', 'Creation of their first corporate webpage (2010)', 'Custom Google Sheets template and english introduction presentation (2016)','New corporate website using responsive design and HTML5 (2016).' ],
+  'links' : ['<a href="http://ateca-sl.com" title="ATECA">here</a>.']
+}
+
+var wantmore = {
+  'title' : 'Do you want more?',
+  'texts' : ['If the answer is','you can check out my github repositories for more code'],
+  'boldtexts' : ['YES'],
+  'links' : ['<a href="https://github.com/alu0100698411" title="My student repository">My student repository</a>', '<a href="https://github.com/borbalher" title="My personal repository">My personal repository</a>']
+
+}
 
 res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!',
                         'about': 'About me', 'work': 'Work', 'contact': 'Contact me',
@@ -125,10 +171,13 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'workexperiencetitle' : 'Work experience',
                         'workexperience' : workexperience,
                         'myworks' : 'But don\'t worry, I\'m going to show you some of my works',
-                        'logodesigntitle' : 'Logo design and digitazion',
-                        'logodesigndesc' : 'I guess this is a bit self-explanatory. I made almost all the graphic stuff in this page except the icons. Thanks to <a href="http://fontawesome.io/icons/" title="FontAwesome"> FontAwesome </a>for the CSS icons, they’re awesome!'
-
-
+                        'logodesign' : logodesign,
+                        'bogui' : bogui,
+                        'scss' : scss,
+                        'ttt' : ttt,
+                        'recblock' : recblock,
+                        'ateca' : ateca,
+                        'wantmore' : wantmore
                     });
 });
 

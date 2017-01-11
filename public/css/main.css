@@ -140,6 +140,36 @@ html, body {
   -ms-transform: translate(100%, 800%);
   transform: translate(100%, 800%); }
 
+#bogui {
+  -webkit-transform: translate(0%, 900%);
+  -ms-transform: translate(0%, 900%);
+  transform: translate(0%, 900%); }
+
+#scss {
+  -webkit-transform: translate(100%, 900%);
+  -ms-transform: translate(100%, 900%);
+  transform: translate(100%, 900%); }
+
+#ttt {
+  -webkit-transform: translate(0%, 1000%);
+  -ms-transform: translate(0%, 1000%);
+  transform: translate(0%, 1000%); }
+
+#recblock {
+  -webkit-transform: translate(100%, 1000%);
+  -ms-transform: translate(100%, 1000%);
+  transform: translate(100%, 1000%); }
+
+#ateca {
+  -webkit-transform: translate(0%, 1100%);
+  -ms-transform: translate(0%, 1100%);
+  transform: translate(0%, 1100%); }
+
+#wantmore {
+  -webkit-transform: translate(100%, 1100%);
+  -ms-transform: translate(100%, 1100%);
+  transform: translate(100%, 1100%); }
+
 .halflangbox {
   width: 50%;
   display: inline-block;
@@ -208,7 +238,9 @@ p {
   padding: 0.5em 1em;
   margin: 0 auto;
   line-height: 1.5em;
-  text-align: justify; }
+  text-align: justify;
+  word-wrap: break-word;
+  white-space: normal; }
 
 ul {
   padding: 0 1em 0 2em;
@@ -226,10 +258,12 @@ h2 {
 
 .contentwrapper {
   display: block;
-  position: relative;
-  margin: 5% auto;
-  width: 80%;
-  height: 90% !important; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2% 5% 0 5%;
+  width: 90%;
+  height: 98%; }
 
 .myworkscontainer {
   position: absolute;
@@ -293,7 +327,8 @@ a:active {
   top: 0;
   left: 0;
   width: 50%;
-  height: 50%; }
+  height: 50%;
+  overflow: hidden; }
 
 #bullseye {
   -webkit-animation-duration: 5s;
@@ -400,7 +435,7 @@ a:active {
 
 #msrocketcontainer {
   position: absolute;
-  width: 80%;
+  width: 100%;
   bottom: 30%;
   margin: 0 auto;
   text-align: center;
