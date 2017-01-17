@@ -17,9 +17,9 @@ $logo_design: $my_works + $slides_duration;
 $bogui: $logo_design + $slides_duration;
 $scss: $bogui + $slides_duration;
 $ttt: $scss + $slides_duration;
-$recblock: $ttt + $slides_duration;
+$ttt_web: $ttt + $slides_duration;
+$recblock: $ttt_web + $slides_duration;
 $ateca: $recblock + $slides_duration;
-$want_more: $ateca + $slides_duration;
 
 #paralax-sections{
   -skrollr-animation-name:slideshow;
@@ -301,8 +301,16 @@ $want_more: $ateca + $slides_duration;
     visibility: visible;
   }
 
-  skrollr-#{$recblock}p {
+  skrollr-#{$ttt_web}p {
     transform:translate(-50%,-500%);
+  }
+
+  skrollr-#{$ttt_web+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$recblock}p {
+    transform:translate(0%,-550%);
   }
 
   skrollr-#{$recblock+$slides_pause}p {
@@ -310,7 +318,7 @@ $want_more: $ateca + $slides_duration;
   }
 
   skrollr-#{$ateca}p {
-    transform:translate(0%,-550%);
+    transform:translate(0%,-600%);
   }
 
   skrollr-#{$ateca+$slides_pause}p {

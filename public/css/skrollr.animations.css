@@ -179,4 +179,8 @@
   skrollr-2500p {
     transform: translate(0%, -550%); }
   skrollr-2550p {
+    visibility: visible; }
+  skrollr-2650p {
+    transform: translate(0%, -600%); }
+  skrollr-2700p {
     visibility: visible; } }

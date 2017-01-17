@@ -1,0 +1,82 @@
+.divdoble {
+  margin-top:5px;
+  width: 100%;
+  float: left;
+}
+.divdoble .divmitad {
+  width: 50%;
+  float:left;
+}
+
+.button {
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #0066cc;
+  color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #3399cc;
+  color: #333;
+}
+
+#error {
+  margin: 0 auto;
+  margin-top:15px;
+  border-radius:10px;
+  height: 90px;
+  padding:15px;
+  color: white;
+  background-color: #990033;
+  text-align:left;
+  overflow:auto;
+}
+
+
+.centered {
+  text-align: center;
+}
+
+.justified {
+  text-align: justify;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+#input {
+  text-align: left;
+  width: 100%;
+}
+
+#textareas{
+  margin-bottom:10px;
+}
+
+.hidden{
+ visibility: hidden;
+}
+.unhidden{
+ visibility: visible;
+}
+
+
+.header{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align:left;
+  background-color:#cccccc;
+  border: 1px solid #b8b8b8;
+}
+
+.noborderright{
+  border-right: 0px;
+}

@@ -8,11 +8,16 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
     link(href='/css/skrollr.animations.css', rel='stylesheet' data-skrollr-stylesheet)
-    link(href='/css/main.css', rel='stylesheet')
+    link(href='/css/owl-carousel.css', rel='stylesheet')
+    link(href='/css/owl-carousel-theme.css', rel='stylesheet')
     link(href='/css/animate.css', rel='stylesheet')
-    link(href='/css/normalize.css', rel='stylesheet')
     link(href='/css/font-awesome.css', rel='stylesheet')
-    script(href='/js/third-parties/modernizr.js')
+    link(href='/css/main.css', rel='stylesheet')
+    link(href='/css/normalize.css', rel='stylesheet')
+    script(src='/js/jquery.js')
+    script(src='/js/third-parties/modernizr.js')
+    script(src='/js/owl-carousel.js')
+    script(src='/js/load-owl-carousel.js')
   body
     div#landing-bg.bg-wrapper
     #main-container
@@ -160,21 +165,42 @@ html
         #logodesign.paralax-section
           div.contentwrapper
             h2 #{logodesign.title} #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")]
-            p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}]
-            div#logosimg.imgrespheight
-              img(src='imgs/showcase.png' title='Some of my logos')
+            p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}] #{logodesign.texts[3]} #[span.bold #{logodesign.boldtexts[2]}].
+            div.owl-carousel
+              div
+                img(src='imgs/tsc.png' title='TSC')
+              div
+                img(src='imgs/my_logo.png' title='My signature')
+              div
+                img(src='imgs/hg.png' title='Hood Geniuses')
+              div
+                img(src='imgs/scb1.png' title='Scbonkers')
+              div
+                img(src='imgs/bogui.png' title='Bogui JS')
+              div
+                img(src='imgs/scss.png' title='Simple CSS')
+              div
+                img(src='imgs/scb2.png' title='Scbonkers alternative')
+              div
+                img(src='imgs/cr.png' title='CAN Rap')
         #bogui.paralax-section
           div.contentwrapper
             h2  #{bogui.title}
             p #{bogui.texts[0]} !{bogui.links[0]} #{bogui.texts[1]} #[span.bold #{bogui.boldtexts[0]}] #{bogui.texts[2]} !{bogui.links[1]}
+            div#boguilogo.imgrespwidth
+              img(src='imgs/bogui_example.png' title='Bogui: A Javascript Image Editor')
         #scss.paralax-section
           div.contentwrapper
             h2 #{scss.title}
             p #{scss.texts[0]} #[span.bold #{scss.boldtexts[0]}] #{scss.texts[1]} !{scss.links[0]} #{scss.texts[2]} !{scss.links[1]}
+            div#scsslogo.imgrespheight
+              img(src='imgs/scss.png' title='Simple CSS DSL')
         #ttt.paralax-section
           div.contentwrapper
             h2 #{ttt.title}
             p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]
+        #tttweb.paralax-section
+          div.contentwrapper PLACEHOLDER
         #recblock.paralax-section
           div.contentwrapper
             h2 #{recblock.title}

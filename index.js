@@ -90,23 +90,23 @@ var workexperience = {
 
 var logodesign = {
   'title' : 'Logo design and digitazion',
-  'texts' : ['I guess this is a bit','except the icons. Thanks to', 'for the CSS icons,'],
-  'boldtexts' : ['self-explanatory. I made almost all the graphic stuff in this page','they\'re awesome!'],
+  'texts' : ['I guess this is a bit','except the icons. Thanks to', 'for the CSS icons,', "Below you can watch some"],
+  'boldtexts' : ['self-explanatory. I made all the graphic stuff in this website','they\'re awesome!',"logo examples I\'ve made in the past"],
   'links' : ['<a href="http://fontawesome.io/icons/" title="FontAwesome"> FontAwesome</a>']
 }
 
 var bogui = {
   'title' : 'Bogui JS (2015)',
-  'texts' : ['This one was a little experiment I made with my friend', 'It\'s a simple online image editor using','You can check the project'],
+  'texts' : ['This one was a little experiment I made with my friend', 'It\'s a simple online image editor  for black and white images using','You can check the project'],
   'boldtexts' : ['JQuery and JQuery UI.'],
-  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="http://fontawesome.io/icons/" title="Bogui JS">here</a>.']
+  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/bogui/html/index.html" title="Bogui JS">here</a> but, it\'s in spanish. Sorry!']
 }
 
 var scss = {
-  'title' : 'SCSS (2014)',
-  'texts' : ['It\'s a','It\'s similar to SASS and LESS and all that kind of CSS pre-processors. It was made during my university days with my friend','You can check the project'],
-  'boldtexts' : ['Domain Specific Language (DSL) for writing CSS, 100% in Javascript.'],
-  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="http://fontawesome.io/icons/" title="Simple CSS">here</a>.']
+  'title' : 'Simple CSS DSL (2014)',
+  'texts' : ['It\'s a','It\'s similar to SASS and LESS and all that kind of CSS pre-processors that exist nowadays. It was made while I was at the university with my friend','You can check the project and get more info'],
+  'boldtexts' : ['Domain Specific Language (DSL) for writing CSS, 100% done in Javascript with JISON.'],
+  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/scss/index" title="Simple CSS">here</a>.']
 }
 
 var ttt = {
@@ -170,7 +170,7 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'otherlangs' : 'English',
                         'workexperiencetitle' : 'Work experience',
                         'workexperience' : workexperience,
-                        'myworks' : 'But don\'t worry, I\'m going to show you some of my works',
+                        'myworks' : 'Don\'t worry, I\'ll show you some of my works',
                         'logodesign' : logodesign,
                         'bogui' : bogui,
                         'scss' : scss,
@@ -193,6 +193,14 @@ app.get('/css/font-awesome.css', function (req, res) {
    res.sendFile(__dirname + '/node_modules/font-awesome/css/font-awesome.min.css');
 });
 
+app.get('/css/owl-carousel.css', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css');
+});
+
+app.get('/css/owl-carousel-theme.css', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css');
+});
+
 app.get('/js/skrollr.js', function (req, res) {
    res.sendFile(__dirname + '/node_modules/skrollr/dist/skrollr.min.js');
 });
@@ -213,8 +221,12 @@ app.get('/js/skrollr-stylesheets.js', function (req, res) {
    res.sendFile(__dirname + '/node_modules/skrollr-stylesheets/dist/skrollr.stylesheets.min.js');
 });
 
-app.get('/imgs/signature.png', function (req, res) {
-   res.sendFile(__dirname + '/public/imgs/signature.png');
+app.get('/js/owl-carousel.js', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/owl.carousel/dist/owl.carousel.min.js');
+});
+
+app.get('/js/jquery.js', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/jquery/dist/jquery.min.js');
 });
 
 app.get('/fonts/fontawesome-webfont.woff2', function (req, res) {

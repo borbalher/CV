@@ -11,6 +11,9 @@
   body {
     font-size: 1vmax !important; } }
 
+.owl-carousel {
+  margin-top: 1em; }
+
 html, body {
   width: 100%;
   height: 100% !important;
@@ -155,20 +158,20 @@ html, body {
   -ms-transform: translate(0%, 1000%);
   transform: translate(0%, 1000%); }
 
-#recblock {
+#tttweb {
   -webkit-transform: translate(100%, 1000%);
   -ms-transform: translate(100%, 1000%);
   transform: translate(100%, 1000%); }
 
-#ateca {
+#recblock {
   -webkit-transform: translate(0%, 1100%);
   -ms-transform: translate(0%, 1100%);
   transform: translate(0%, 1100%); }
 
-#wantmore {
-  -webkit-transform: translate(100%, 1100%);
-  -ms-transform: translate(100%, 1100%);
-  transform: translate(100%, 1100%); }
+#ateca {
+  -webkit-transform: translate(0%, 1200%);
+  -ms-transform: translate(0%, 1200%);
+  transform: translate(0%, 1200%); }
 
 .halflangbox {
   width: 50%;
@@ -457,6 +460,25 @@ a:active {
   vertical-align: middle;
   display: inline-block; }
 
+.owl-nav {
+  font-size: 2.5vmax;
+  width: 50%;
+  margin: 2em auto 0 auto; }
+  .owl-nav .owl-prev {
+    display: inline-block;
+    width: 50%; }
+  .owl-nav .owl-next {
+    display: inline-block;
+    width: 50%;
+    text-align: right; }
+  .owl-nav i {
+    padding: 0.5em;
+    background: #0000b5;
+    color: #fff; }
+
+.owl-carousel .owl-item img {
+  width: 80%; }
+
 @media (orientation: portrait) {
   #menu-nav {
     bottom: 25%; }
@@ -467,7 +489,7 @@ a:active {
 
 @media (orientation: landscape) {
   #landing-bg {
-    background-size: 50%; } }
+    background-size: 45%; } }
 
 @media only screen and (min-width: 961px) {
   #menu-nav {
