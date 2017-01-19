@@ -99,7 +99,7 @@ var bogui = {
   'title' : 'Bogui JS (2015)',
   'texts' : ['This one was a little experiment I made with my friend', 'It\'s a simple online image editor  for black and white images using','You can check the project'],
   'boldtexts' : ['JQuery and JQuery UI.'],
-  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/bogui/html/index.html" title="Bogui JS">here</a> but, it\'s in spanish. Sorry!']
+  'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/bogui/html/index.html" title="Bogui JS">here</a> but it\'s in spanish. Sorry!']
 }
 
 var scss = {
@@ -111,8 +111,9 @@ var scss = {
 
 var ttt = {
   'title' : 'Tenerife Trending Topic (2014-2015)',
-  'texts' : ['E-commerce website using',' I made all the geeky stuff: '],
-  'boldtexts' : ['Prestashop.','custom bootstrap template, web server configuration and Prestashop installation along some Prestashop modules modifications.']
+  'texts' : ['E-commerce website using',' I made all the geeky stuff: ','Finally in 2016','Even so, you can check their website '],
+  'boldtexts' : ['Prestashop.','free basic logo, custom bootstrap template, web server configuration and Prestashop installation along some Prestashop modules modifications.', 'I did the migration to WooCommerce but I got nothing to do with the new design'],
+  'links' : ['<a href="https://tenerifetrendingtopic.com/" title="Tenerife Trending Topic">here</a>.']
 }
 
 var recblock = {
@@ -125,7 +126,7 @@ var recblock = {
 var ateca = {
   'title' : 'ATECA (2009-current)',
   'texts' : ['They are ', 'in the', 'in terms of', 'I have made', 'other ones include:', 'You can give it a look'],
-  'boldtexts' : ['one of the referents','Canary Islands', 'industrial services.', 'many works with them as computer technician,', 'Logo digitazion (2009)', 'Creation of their first corporate webpage (2010)', 'Custom Google Sheets template and english introduction presentation (2016)','New corporate website using responsive design and HTML5 (2016).' ],
+  'boldtexts' : ['one of the referents','Canary Islands', 'industrial services.', 'many works with them as computer technician,', 'Logo digitazion (2009)', 'Creation of their first corporate webpage (2010)', 'Custom Google Sheets template and english showcase presentation (2016)','New corporate website using responsive design and HTML5 (2016).' ],
   'links' : ['<a href="http://ateca-sl.com" title="ATECA">here</a>.']
 }
 
@@ -170,7 +171,7 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'otherlangs' : 'English',
                         'workexperiencetitle' : 'Work experience',
                         'workexperience' : workexperience,
-                        'myworks' : 'Don\'t worry, I\'ll show you some of my works',
+                        'myworks' : 'Don\'t worry, now I\'ll show you some of my works',
                         'logodesign' : logodesign,
                         'bogui' : bogui,
                         'scss' : scss,

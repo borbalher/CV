@@ -155,7 +155,7 @@ html
             h2 #{workexperiencetitle}
             div.workexperience
               span.notfound #{workexperience.texts[6]}
-              span #{workexperience.texts[7]}
+              span.realexperience #{workexperience.texts[7]}
             p   #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}] #{workexperience.texts[2]} #[span.bold #{workexperience.boldtexts[2]}] #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}]. #{workexperience.texts[4]}:
             p.experienceparagraph #[span.bold #{workexperience.boldtexts[4]}]
         #myworks.paralax-section
@@ -167,8 +167,6 @@ html
             h2 #{logodesign.title} #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")]
             p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}] #{logodesign.texts[3]} #[span.bold #{logodesign.boldtexts[2]}].
             div.owl-carousel
-              div
-                img(src='imgs/tsc.png' title='TSC')
               div
                 img(src='imgs/my_logo.png' title='My signature')
               div
@@ -183,12 +181,12 @@ html
                 img(src='imgs/scb2.png' title='Scbonkers alternative')
               div
                 img(src='imgs/cr.png' title='CAN Rap')
+              div
+                img(src='imgs/tsc.png' title='TSC')
         #bogui.paralax-section
           div.contentwrapper
             h2  #{bogui.title}
             p #{bogui.texts[0]} !{bogui.links[0]} #{bogui.texts[1]} #[span.bold #{bogui.boldtexts[0]}] #{bogui.texts[2]} !{bogui.links[1]}
-            div#boguilogo.imgrespwidth
-              img(src='imgs/bogui_example.png' title='Bogui: A Javascript Image Editor')
         #scss.paralax-section
           div.contentwrapper
             h2 #{scss.title}
@@ -198,7 +196,7 @@ html
         #ttt.paralax-section
           div.contentwrapper
             h2 #{ttt.title}
-            p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]
+            p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]  #{ttt.texts[2]} #[span.bold #{ttt.boldtexts[2]}] #{ttt.texts[3]} !{ttt.links[0]}
         #tttweb.paralax-section
           div.contentwrapper PLACEHOLDER
         #recblock.paralax-section
