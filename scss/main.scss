@@ -49,6 +49,7 @@ $dpi2: "(min-resolution: 2dppx)";
   margin-top: 1em;
 }
 
+
 html, body {
     width:100%;
     height: 100% !important;
@@ -75,9 +76,7 @@ html, body {
     left: 0;
 }
 
-#contact{
-  background-color: orange;
-}
+
 #work{
   background-color: purple;
 }
@@ -94,7 +93,7 @@ html, body {
   img{
     display: block;
     width: auto;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     height: 100%;
     max-height: 100%;
@@ -116,54 +115,6 @@ html, body {
 
 #skillstitle{
     margin-bottom: 0px;
-}
-
-#whoami {
-    -webkit-transform: translate(0,100%);
-    -ms-transform: translate(0,100%);
-    transform: translate(0,100%);
-}
-
-#objectives {
-    -webkit-transform: translate(0%,200%);
-    -ms-transform: translate(0%,200%);
-    transform: translate(0%,200%);
-}
-
-#skills {
-    -webkit-transform: translate(0%,300%);
-    -ms-transform: translate(0%,300%);
-    transform: translate(0%,300%);
-}
-
-#mskills {
-  -webkit-transform: translate(100%,300%);
-  -ms-transform: translate(100%,300%);
-  transform: translate(100%,300%);
-  h2{
-    margin-bottom: 0;
-  }
-}
-
- #education {
-   -webkit-transform: translate(0%,400%);
-   -ms-transform: translate(0%,400%);
-   transform: translate(0%,400%);
-}
-
-#complementaryeducation {
-  -webkit-transform: translate(0%,500%);
-  -ms-transform: translate(0%,500%);
-  transform: translate(0%,500%);
-  ul{
-    margin-top:0;
-  }
-}
-
-#morecomplementaryeducation{
-  -webkit-transform: translate(100%,500%);
-  -ms-transform: translate(100%,500%);
-  transform: translate(100%,500%);
 }
 
 
@@ -192,19 +143,54 @@ html, body {
 
 }
 
-#languages{
-  -webkit-transform: translate(0%,600%);
-  -ms-transform: translate(0%,600%);
-  transform: translate(0%,600%);
+.contactinfo{
+    text-align: center;
+    margin-top: 15%;
+    a{
+      font-size: 3em;
+    }
 }
 
-#morelanguages{
-  -webkit-transform: translate(100%,600%);
-  -ms-transform: translate(100%,600%);
-  transform: translate(100%,600%);
-  h3,h4,h5,h6{
-      margin: 0.8em 0;
-  }
+#whoami {
+    -webkit-transform: translate(0,100%);
+    -ms-transform: translate(0,100%);
+    transform: translate(0,100%);
+}
+
+#objectives {
+    -webkit-transform: translate(0%,200%);
+    -ms-transform: translate(0%,200%);
+    transform: translate(0%,200%);
+}
+
+#skills {
+    -webkit-transform: translate(0%,300%);
+    -ms-transform: translate(0%,300%);
+    transform: translate(0%,300%);
+}
+
+#mskills {
+  -webkit-transform: translate(100%,300%);
+  -ms-transform: translate(100%,300%);
+  transform: translate(100%,300%);
+}
+
+ #education {
+   -webkit-transform: translate(0%,400%);
+   -ms-transform: translate(0%,400%);
+   transform: translate(0%,400%);
+}
+
+#complementaryeducation {
+  -webkit-transform: translate(0%,500%);
+  -ms-transform: translate(0%,500%);
+  transform: translate(0%,500%);
+}
+
+#morecomplementaryeducation{
+  -webkit-transform: translate(100%,500%);
+  -ms-transform: translate(100%,500%);
+  transform: translate(100%,500%);
 }
 
 #workexperience{
@@ -243,24 +229,71 @@ html, body {
   transform: translate(0%,1000%);
 }
 
-#tttweb{
+
+#recblock{
   -webkit-transform: translate(100%,1000%);
   -ms-transform: translate(100%,1000%);
   transform: translate(100%,1000%);
 }
 
-#recblock{
+#ateca{
   -webkit-transform: translate(0%,1100%);
   -ms-transform: translate(0%,1100%);
   transform: translate(0%,1100%);
 }
 
-#ateca{
+#atecaimg{
+  -webkit-transform: translate(100%,1100%);
+  -ms-transform: translate(100%,1100%);
+  transform: translate(100%,1100%);
+}
+
+#wantmore{
   -webkit-transform: translate(0%,1200%);
   -ms-transform: translate(0%,1200%);
   transform: translate(0%,1200%);
 }
 
+#contact{
+  -webkit-transform: translate(100%,1200%);
+  -ms-transform: translate(100%,1200%);
+  transform: translate(100%,1200%);
+}
+
+
+#languages{
+  -webkit-transform: translate(0%,600%);
+  -ms-transform: translate(0%,600%);
+  transform: translate(0%,600%);
+}
+
+#morelanguages{
+  -webkit-transform: translate(100%,600%);
+  -ms-transform: translate(100%,600%);
+  transform: translate(100%,600%);
+}
+
+#mskills {
+  h2{
+    margin-bottom: 0;
+  }
+}
+
+#complementaryeducation {
+  ul{
+    margin-top:0;
+  }
+}
+
+#morelanguages{
+  h3,h4,h5,h6{
+      margin: 0.8em 0;
+  }
+}
+
+.atecaimg{
+    height: 80%;
+}
 
 .halflangbox{
   width: 50%;
@@ -354,7 +387,7 @@ p{
 }
 
 ul{
-  padding: 0 1em 0 2em;
+  padding: 0 1em 0 2.5em;
   list-style-type: square;
   line-height: 1em;
   text-align: justify;
@@ -500,12 +533,12 @@ a:active {
     position:absolute;
     left:0;
     top: 0;
-    height:2950%;
-    width: 20px;
+    height:3100%;
+    width: 1px;
 }
 
 .marker {
-    height: 5%;
+    height: 4.76%;
     width: 100%;
 }
 .black {
@@ -610,6 +643,8 @@ a:active {
     display: inline-block;
 }
 
+
+
 .owl-nav{
   font-size: 2vmax;
   width: 50%;
@@ -635,8 +670,14 @@ a:active {
   margin: 0 auto;
 }
 
+#ttt .imgrespheight,
+#bogui .imgrespheight{
+  height: 60%;
+}
+
 
 @media #{$portrait}{
+
   #menu-nav{
     bottom: 25%;
   }
@@ -649,7 +690,6 @@ a:active {
 }
 
 @media #{$landscape}{
-
   #landing-bg{
     background-size: 45%;
   }

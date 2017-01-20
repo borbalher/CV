@@ -181,6 +181,14 @@
   skrollr-2550p {
     visibility: visible; }
   skrollr-2650p {
-    transform: translate(0%, -600%); }
+    transform: translate(-50%, -550%); }
   skrollr-2700p {
+    visibility: visible; }
+  skrollr-2800p {
+    transform: translate(0%, -600%); }
+  skrollr-2850p {
+    visibility: visible; }
+  skrollr-2950p {
+    transform: translate(-50%, -600%); }
+  skrollr-3000p {
     visibility: visible; } }

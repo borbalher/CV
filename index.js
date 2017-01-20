@@ -11,6 +11,7 @@ app.get('/', function (req, res) {
 
 
   var education = {
+    'title' : 'My education',
     "course_name": ["Computer Engineering Degree:  Computation and Artificial intelligence","Professional Training: Interactive Applications Development in 4th generation environments and CASE tools"],
     "course_institution": ["Universidad de La Laguna","IES Domingo P&eacute;rez Minik"],
     "course_begin":  [2011,2009],
@@ -19,6 +20,7 @@ app.get('/', function (req, res) {
 
 
   var complementary_education = {
+    'title' : 'My complementary education',
     'texts' : ["Most of my complementary education is heavily based in ", " Besides that, I have also knowledge in other areas like " ],
     'boldtexts' : ["computers and technology","e-commerce, marketing and business"],
     'course_name': [
@@ -46,6 +48,7 @@ app.get('/', function (req, res) {
   };
 
 var skills ={
+  'title': 'My skills',
   'texts': ["Through the years I\'ve been in touch with",
                  "but, in the present, I feel comfortable with the following:",
                  "Those were the ones that I use the most but there are other programming languages that I can use to make awesome things:",
@@ -61,11 +64,13 @@ var skills ={
 };
 
 var objectives ={
+  'title': 'My career objectives',
   'texts': ["as computer engineer in a laboral environment.","of an IT enterprise.","At last but not least:"],
   'boldtexts': ["Earning experience","Learn the workflow","Mastering my skills or learn some new ones","do my best!"]
 };
 
 var whoami ={
+  'title': 'Who am I?',
   'texts': ["I'm ",
             ", a young guy from a little paradise called ",
             " and located in ",
@@ -84,6 +89,7 @@ var whoami ={
 };
 
 var workexperience = {
+  'title': 'Work experience',
   'texts' : ['I haven\'t got','with a full-time job as programmer and','I’m very excited and looking forward to make big things. Nevertheless, I’ve been','as freelancer','These are some of the services I give', 'And now, I\'ll show you some of', '404', '"Real" work experience not found.'],
   'boldtexts' : ['any work experience in a real laboral environment','I really want to start!','offering my services','since 2010', 'Logo and web design, e-commerce solutions, server and network configuration,  PC formatting and repairing, data recovery, virus/malware removal, private tutoring…', 'my latests projects']
 };
@@ -118,9 +124,9 @@ var ttt = {
 
 var recblock = {
   'title' : 'Recblock (2016)',
-  'texts' : ['This one was', 'It\'s a', 'that serves as a', ' You can get more info'],
+  'texts' : ['This one was', 'It\'s a', 'that serves as a', ' The plug-in and code is available in this', 'For more detailed info about the project you can check its '],
   'boldtexts' : ['my final career project.','Moodle PHP plug-in', 'recommendation block based on user\'s playing type and learning style.'],
-  'links' : ['<a href="https://github.com/borbalher/moodle-block_recblock" title="Recblock Moodle Plug-in">here</a>.']
+  'links' : ['<a href="https://github.com/borbalher/moodle-block_recblock" title="Recblock Moodle Plug-in">GitHub repository</a>.', '<a href="http://riull.ull.es/xmlui/handle/915/3080" title="Recblock Thesis">thesis</a>.']
 }
 
 var ateca = {
@@ -132,24 +138,24 @@ var ateca = {
 
 var wantmore = {
   'title' : 'Do you want more?',
-  'texts' : ['If the answer is','you can check out my github repositories for more code'],
-  'boldtexts' : ['YES'],
+  'texts' : ['If the answer is: ','you can check out my github repositories for more code:'],
+  'boldtexts' : ['YES!'],
   'links' : ['<a href="https://github.com/alu0100698411" title="My student repository">My student repository</a>', '<a href="https://github.com/borbalher" title="My personal repository">My personal repository</a>']
 
 }
 
+var contact = {
+  'title' : 'Contact me',
+  'links' : ['<a href="mailto:contact@borisballester.com?Subject=Hello%20again" title="My e-mail">contact@borisballester.com</a>']
+}
 res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!',
-                        'about': 'About me', 'work': 'Work', 'contact': 'Contact me',
+                        'about': 'About me',
+                        'work': 'Work',
                         'intro': 'Computer engineering + design',
-                        'whoamititle' : 'Who am I?',
                         'whoami' : whoami,
-                        'objectivestitle' : 'My career objectives',
                         'objectives' : objectives,
-                        'skillstitle' : 'My skills',
                         'skills' : skills,
-                        'educationtitle' : 'Education',
                         'education' : education,
-                        'complementaryeducationtitle' : ' Complementary education',
                         'complementaryeducation' : complementary_education,
                         'english' : 'English',
                         'selfassessment' : 'Self-assessment of language skills',
@@ -169,7 +175,6 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'mothertongues' : 'Spanish',
                         'otherlangtitle' : 'Other languages',
                         'otherlangs' : 'English',
-                        'workexperiencetitle' : 'Work experience',
                         'workexperience' : workexperience,
                         'myworks' : 'Don\'t worry, now I\'ll show you some of my works',
                         'logodesign' : logodesign,
@@ -178,7 +183,8 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'ttt' : ttt,
                         'recblock' : recblock,
                         'ateca' : ateca,
-                        'wantmore' : wantmore
+                        'wantmore' : wantmore,
+                        'contact' : contact
                     });
 });
 

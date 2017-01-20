@@ -17,9 +17,11 @@ $logo_design: $my_works + $slides_duration;
 $bogui: $logo_design + $slides_duration;
 $scss: $bogui + $slides_duration;
 $ttt: $scss + $slides_duration;
-$ttt_web: $ttt + $slides_duration;
-$recblock: $ttt_web + $slides_duration;
+$recblock: $ttt + $slides_duration;
 $ateca: $recblock + $slides_duration;
+$ateca_img: $ateca + $slides_duration;
+$want_more: $ateca_img + $slides_duration;
+$contact: $want_more + $slides_duration;
 
 #paralax-sections{
   -skrollr-animation-name:slideshow;
@@ -301,16 +303,9 @@ $ateca: $recblock + $slides_duration;
     visibility: visible;
   }
 
-  skrollr-#{$ttt_web}p {
-    transform:translate(-50%,-500%);
-  }
-
-  skrollr-#{$ttt_web+$slides_pause}p {
-    visibility: visible;
-  }
 
   skrollr-#{$recblock}p {
-    transform:translate(0%,-550%);
+    transform:translate(-50%,-500%);
   }
 
   skrollr-#{$recblock+$slides_pause}p {
@@ -318,10 +313,34 @@ $ateca: $recblock + $slides_duration;
   }
 
   skrollr-#{$ateca}p {
-    transform:translate(0%,-600%);
+    transform:translate(0%,-550%);
   }
 
   skrollr-#{$ateca+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$ateca_img}p {
+    transform:translate(-50%,-550%);
+  }
+
+  skrollr-#{$ateca_img+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$want_more}p {
+    transform:translate(0%,-600%);
+  }
+
+  skrollr-#{$want_more+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$contact}p {
+    transform:translate(-50%,-600%);
+  }
+
+  skrollr-#{$contact+$slides_pause}p {
     visibility: visible;
   }
 }

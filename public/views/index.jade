@@ -31,12 +31,12 @@ html
               li
                 a(href="#work" data-menu-top="250p") #[i.fa.fw.fa-briefcase] #{work}
               li
-                a(href="#contact" data-menu-top="550p") #[i.fa.fw.fa-envelope] #{contact}
+                a(href="#contact" data-menu-top="550p") #[i.fa.fw.fa-envelope] #{contact.title}
           i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
         #whoami.paralax-section
           div.contentwrapper
             div#whoamicontent
-              h2 #{whoamititle}
+              h2 #{whoami.title}
               p #{whoami.texts[0]} #[span.bold #{whoami.boldtexts[0]}]
                 | #{whoami.texts[1]} #[span.bold #{whoami.boldtexts[1]}]
                 | #{whoami.texts[2]} #[span.bold #{whoami.boldtexts[2]}]
@@ -49,7 +49,7 @@ html
         #objectives.paralax-section
           div.contentwrapper
             div#objectivescontent
-              h2 #{objectivestitle}
+              h2 #{objectives.title}
               ul
                 li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
                 li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
@@ -59,7 +59,7 @@ html
               img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
-            h2#skillstitle !{skillstitle} #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")]
+            h2#skillstitle !{skills.title} #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")]
             div#skillsdesc
                 p #{skills.texts[0]} #[span.bold #{skills.boldtexts[0]}] #{skills.texts[1]}
                 ul
@@ -72,7 +72,7 @@ html
               div#msrocketcontainer #[i#msrocket.fa.fw.fa-rocket(aria-hidden="true")]
         #education.paralax-section
             div.contentwrapper
-              h2#educationtitle #{educationtitle}
+              h2#educationtitle #{education.title}
               div.facontainer#educationimg
                 span.fa.fa-university(aria-hidden="true")
               mixin fill_eduaction(name, institution, begin, end)
@@ -89,7 +89,7 @@ html
         #complementaryeducation.paralax-section
           div.contentwrapper
             div#complementaryeducationcontent
-              h2 #{complementaryeducationtitle}
+              h2 #{complementaryeducation.title}
               p #{complementaryeducation.texts[0]}  #[span.bold #{complementaryeducation.boldtexts[0]}]:
               mixin fill_complementary_education(name, institution, hours, year)
                 li
@@ -152,7 +152,7 @@ html
                 div.langvalue #{b1}
         #workexperience.paralax-section
           div.contentwrapper
-            h2 #{workexperiencetitle}
+            h2 #{workexperience.title}
             div.workexperience
               span.notfound #{workexperience.texts[6]}
               span.realexperience #{workexperience.texts[7]}
@@ -187,6 +187,8 @@ html
           div.contentwrapper
             h2  #{bogui.title}
             p #{bogui.texts[0]} !{bogui.links[0]} #{bogui.texts[1]} #[span.bold #{bogui.boldtexts[0]}] #{bogui.texts[2]} !{bogui.links[1]}
+            div.imgrespheight
+              img(src='imgs/bogui_example.png' title='BoguiJS Image Editor')
         #scss.paralax-section
           div.contentwrapper
             h2 #{scss.title}
@@ -197,12 +199,12 @@ html
           div.contentwrapper
             h2 #{ttt.title}
             p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]  #{ttt.texts[2]} #[span.bold #{ttt.boldtexts[2]}] #{ttt.texts[3]} !{ttt.links[0]}
-        #tttweb.paralax-section
-          div.contentwrapper PLACEHOLDER
+            div.imgrespheight
+              img(src='imgs/ttt.png' title='Tenerife Trending Topic web-store')
         #recblock.paralax-section
           div.contentwrapper
             h2 #{recblock.title}
-            p #{recblock.texts[0]} #[span.bold #{recblock.boldtexts[0]}] #{recblock.texts[1]} #[span.bold #{recblock.boldtexts[1]}] #{recblock.texts[2]} #[span.bold #{recblock.boldtexts[2]}] #{recblock.texts[3]} !{recblock.links[0]}
+            p #{recblock.texts[0]} #[span.bold #{recblock.boldtexts[0]}] #{recblock.texts[1]} #[span.bold #{recblock.boldtexts[1]}] #{recblock.texts[2]} #[span.bold #{recblock.boldtexts[2]}] #{recblock.texts[3]} !{recblock.links[0]} #{recblock.texts[4]} !{recblock.links[1]}
         #ateca.paralax-section
           div.contentwrapper
             h2 #{ateca.title}
@@ -212,6 +214,22 @@ html
               li #[span.bold #{ateca.boldtexts[5]}]
               li #[span.bold #{ateca.boldtexts[6]}]
               li #[span.bold #{ateca.boldtexts[7]}] #{ateca.texts[5]} !{ateca.links[0]}
+        #atecaimg.paralax-section
+          div.contentwrapper
+            div.imgrespheight.atecaimg
+              img(src='imgs/ateca.png' title='ATECA')
+        #wantmore.paralax-section
+          div.contentwrapper
+            h2 #{wantmore.title}
+            p #{wantmore.texts[0]} #[span.bold #{wantmore.boldtexts[0]}] #{wantmore.texts[1]}
+            ul
+              li !{wantmore.links[0]}
+              li !{wantmore.links[1]}
+        #contact.paralax-section
+          div.contentwrapper
+            div.contactinfo
+              h2 #{contact.title}
+              !{contact.links[0]}
     div#helper
       .marker.red
       .marker.cyan
@@ -233,6 +251,7 @@ html
       .marker.cyan
       .marker.orange
       .marker.blue
+      .marker.orange
     script(src='/js/skrollr-stylesheets.js')
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')
