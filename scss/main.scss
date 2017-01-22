@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $bg: #f5f5f5;
-$link: #0000b5;
-$linkhover: #2929ff;
-$red: #e50000;
-$title: #0000b5;
-
+$border: #eab126;
+$link: #1fb58f;
+$linkhover: #1b7b34;
+$red: #ff3366;
+$title: #ffffff;
+$text: #474747;
+$boldtext: #333333;
+$button: #f24c4e;
 
 $smartphone: "only screen and (min-width : 320px)";
 $large-smartphone: "only screen and (min-width : 425px)";
@@ -26,6 +29,12 @@ $dpi2: "(min-resolution: 2dppx)";
 //@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 //@media (min-width:1281px) { /* hi-res laptops and desktops */ }
 //@media (min-width:2560px) { /* 4k screens */ }
+
+
+.yes{
+  color: $red !important;
+  font-size: 1.5em;
+}
 
 @media #{$dpi2}{
   body{
@@ -55,8 +64,8 @@ html, body {
     height: 100% !important;
     font-size: 1.5vmax;
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: $bg;
+    color: $text;
+    background: url(/imgs/bg.png);
 }
 
 /* full width/height container */
@@ -143,13 +152,6 @@ html, body {
 
 }
 
-.contactinfo{
-    text-align: center;
-    margin-top: 15%;
-    a{
-      font-size: 3em;
-    }
-}
 
 #whoami {
     -webkit-transform: translate(0,100%);
@@ -289,10 +291,18 @@ html, body {
   h3,h4,h5,h6{
       margin: 0.8em 0;
   }
+  h3{
+    text-align: center;
+  }
 }
 
 .atecaimg{
     height: 80%;
+}
+.contactmail{
+  text-align: center;
+  margin-top: 10%;
+  font-size: 2em;
 }
 
 .halflangbox{
@@ -320,19 +330,20 @@ html, body {
   top: 0;
   left: 0;
   width: 50%;
-  border-right: 1px solid $link;
+  border-right: 1px solid $border;
   height: 75%;
   margin: 0.5em 0;
 }
 
 .langboxcontainer{
   position: relative;
-  border-top: 1px solid $link;
-  border-bottom: 1px solid $link;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
 }
 
 #educationimg{
   span{
+    color: $boldtext;
     font-size: 22vw;
   }
 }
@@ -344,13 +355,13 @@ html, body {
 .mainheader{
     background-color: #d7d7d7;
     text-transform: uppercase;
-    color: #333 !important;
+    color: $boldtext !important;
     font-weight: bold;
 }
 
 .langtitle{
     font-weight: bold;
-    color: $link;
+    color: $red;
 }
 
 #educationimg[active="1"]{
@@ -364,7 +375,18 @@ html, body {
   transform-origin: center bottom;
 }
 
+p{
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  line-height: 1.5em;
+  text-align: justify;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
 #intro{
+  color: $button;
+  padding-top: 1em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -377,14 +399,7 @@ html, body {
 
 }
 
-p{
-  padding: 0.5em 1em;
-  margin: 0 auto;
-  line-height: 1.5em;
-  text-align: justify;
-  word-wrap: break-word;
-  white-space: normal;
-}
+
 
 ul{
   padding: 0 1em 0 2.5em;
@@ -401,14 +416,14 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h2{
-  color: $title;
+  margin: 0 0 0.5em 0;
+  padding: 0.5em 0.5em 0.3em 0.5em;
+  color: $link;
+  border-bottom: 1px solid $border;
 }
 
 .contentwrapper{
     display: block;
-    position:absolute;
-    top:0;
-    left:0;
     margin: 2% 5% 0 5%;
     width:90%;
     height:98%;
@@ -426,6 +441,7 @@ h2{
 }
 .bold{
   font-weight: bold;
+  color:$boldtext;
 }
 
 .italic{
@@ -508,12 +524,17 @@ a:active {
   -moz-animation-duration: 5s;
   -moz-animation-delay: 0s;
   -moz-animation-iteration-count: infinite;
+
+
+  img{
+    height: 80%;
+  }
 }
 
 
 
 #landing-bg{
-  background: url('/imgs/signature.png') no-repeat;
+  background: url('/imgs/signature_alt.png') no-repeat;
   background-position: 50% 20%;
   background-size: 55%;
 }
@@ -660,13 +681,13 @@ a:active {
   }
   i{
     padding: 0.5em;
-    background: $link;
+    background: $button;
     color: #fff;
   }
 }
 
 .owl-carousel .owl-item img{
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
 }
 

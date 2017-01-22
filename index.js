@@ -132,7 +132,7 @@ var recblock = {
 var ateca = {
   'title' : 'ATECA (2009-current)',
   'texts' : ['They are ', 'in the', 'in terms of', 'I have made', 'other ones include:', 'You can give it a look'],
-  'boldtexts' : ['one of the referents','Canary Islands', 'industrial services.', 'many works with them as computer technician,', 'Logo digitazion (2009)', 'Creation of their first corporate webpage (2010)', 'Custom Google Sheets template and english showcase presentation (2016)','New corporate website using responsive design and HTML5 (2016).' ],
+  'boldtexts' : ['one of the referents','Canary Islands', 'industrial services.', 'many works with them as computer technician,', 'Logo digitazion', 'creation of their first corporate webpage (2010)', 'Custom Google Sheets template and english showcase presentation','New corporate website using responsive design and HTML5 (2016).' ],
   'links' : ['<a href="http://ateca-sl.com" title="ATECA">here</a>.']
 }
 

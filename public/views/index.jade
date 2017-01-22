@@ -161,10 +161,10 @@ html
         #myworks.paralax-section
           div.contentwrapper
             div.myworkscontainer
-              p #{myworks} #[i.fa.fw.fa-smile-o(aria-hidden="true")]
+              p #{myworks}.
         #logodesign.paralax-section
           div.contentwrapper
-            h2 #{logodesign.title} #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")]
+            h2 #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")] #{logodesign.title}
             p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}] #{logodesign.texts[3]} #[span.bold #{logodesign.boldtexts[2]}].
             div.owl-carousel
               div
@@ -210,10 +210,10 @@ html
             h2 #{ateca.title}
             p #{ateca.texts[0]} #[span.bold #{ateca.boldtexts[0]}]  #{ateca.texts[1]} #[span.bold #{ateca.boldtexts[1]}]  #{ateca.texts[2]} #[span.bold #{ateca.boldtexts[2]}]  #{ateca.texts[3]} #[span.bold #{ateca.boldtexts[3]}]  #{ateca.texts[4]}
             ul
-              li #[span.bold #{ateca.boldtexts[4]}]
-              li #[span.bold #{ateca.boldtexts[5]}]
-              li #[span.bold #{ateca.boldtexts[6]}]
-              li #[span.bold #{ateca.boldtexts[7]}] #{ateca.texts[5]} !{ateca.links[0]}
+              li #[span.bold #{ateca.boldtexts[4]}] and #[span.bold #{ateca.boldtexts[5]}]
+              li #[span.bold #{ateca.boldtexts[6]}]. #[span.bold #{ateca.boldtexts[7]}] #{ateca.texts[5]} !{ateca.links[0]}
+            div.imgrespheight
+              img(src='imgs/ateca.png' title='ATECA')
         #atecaimg.paralax-section
           div.contentwrapper
             div.imgrespheight.atecaimg
@@ -221,15 +221,14 @@ html
         #wantmore.paralax-section
           div.contentwrapper
             h2 #{wantmore.title}
-            p #{wantmore.texts[0]} #[span.bold #{wantmore.boldtexts[0]}] #{wantmore.texts[1]}
+            p #{wantmore.texts[0]} #[span.bold.yes #{wantmore.boldtexts[0]}] #{wantmore.texts[1]}
             ul
               li !{wantmore.links[0]}
               li !{wantmore.links[1]}
         #contact.paralax-section
           div.contentwrapper
-            div.contactinfo
               h2 #{contact.title}
-              !{contact.links[0]}
+              div.contactmail !{contact.links[0]}
     div#helper
       .marker.red
       .marker.cyan

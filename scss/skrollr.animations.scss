@@ -152,7 +152,7 @@ $contact: $want_more + $slides_duration;
 
 @-skrollr-keyframes srocket {
   skrollr-#{$skills}p {
-    color: #e50000;
+    color: #ff3366;
     transform:translate(0%, 0%);
   }
 
@@ -165,7 +165,7 @@ $contact: $want_more + $slides_duration;
 
 @-skrollr-keyframes msrocket {
   skrollr-#{$slides_begin}p {
-    color: #e50000;
+    color: #ff3366;
     visibility: hidden;
   }
   skrollr-#{$mskills - $slides_pause}p {
