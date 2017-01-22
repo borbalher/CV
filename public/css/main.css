@@ -3,24 +3,12 @@
   color: #ff3366 !important;
   font-size: 1.5em; }
 
-@media (min-resolution: 2dppx) {
-  body {
-    font-size: 2vmax !important; } }
-
-@media only screen and (min-width: 1440px) and (orientation: landscape) {
-  #landing-bg {
-    background-size: 35% !important; } }
-
-@media only screen and (min-width: 1440px) and (min-resolution: 2dppx) {
-  body {
-    font-size: 1vmax !important; } }
-
 .owl-carousel {
   margin-top: 1em; }
 
 html, body {
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-size: 1.5vmax;
   font-family: 'Roboto', sans-serif;
   color: #474747;
@@ -73,7 +61,7 @@ html, body {
   display: block; }
 
 .notfound {
-  font-size: 15vmax;
+  font-size: 15vw;
   font-weight: bold; }
 
 #mskills h2 {
@@ -212,7 +200,7 @@ h2 {
   .myworkscontainer p {
     display: block;
     text-align: center;
-    font-size: 3vmax; }
+    font-size: 2em; }
 
 .bold {
   font-weight: bold;
@@ -290,30 +278,6 @@ a:active {
 .marker {
   height: 4.76%;
   width: 100%; }
-
-.black {
-  background-color: black; }
-
-.red {
-  background-color: red; }
-
-.green {
-  background-color: green; }
-
-.blue {
-  background-color: blue; }
-
-.yellow {
-  background-color: yellow; }
-
-.orange {
-  background-color: orange; }
-
-.cyan {
-  background-color: cyan; }
-
-.pink {
-  background-color: pink; }
 
 /**
  * For modern browsers
@@ -422,3 +386,15 @@ a:active {
     bottom: 15%; }
   .img-container:before {
     height: 100vh; } }
+
+@media (min-resolution: 2dppx) {
+  body {
+    font-size: 2vmax !important; } }
+
+@media only screen and (min-width: 1440px) and (orientation: landscape) {
+  #landing-bg {
+    background-size: 35% !important; } }
+
+@media only screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+  body {
+    font-size: 1vmax !important; } }

@@ -157,7 +157,7 @@ var contact = {
 }
 res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!',
                         'about': 'About me',
-                        'work': 'Work',
+                        'work': 'My works',
                         'intro': 'Computer engineering + design',
                         'whoami' : whoami,
                         'objectives' : objectives,
