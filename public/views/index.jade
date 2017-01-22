@@ -13,6 +13,7 @@ html
     link(href='/css/animate.css', rel='stylesheet')
     link(href='/css/font-awesome.css', rel='stylesheet')
     link(href='/css/main.css', rel='stylesheet')
+    link(href='/css/skrollr.css', rel='stylesheet')
     link(href='/css/normalize.css', rel='stylesheet')
     script(src='/js/jquery.js')
     script(src='/js/third-parties/modernizr.js')
@@ -35,26 +36,24 @@ html
           i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
         #whoami.paralax-section
           div.contentwrapper
-            div#whoamicontent
-              h2 #{whoami.title}
-              p #{whoami.texts[0]} #[span.bold #{whoami.boldtexts[0]}]
-                | #{whoami.texts[1]} #[span.bold #{whoami.boldtexts[1]}]
-                | #{whoami.texts[2]} #[span.bold #{whoami.boldtexts[2]}]
-                | #{whoami.texts[3]} #[span.bold #{whoami.boldtexts[3]}]
-                | #{whoami.texts[4]} #[span.bold #{whoami.boldtexts[4]}]
-                | #{whoami.texts[5]} #[span.bold #{whoami.boldtexts[5]}]
-                | #[span.bold #{whoami.boldtexts[6]}]
+            h2 #{whoami.title}
+            p #{whoami.texts[0]} #[span.bold #{whoami.boldtexts[0]}]
+              | #{whoami.texts[1]} #[span.bold #{whoami.boldtexts[1]}]
+              | #{whoami.texts[2]} #[span.bold #{whoami.boldtexts[2]}]
+              | #{whoami.texts[3]} #[span.bold #{whoami.boldtexts[3]}]
+              | #{whoami.texts[4]} #[span.bold #{whoami.boldtexts[4]}]
+              | #{whoami.texts[5]} #[span.bold #{whoami.boldtexts[5]}]
+              | #[span.bold #{whoami.boldtexts[6]}]
             div#mypicture.imgrespheight
               img(src='imgs/me.png' title='That\'s me \:3')
         #objectives.paralax-section
           div.contentwrapper
-            div#objectivescontent
-              h2 #{objectives.title}
-              ul
-                li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
-                li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
-                li #[span.bold #{objectives.boldtexts[2]}]
-                li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
+            h2 #{objectives.title}
+            ul
+              li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
+              li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
+              li #[span.bold #{objectives.boldtexts[2]}]
+              li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
             div#bullseye.imgrespheight.animated.swing
               img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
@@ -73,7 +72,7 @@ html
         #education.paralax-section
             div.contentwrapper
               h2#educationtitle #{education.title}
-              div.facontainer#educationimg
+              div.facontainer#educationimg.animated
                 span.fa.fa-university(aria-hidden="true")
               mixin fill_eduaction(name, institution, begin, end)
                 li
@@ -113,7 +112,7 @@ html
         #languages.paralax-section
           div.contentwrapper
             h2 #[i.fa.fw.fa-comments(aria-hidden="true")] #{langtitle}
-            div#langimg.imgrespheight
+            div#langimg.imgrespheight.animated
               img(src='imgs/langs.svg' title='My main languages')
             div#languageskills.langboxcontainer
               div.halflangbox
@@ -156,7 +155,7 @@ html
             div.workexperience
               span.notfound #{workexperience.texts[6]}
               span.realexperience #{workexperience.texts[7]}
-            p   #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}] #{workexperience.texts[2]} #[span.bold #{workexperience.boldtexts[2]}] #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}]. #{workexperience.texts[4]}:
+            p  #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}] #{workexperience.texts[2]} #[span.bold #{workexperience.boldtexts[2]}] #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}]. #{workexperience.texts[4]}:
             p.experienceparagraph #[span.bold #{workexperience.boldtexts[4]}]
         #myworks.paralax-section
           div.contentwrapper
@@ -214,10 +213,10 @@ html
               li #[span.bold #{ateca.boldtexts[6]}]. #[span.bold #{ateca.boldtexts[7]}] #{ateca.texts[5]} !{ateca.links[0]}
             div.imgrespheight
               img(src='imgs/ateca.png' title='ATECA')
-        #atecaimg.paralax-section
+        #chicharro.paralax-section
           div.contentwrapper
-            div.imgrespheight.atecaimg
-              img(src='imgs/ateca.png' title='ATECA')
+            h2 #{chicharro.title}
+            p #{chicharro.texts[0]} !{chicharro.links[0]} #{chicharro.texts[1]} #[span.bold #{chicharro.boldtexts[0]}] #{chicharro.texts[2]} #[span.bold #{chicharro.boldtexts[1]}].  I'm still working in this but it will be posted as soon as I finish. <!--#{chicharro.texts[3]} !{chicharro.links[1]}-->
         #wantmore.paralax-section
           div.contentwrapper
             h2 #{wantmore.title}

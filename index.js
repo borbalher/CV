@@ -136,6 +136,13 @@ var ateca = {
   'links' : ['<a href="http://ateca-sl.com" title="ATECA">here</a>.']
 }
 
+var chicharro = {
+  'title' : 'Chicharro Tattoo Gallery (2016)',
+  'texts' : ['E-commerce website I made for Chicharro Tattoo Gallery,','tattoo studio. It uses', 'with a', 'You can check the site here'],
+  'boldtexts' : ['Wordpress+Woocommerce','custom template' ],
+  'links' : ['<a href="http://www.zez608.com/" title="Diego Mena\'s Personal Website">Diego Mena\'s</a>','<a href="http://www.chicharrotattoogallery.com/" title="Chicharro Tattoo Gallery">here</a>.']
+}
+
 var wantmore = {
   'title' : 'Do you want more?',
   'texts' : ['If the answer is: ','you can check out my github repositories for more code:'],
@@ -183,6 +190,7 @@ res.render('index', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!'
                         'ttt' : ttt,
                         'recblock' : recblock,
                         'ateca' : ateca,
+                        'chicharro' : chicharro,
                         'wantmore' : wantmore,
                         'contact' : contact
                     });

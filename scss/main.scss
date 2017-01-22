@@ -5,6 +5,7 @@ $border: #eab126;
 $link: #1fb58f;
 $linkhover: #1b7b34;
 $red: #ff3366;
+$redhover: #f7003e;
 $title: #ffffff;
 $text: #474747;
 $boldtext: #333333;
@@ -61,31 +62,12 @@ $dpi2: "(min-resolution: 2dppx)";
 
 html, body {
     width:100%;
-    height: 100% !important;
+    font-size: 1.5em;
     font-size: 1.5vmax;
     font-family: 'Roboto', sans-serif;
     color: $text;
-    background: url(/imgs/bg.png);
+    background: url('/imgs/bg.png');
 }
-
-/* full width/height container */
-#main-container {
-    width: 100%;
-    height: 100% !important;
-    overflow: hidden;
-}
-
-/* double the height/width of a viewport, uses position-fixed so we dont need
-#skrollr-body for mobile support*/
-#paralax-sections {
-    width: 200%;
-    height: 200%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-
 #work{
   background-color: purple;
 }
@@ -152,129 +134,6 @@ html, body {
 
 }
 
-
-#whoami {
-    -webkit-transform: translate(0,100%);
-    -ms-transform: translate(0,100%);
-    transform: translate(0,100%);
-}
-
-#objectives {
-    -webkit-transform: translate(0%,200%);
-    -ms-transform: translate(0%,200%);
-    transform: translate(0%,200%);
-}
-
-#skills {
-    -webkit-transform: translate(0%,300%);
-    -ms-transform: translate(0%,300%);
-    transform: translate(0%,300%);
-}
-
-#mskills {
-  -webkit-transform: translate(100%,300%);
-  -ms-transform: translate(100%,300%);
-  transform: translate(100%,300%);
-}
-
- #education {
-   -webkit-transform: translate(0%,400%);
-   -ms-transform: translate(0%,400%);
-   transform: translate(0%,400%);
-}
-
-#complementaryeducation {
-  -webkit-transform: translate(0%,500%);
-  -ms-transform: translate(0%,500%);
-  transform: translate(0%,500%);
-}
-
-#morecomplementaryeducation{
-  -webkit-transform: translate(100%,500%);
-  -ms-transform: translate(100%,500%);
-  transform: translate(100%,500%);
-}
-
-#workexperience{
-  -webkit-transform: translate(0%,700%);
-  -ms-transform: translate(0%,700%);
-  transform: translate(0%,700%);
-}
-
-#myworks{
-  -webkit-transform: translate(0%,800%);
-  -ms-transform: translate(0%,800%);
-  transform: translate(0%,800%);
-}
-
-#logodesign{
-  -webkit-transform: translate(100%,800%);
-  -ms-transform: translate(100%,800%);
-  transform: translate(100%,800%);
-}
-
-#bogui{
-  -webkit-transform: translate(0%,900%);
-  -ms-transform: translate(0%,900%);
-  transform: translate(0%,900%);
-}
-
-#scss{
-  -webkit-transform: translate(100%,900%);
-  -ms-transform: translate(100%,900%);
-  transform: translate(100%,900%);
-}
-
-#ttt{
-  -webkit-transform: translate(0%,1000%);
-  -ms-transform: translate(0%,1000%);
-  transform: translate(0%,1000%);
-}
-
-
-#recblock{
-  -webkit-transform: translate(100%,1000%);
-  -ms-transform: translate(100%,1000%);
-  transform: translate(100%,1000%);
-}
-
-#ateca{
-  -webkit-transform: translate(0%,1100%);
-  -ms-transform: translate(0%,1100%);
-  transform: translate(0%,1100%);
-}
-
-#atecaimg{
-  -webkit-transform: translate(100%,1100%);
-  -ms-transform: translate(100%,1100%);
-  transform: translate(100%,1100%);
-}
-
-#wantmore{
-  -webkit-transform: translate(0%,1200%);
-  -ms-transform: translate(0%,1200%);
-  transform: translate(0%,1200%);
-}
-
-#contact{
-  -webkit-transform: translate(100%,1200%);
-  -ms-transform: translate(100%,1200%);
-  transform: translate(100%,1200%);
-}
-
-
-#languages{
-  -webkit-transform: translate(0%,600%);
-  -ms-transform: translate(0%,600%);
-  transform: translate(0%,600%);
-}
-
-#morelanguages{
-  -webkit-transform: translate(100%,600%);
-  -ms-transform: translate(100%,600%);
-  transform: translate(100%,600%);
-}
-
 #mskills {
   h2{
     margin-bottom: 0;
@@ -296,13 +155,45 @@ html, body {
   }
 }
 
-.atecaimg{
-    height: 80%;
+#wantmore {
+  ul{
+    text-align: center;
+    list-style: none;
+    font-size: 1.5em;
+  }
 }
+
 .contactmail{
   text-align: center;
-  margin-top: 10%;
   font-size: 2em;
+  width: 90%;
+  position: absolute;
+  top: 45%;
+  a{
+    text-decoration: none;
+    color: $red;
+  }
+
+  /* unvisited link */
+  a:link {
+      color: $red;
+  }
+
+  /* visited link */
+  a:visited {
+      color: $red;
+  }
+
+  /* mouse over link */
+  a:hover {
+      color: $redhover;
+      background: #e1e1e1;
+  }
+
+  /* selected link */
+  a:active {
+    color: $red;
+  }
 }
 
 .halflangbox{
@@ -364,17 +255,6 @@ html, body {
     color: $red;
 }
 
-#educationimg[active="1"]{
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-}
-
 p{
   padding: 0.5em 1em;
   margin: 0 auto;
@@ -398,8 +278,6 @@ p{
   }
 
 }
-
-
 
 ul{
   padding: 0 1em 0 2.5em;
@@ -427,12 +305,13 @@ h2{
     margin: 2% 5% 0 5%;
     width:90%;
     height:98%;
+    position: relative;
 }
 
 .myworkscontainer{
   position: absolute;
-  top: 30%;
-  width: 100%;
+  top: 40%;
+  width: 90%;
   p{
     display: block;
     text-align: center;
@@ -502,16 +381,6 @@ a:active {
   color: $link;
 }
 
-.paralax-section {
-    display: block;
-    position:absolute;
-    top:0;
-    left:0;
-    width:50%;
-    height:50%;
-    overflow: hidden;
-}
-
 #bullseye{
   -webkit-animation-duration: 5s;
   -webkit-animation-delay: 0s;
@@ -531,36 +400,23 @@ a:active {
   }
 }
 
-
-
 #landing-bg{
   background: url('/imgs/signature_alt.png') no-repeat;
   background-position: 50% 20%;
   background-size: 55%;
 }
 
-.bg-wrapper{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translate(0%,-100%);
-  -ms-transform: translate(0%,-100%);
-  transform: translate(0%,-100%);
-}
-
 #helper {
-    position:absolute;
-    left:0;
-    top: 0;
-    height:3100%;
-    width: 1px;
+  position:absolute;
+  left:0;
+  top: 0;
+  height:3100%;
+  width: 1px;
 }
 
 .marker {
-    height: 4.76%;
-    width: 100%;
+  height: 4.76%;
+  width: 100%;
 }
 .black {
     background-color: black;
@@ -586,6 +442,7 @@ a:active {
 .pink{
   background-color: pink;
 }
+
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the

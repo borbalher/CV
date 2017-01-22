@@ -4,12 +4,14 @@
   "description": "My personal page and cv.",
   "main": "index.js",
   "scripts": {
-    "build-all-css": "concurrently  \"npm run build-main-css\" \"npm run build-skrollr-css\"",
+    "build-all-css": "concurrently  \"npm run build-main-css\" \"npm run build-skrollr-css\" \"npm run build-interactive-css\" ",
     "build-main-css": "bin\\build-main-css.bat",
     "build-skrollr-css": "bin\\build-skrollr-css.bat",
-    "build-all-css-min": "concurrently  \"npm run build-main-css-min\" \"npm run build-skrollr-css-min\"",
+    "build-interactive-css": "bin\\build-interactive-css.bat",
+    "build-all-css-min": "concurrently  \"npm run build-main-css-min\" \"npm run build-skrollr-css-min\" \"npm run build-interactive-css-min\"",
     "build-main-css-min": "bin\\build-main-css-min.bat",
     "build-skrollr-css-min": "bin\\build-skrollr-css-min.bat",
+    "build-interactive-css-min": "bin\\build-interactive-css-min.bat",
     "watch-css": "bin\\watch-css.bat",
     "build-modernizr": "modernizr -c modernizr-config.json"
   },

@@ -2,19 +2,11 @@
   -skrollr-animation-name: slideshow; }
 
 #intro {
-  -skrollr-animation-name: introanimation;
+  -skrollr-animation-name: intro_animation;
   -skrollr-anchor-target: '#helper'; }
 
 #landing-bg {
-  -skrollr-animation-name: landingbg;
-  -skrollr-anchor-target: '#helper'; }
-
-#whoamicontent h2 {
-  -skrollr-animation-name: whoamicontent;
-  -skrollr-anchor-target: '#helper'; }
-
-#whoamicontent p {
-  -skrollr-animation-name: whoamicontent;
+  -skrollr-animation-name: landing_bg;
   -skrollr-anchor-target: '#helper'; }
 
 #bullseye img {
@@ -29,43 +21,91 @@
   -skrollr-animation-name: msrocket;
   -skrollr-anchor-target: '#helper'; }
 
-#skillsdesc {
-  -skrollr-animation-name: skillscontent;
-  -skrollr-anchor-target: '#helper'; }
-
-#mypicture {
-  -skrollr-animation-name: mypicture;
-  -skrollr-anchor-target: '#helper'; }
-
-#skillstitle {
-  -skrollr-animation-name: skillscontent;
-  -skrollr-anchor-target: '#helper'; }
-
 #educationimg {
   -skrollr-animation-name: activate_animation_education;
   -skrollr-anchor-target: '#helper'; }
 
 #menu {
-  -skrollr-animation-name: introanimation;
+  -skrollr-animation-name: intro_animation;
   -skrollr-anchor-target: '#helper'; }
 
-#objectivescontent {
-  -skrollr-animation-name: objectivescontent;
+#whoami .contentwrapper {
+  -skrollr-animation-name: who_am_i;
   -skrollr-anchor-target: '#helper'; }
 
-#educationcontent {
-  -skrollr-animation-name: educationcontent;
+#objectives .contentwrapper {
+  -skrollr-animation-name: objectives;
   -skrollr-anchor-target: '#helper'; }
 
-#educationtitle {
-  -skrollr-animation-name: educationcontent;
+#skills .contentwrapper {
+  -skrollr-animation-name: skills;
   -skrollr-anchor-target: '#helper'; }
 
-#educationimg {
-  -skrollr-animation-name: educationcontent;
+#mskills .contentwrapper {
+  -skrollr-animation-name: more_skills;
   -skrollr-anchor-target: '#helper'; }
 
-@-skrollr-keyframes landingbg {
+#education .contentwrapper {
+  -skrollr-animation-name: education;
+  -skrollr-anchor-target: '#helper'; }
+
+#complementaryeducation .contentwrapper {
+  -skrollr-animation-name: complementary_education;
+  -skrollr-anchor-target: '#helper'; }
+
+#morecomplementaryeducation .contentwrapper {
+  -skrollr-animation-name: more_complementary_education;
+  -skrollr-anchor-target: '#helper'; }
+
+#languages .contentwrapper {
+  -skrollr-animation-name: languages;
+  -skrollr-anchor-target: '#helper'; }
+
+#langimg {
+  -skrollr-animation-name: activate_animation_language;
+  -skrollr-anchor-target: '#helper'; }
+
+#morelanguages .contentwrapper {
+  -skrollr-animation-name: more_languages;
+  -skrollr-anchor-target: '#helper'; }
+
+#workexperience .contentwrapper {
+  -skrollr-animation-name: work_experience;
+  -skrollr-anchor-target: '#helper'; }
+
+.workexperience {
+  -skrollr-animation-name: activate_animation_work;
+  -skrollr-anchor-target: '#helper'; }
+
+#myworks .contentwrapper {
+  -skrollr-animation-name: my_works;
+  -skrollr-anchor-target: '#helper'; }
+
+#logodesign .contentwrapper {
+  -skrollr-animation-name: logo_design;
+  -skrollr-anchor-target: '#helper'; }
+
+#bogui .contentwrapper {
+  -skrollr-animation-name: bogui;
+  -skrollr-anchor-target: '#helper'; }
+
+#ttt .contentwrapper {
+  -skrollr-animation-name: ttt;
+  -skrollr-anchor-target: '#helper'; }
+
+#ateca .contentwrapper {
+  -skrollr-animation-name: ateca;
+  -skrollr-anchor-target: '#helper'; }
+
+#chicharro .contentwrapper {
+  -skrollr-animation-name: chicharro;
+  -skrollr-anchor-target: '#helper'; }
+
+#wantmore .contentwrapper {
+  -skrollr-animation-name: want_more;
+  -skrollr-anchor-target: '#helper'; }
+
+@-skrollr-keyframes landing_bg {
   skrollr-0 {
     transform: translate(0%, 0%);
     opacity: 1; }
@@ -73,7 +113,7 @@
     transform: translate(0%, -10%);
     opacity: 0; } }
 
-@-skrollr-keyframes introanimation {
+@-skrollr-keyframes intro_animation {
   skrollr-0p {
     transform: translate(0%, 0%);
     opacity: 1;
@@ -83,13 +123,36 @@
     opacity: 0;
     display: none; } }
 
+@-skrollr-keyframes who_am_i {
+  skrollr-100p {
+    transform: translate(0%, 0%); }
+  skrollr-150p {
+    transform: translate(0%, 0%);
+    opacity: 1; }
+  skrollr-250p {
+    transform: translate(0%, -10%);
+    opacity: 0; } }
+
+@-skrollr-keyframes objectives {
+  skrollr-250p {
+    transform: translate(0%, 0%); }
+  skrollr-300p {
+    transform: translate(0%, 0%);
+    opacity: 1; }
+  skrollr-400p {
+    transform: translate(0%, -10%);
+    opacity: 0; } }
+
 @-skrollr-keyframes bullseye {
   skrollr-250p {
     transform: rotate(0deg); }
   skrollr-300p {
-    transform: rotate(-120deg);
+    transform: rotate(-120deg); } }
+
+@-skrollr-keyframes skills {
+  skrollr-450p {
     opacity: 1; }
-  skrollr-400p {
+  skrollr-550p {
     opacity: 0; } }
 
 @-skrollr-keyframes srocket {
@@ -98,6 +161,16 @@
     transform: translate(0%, 0%); }
   skrollr-550p {
     transform: translate(300%, -500%); } }
+
+@-skrollr-keyframes more_skills {
+  skrollr-550p {
+    transform: translate(0%, 0%); }
+  skrollr-600p {
+    transform: translate(0%, 0%);
+    opacity: 1; }
+  skrollr-700p {
+    transform: translate(10%, -10%);
+    opacity: 0; } }
 
 @-skrollr-keyframes msrocket {
   skrollr-0p {
@@ -108,6 +181,122 @@
     transform: translate(0%, -400%) rotate(-45deg); }
   skrollr-600p {
     transform: translate(0%, 0%) rotate(-45deg); } }
+
+@-skrollr-keyframes education {
+  skrollr-700p {
+    transform: translate(0%, 0%); }
+  skrollr-750p {
+    transform: translate(0%, 0%);
+    opacity: 1; }
+  skrollr-850p {
+    transform: translate(0%, -10%);
+    opacity: 0; } }
+
+@-skrollr-keyframes activate_animation_education {
+  skrollr-0p {
+    @active : 0; }
+  skrollr-710p {
+    @active : 1; } }
+
+@-skrollr-keyframes complementary_education {
+  skrollr-900p {
+    opacity: 1; }
+  skrollr-1000p {
+    opacity: 0; } }
+
+@-skrollr-keyframes more_complementary_education {
+  skrollr-1050p {
+    opacity: 1; }
+  skrollr-1150p {
+    opacity: 0; } }
+
+@-skrollr-keyframes languages {
+  skrollr-1200p {
+    opacity: 1; }
+  skrollr-1300p {
+    opacity: 0; } }
+
+@-skrollr-keyframes activate_animation_language {
+  skrollr-0p {
+    @active : 0; }
+  skrollr-1160p {
+    @active : 1; } }
+
+@-skrollr-keyframes more_languages {
+  skrollr-1350p {
+    opacity: 1; }
+  skrollr-1450p {
+    opacity: 0; } }
+
+@-skrollr-keyframes work_experience {
+  skrollr-1450p {
+    transform: translate(0%, 0%); }
+  skrollr-1500p {
+    transform: translate(0%, 0%);
+    opacity: 1; }
+  skrollr-1600p {
+    transform: translate(0%, -10%);
+    opacity: 0; } }
+
+@-skrollr-keyframes activate_animation_work {
+  skrollr-0p {
+    @active : 0; }
+  skrollr-1460p {
+    @active : 1; } }
+
+@-skrollr-keyframes my_works {
+  skrollr-1650p {
+    opacity: 1; }
+  skrollr-1750p {
+    opacity: 0; } }
+
+@-skrollr-keyframes logo_design {
+  skrollr-1800p {
+    opacity: 1; }
+  skrollr-1900p {
+    opacity: 0; } }
+
+@-skrollr-keyframes bogui {
+  skrollr-1950p {
+    opacity: 1; }
+  skrollr-2050p {
+    opacity: 0; } }
+
+@-skrollr-keyframes scss {
+  skrollr-2100p {
+    opacity: 1; }
+  skrollr-2200p {
+    opacity: 0; } }
+
+@-skrollr-keyframes ttt {
+  skrollr-2250p {
+    opacity: 1; }
+  skrollr-2350p {
+    opacity: 0; } }
+
+@-skrollr-keyframes recblock {
+  skrollr-2400p {
+    opacity: 1; }
+  skrollr-2500p {
+    opacity: 0; } }
+
+@-skrollr-keyframes ateca {
+  skrollr-2550p {
+    opacity: 1; }
+  skrollr-2650p {
+    opacity: 0; } }
+
+@-skrollr-keyframes chicharro {
+  skrollr-2700p {
+    opacity: 1; }
+  skrollr-2800p {
+    opacity: 0; } }
+
+@-skrollr-keyframes want_more {
+  skrollr-2850p {
+    opacity: 1; }
+  skrollr-2950p {
+    opacity: 0; } }
 
 @-skrollr-keyframes slideshow {
   skrollr-0p {
