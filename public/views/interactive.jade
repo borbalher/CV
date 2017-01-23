@@ -15,10 +15,7 @@ html
     link(href='/css/main.css', rel='stylesheet')
     link(href='/css/skrollr.css', rel='stylesheet')
     link(href='/css/normalize.css', rel='stylesheet')
-    script(src='/js/jquery.js')
-    script(src='/js/third-parties/modernizr.js')
-    script(src='/js/owl-carousel.js')
-    script(src='/js/load-owl-carousel.js')
+
   body
     div#landing-bg.bg-wrapper
     #main-container
@@ -28,9 +25,9 @@ html
             p#intro #{intro}
             ul#menu
               li
-                a(href="#about-me" data-menu-top="100p") #[i.fa.fw.fa-user-circle] #{about}
+                a(href="#whoami" data-menu-top="100p") #[i.fa.fw.fa-user-circle] #{about}
               li
-                a(href="#work" data-menu-top="1450p") #[i.fa.fw.fa-briefcase] #{work}
+                a(href="#workexperience" data-menu-top="1450p") #[i.fa.fw.fa-briefcase] #{work}
               li
                 a(href="#contact" data-menu-top="2950p") #[i.fa.fw.fa-envelope] #{contact.title}
           i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
@@ -44,8 +41,8 @@ html
               | #{whoami.texts[4]} #[span.bold #{whoami.boldtexts[4]}]
               | #{whoami.texts[5]} #[span.bold #{whoami.boldtexts[5]}]
               | #[span.bold #{whoami.boldtexts[6]}]
-            div#mypicture.imgrespheight
-              img(src='imgs/me.png' title='That\'s me \:3')
+            div#mypicture.imgresp
+              img(src='/imgs/me.png' title='That\'s me \:3')
         #objectives.paralax-section
           div.contentwrapper
             h2 #{objectives.title}
@@ -54,8 +51,8 @@ html
               li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
               li #[span.bold #{objectives.boldtexts[2]}]
               li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
-            div#bullseye.imgrespheight.animated.swing
-              img(src='imgs/bulls-eye.svg' title='Bull\'s eye')
+            div#bullseye.imgresp.animated.swing
+              img(src='/imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
             h2#skillstitle !{skills.title} #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")]
@@ -95,7 +92,7 @@ html
                   span.coursename.bold !{name}
                   ul.institutionlist
                     li
-                      span.courseinstitution.italic  !{institution}
+                      span.courseinstitution.italic  #{institution}
                       span.courseduration    [#{hours} hours] [#{year}]
               ul
                 - for (var i = 0; i < 4; ++i) {
@@ -112,8 +109,8 @@ html
         #languages.paralax-section
           div.contentwrapper
             h2 #[i.fa.fw.fa-comments(aria-hidden="true")] #{langtitle}
-            div#langimg.imgrespheight.animated
-              img(src='imgs/langs.svg' title='My main languages')
+            div#langimg.imgresp.animated
+              img(src='/imgs/langs.svg' title='My main languages')
             div#languageskills.langboxcontainer
               div.halflangbox
                 div.langtitle #{mothertonguetitle}
@@ -152,9 +149,9 @@ html
         #workexperience.paralax-section
           div.contentwrapper
             h2 #{workexperience.title}
-            div.workexperience
-              span.notfound #{workexperience.texts[6]}
-              span.realexperience #{workexperience.texts[7]}
+            div.workexperience.animated
+              span.notfound #{workexperience.texts[5]}
+              span.realexperience #{workexperience.texts[6]}
             p  #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}] #{workexperience.texts[2]} #[span.bold #{workexperience.boldtexts[2]}] #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}]. #{workexperience.texts[4]}:
             p.experienceparagraph #[span.bold #{workexperience.boldtexts[4]}]
         #myworks.paralax-section
@@ -167,39 +164,39 @@ html
             p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}] #{logodesign.texts[3]} #[span.bold #{logodesign.boldtexts[2]}].
             div.owl-carousel
               div
-                img(src='imgs/my_logo.png' title='My signature')
+                img(src='/imgs/my_logo.png' title='My signature')
               div
-                img(src='imgs/hg.png' title='Hood Geniuses')
+                img(src='/imgs/hg.png' title='Hood Geniuses')
               div
-                img(src='imgs/scb1.png' title='Scbonkers')
+                img(src='/imgs/scb1.png' title='Scbonkers')
               div
-                img(src='imgs/bogui.png' title='Bogui JS')
+                img(src='/imgs/bogui.png' title='Bogui JS')
               div
-                img(src='imgs/scss.png' title='Simple CSS')
+                img(src='/imgs/scss.png' title='Simple CSS')
               div
-                img(src='imgs/scb2.png' title='Scbonkers alternative')
+                img(src='/imgs/scb2.png' title='Scbonkers alternative')
               div
-                img(src='imgs/cr.png' title='CAN Rap')
+                img(src='/imgs/pdr.png' title='Predictive Recursive Descent Parser')
               div
-                img(src='imgs/tsc.png' title='TSC')
+                img(src='/imgs/tsc.png' title='TSC')
         #bogui.paralax-section
           div.contentwrapper
             h2  #{bogui.title}
             p #{bogui.texts[0]} !{bogui.links[0]} #{bogui.texts[1]} #[span.bold #{bogui.boldtexts[0]}] #{bogui.texts[2]} !{bogui.links[1]}
-            div.imgrespheight
-              img(src='imgs/bogui_example.png' title='BoguiJS Image Editor')
+            div.imgresp
+              img(src='/imgs/bogui_example.png' title='BoguiJS Image Editor')
         #scss.paralax-section
           div.contentwrapper
             h2 #{scss.title}
             p #{scss.texts[0]} #[span.bold #{scss.boldtexts[0]}] #{scss.texts[1]} !{scss.links[0]} #{scss.texts[2]} !{scss.links[1]}
-            div#scsslogo.imgrespheight
-              img(src='imgs/scss.png' title='Simple CSS DSL')
+            div#scsslogo.imgresp
+              img(src='/imgs/scss.png' title='Simple CSS DSL')
         #ttt.paralax-section
           div.contentwrapper
             h2 #{ttt.title}
             p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]  #{ttt.texts[2]} #[span.bold #{ttt.boldtexts[2]}] #{ttt.texts[3]} !{ttt.links[0]}
-            div.imgrespheight
-              img(src='imgs/ttt.png' title='Tenerife Trending Topic web-store')
+            div.imgresp
+              img(src='/imgs/ttt.png' title='Tenerife Trending Topic web-store')
         #recblock.paralax-section
           div.contentwrapper
             h2 #{recblock.title}
@@ -209,14 +206,14 @@ html
             h2 #{ateca.title}
             p #{ateca.texts[0]} #[span.bold #{ateca.boldtexts[0]}]  #{ateca.texts[1]} #[span.bold #{ateca.boldtexts[1]}]  #{ateca.texts[2]} #[span.bold #{ateca.boldtexts[2]}]  #{ateca.texts[3]} #[span.bold #{ateca.boldtexts[3]}]  #{ateca.texts[4]}
             ul
-              li #[span.bold #{ateca.boldtexts[4]}] and #[span.bold #{ateca.boldtexts[5]}]
-              li #[span.bold #{ateca.boldtexts[6]}]. #[span.bold #{ateca.boldtexts[7]}] #{ateca.texts[5]} !{ateca.links[0]}
-            div.imgrespheight
-              img(src='imgs/ateca.png' title='ATECA')
+              li #[span.bold #{ateca.boldtexts[4]}]
+              li #[span.bold #{ateca.boldtexts[5]}]. #[span.bold #{ateca.boldtexts[6]}] #{ateca.texts[5]} !{ateca.links[0]}
+            div.imgresp
+              img(src='/imgs/ateca.png' title='ATECA')
         #chicharro.paralax-section
           div.contentwrapper
             h2 #{chicharro.title}
-            p #{chicharro.texts[0]} !{chicharro.links[0]} #{chicharro.texts[1]} #[span.bold #{chicharro.boldtexts[0]}] #{chicharro.texts[2]} #[span.bold #{chicharro.boldtexts[1]}].  I'm still working in this but it will be posted as soon as I finish. <!--#{chicharro.texts[3]} !{chicharro.links[1]}-->
+            p #{chicharro.texts[0]} !{chicharro.links[0]} #{chicharro.texts[1]} #[span.bold #{chicharro.boldtexts[0]}] #{chicharro.texts[2]} #[span.bold #{chicharro.boldtexts[1]}]. #{chicharro.texts[3]} !{chicharro.links[1]}
         #wantmore.paralax-section
           div.contentwrapper
             h2 #{wantmore.title}
@@ -250,6 +247,11 @@ html
       .marker
       .marker
       .marker
+    script(src='/js/jquery.js')
+    script(src='/js/third-parties/modernizr.js')
+    script(src='/js/owl-carousel.js')
+    script(src='/js/jquery.mousewheel.js')
+    script(src='/js/load-owl-carousel.js')
     script(src='/js/skrollr-stylesheets.js')
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')

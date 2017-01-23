@@ -21,4 +21,16 @@ $(document).ready(function(){
     }
   });
   console.log("Owl carousel loaded");
+
+  $(".owl-carousel").on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+          $(".owl-carousel").trigger('next.owl');
+    } else {
+          $(".owl-carousel").trigger('prev.owl');
+    }
+    e.preventDefault();
+  });
+
+  console.log("Owl carousel mousewheel loaded");
+
 });
