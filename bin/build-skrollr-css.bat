@@ -1,1 +1,1 @@
-node-sass --include-path scss scss/skrollr.animations.scss public/css/skrollr.animations.css
+node-sass --include-path scss scss/skrollr.animations.scss css/skrollr.animations.css

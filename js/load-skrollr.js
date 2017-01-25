@@ -8,10 +8,10 @@ skrollr.menu.init(s, {
 });
 console.log("Skrollr menu loaded");
 
+
 $(window).resize(function() {
   s.refresh();
 });
-
 
 $(document).ready(function(){
   $(document).scrollTop(1); // removes the impression of animation

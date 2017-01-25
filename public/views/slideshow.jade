@@ -7,13 +7,13 @@ html
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
-    link(href='/css/skrollr.animations.css', rel='stylesheet' data-skrollr-stylesheet)
     link(href='/css/owl-carousel.css', rel='stylesheet')
     link(href='/css/owl-carousel-theme.css', rel='stylesheet')
     link(href='/css/animate.css', rel='stylesheet')
     link(href='/css/font-awesome.css', rel='stylesheet')
     link(href='/css/main.css', rel='stylesheet')
     link(href='/css/skrollr.css', rel='stylesheet')
+    link(href='/css/skrollr.animations.css', rel='stylesheet' data-skrollr-stylesheet)
     link(href='/css/normalize.css', rel='stylesheet')
 
   body
@@ -21,6 +21,10 @@ html
     #main-container
       #paralax-sections
         #landing.paralax-section
+          div#lang-menu
+            a(href="/es/slideshow") #{mothertongues}
+            span |
+            a(href="/en/slideshow") #{english}
           nav#menu-nav
             p#intro #{intro}
             ul#menu
@@ -29,7 +33,10 @@ html
               li
                 a(href="#workexperience" data-menu-top="1450p") #[i.fa.fw.fa-briefcase] #{work}
               li
+                a(href="#wantmore" data-menu-top="2800p") #[i.fa.fw.fa-download] #{download.title}
+              li
                 a(href="#contact" data-menu-top="2950p") #[i.fa.fw.fa-envelope] #{contact.title}
+            div#slideshow !{slideshow}
           i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
         #whoami.paralax-section
           div.contentwrapper
@@ -55,7 +62,7 @@ html
               img(src='/imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
-            h2#skillstitle !{skills.title} #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")]
+            h2#skillstitle #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")] !{skills.title}
             div#skillsdesc
                 p #{skills.texts[0]} #[span.bold #{skills.boldtexts[0]}] #{skills.texts[1]}
                 ul
@@ -216,6 +223,10 @@ html
             p #{chicharro.texts[0]} !{chicharro.links[0]} #{chicharro.texts[1]} #[span.bold #{chicharro.boldtexts[0]}] #{chicharro.texts[2]} #[span.bold #{chicharro.boldtexts[1]}]. #{chicharro.texts[3]} !{chicharro.links[1]}
         #wantmore.paralax-section
           div.contentwrapper
+            h2 #[i.fa.fw.fa-download(aria-hidden="true")] #{download.title}
+            ul
+              li.cv !{download.links[0]}
+              li.cv !{download.links[1]}
             h2 #{wantmore.title}
             p #{wantmore.texts[0]} #[span.bold.yes #{wantmore.boldtexts[0]}] #{wantmore.texts[1]}
             ul
@@ -223,7 +234,6 @@ html
               li !{wantmore.links[1]}
         #contact.paralax-section
           div.contentwrapper
-              h2 #{contact.title}
               div.contactmail !{contact.links[0]}
     div#helper
       .marker
@@ -248,7 +258,6 @@ html
       .marker
       .marker
     script(src='/js/jquery.js')
-    script(src='/js/third-parties/modernizr.js')
     script(src='/js/owl-carousel.js')
     script(src='/js/jquery.mousewheel.js')
     script(src='/js/load-owl-carousel.js')
@@ -256,4 +265,4 @@ html
     script(src='/js/skrollr.js')
     script(src='/js/skrollr-ie.js')
     script(src='/js/skrollr-menu.js')
-    script(src='/js/load-skrollr.min.js')
+    script(src='/js/load-skrollr.js')

@@ -28,12 +28,15 @@ html, body {
 #menu-nav {
   width: 100vw; }
 
+#myworks {
+  display: none; }
+
 #mskills .contentwrapper,
 #morecomplementaryeducation .contentwrapper {
   margin-top: 0; }
 
 .contentwrapper {
-  margin: 5% 5% 0 5%; }
+  margin: 3% 5% 0 5%; }
 
 .langboxcontainer {
   width: 70%;
@@ -47,8 +50,7 @@ html, body {
   text-align: center; }
 
 .contactmail {
-  width: 70%;
-  margin: 0 auto 0.5em auto;
+  width: 100%;
   position: static; }
   .contactmail a {
     display: block;

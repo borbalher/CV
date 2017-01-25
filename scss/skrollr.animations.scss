@@ -62,6 +62,10 @@ $contact: $want_more + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
+#slideshow{
+  -skrollr-animation-name:intro_animation;
+  -skrollr-anchor-target: '#helper';
+}
 
 #whoami .contentwrapper{
   -skrollr-animation-name:who_am_i;
@@ -117,6 +121,7 @@ $contact: $want_more + $slides_duration;
   -skrollr-animation-name:work_experience;
   -skrollr-anchor-target: '#helper';
 }
+
 .workexperience{
   -skrollr-animation-name:activate_animation_work;
   -skrollr-anchor-target: '#helper';
@@ -173,13 +178,11 @@ $contact: $want_more + $slides_duration;
     skrollr-#{$slides_begin}p {
       transform:translate(0%, 0%);
       opacity: 1;
-      display: block;
     }
 
     skrollr-#{$whoami - $slides_pause}p{
       transform:translate(0%, 5%);
       opacity: 0;
-      display: none;
     }
 }
 
@@ -678,4 +681,5 @@ $contact: $want_more + $slides_duration;
   skrollr-#{$contact+$slides_pause}p {
     visibility: visible;
   }
+
 }

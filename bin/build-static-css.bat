@@ -1,1 +1,1 @@
-node-sass --include-path scss scss/static.scss public/css/static.css
+node-sass --include-path scss scss/static.scss css/static.css

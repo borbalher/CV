@@ -6,6 +6,20 @@
 .owl-carousel {
   margin-top: 1em; }
 
+#wantmore ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  font-size: 1.5em;
+  margin: 0; }
+  #wantmore ul li {
+    width: 100%;
+    margin: 0; }
+    #wantmore ul li a {
+      padding: 1em 0;
+      width: 100%;
+      display: block; }
+
 html, body {
   width: 100%;
   font-size: 1.4em;
@@ -64,15 +78,10 @@ html, body {
 #morelanguages h3 {
   text-align: center; }
 
-#wantmore ul {
-  text-align: center;
-  list-style: none;
-  font-size: 1.5em; }
-
 .contactmail {
   text-align: center;
   font-size: 2em;
-  width: 90%;
+  width: 100%;
   position: absolute;
   top: 45%;
   /* unvisited link */
@@ -146,16 +155,17 @@ p {
   word-wrap: break-word;
   white-space: normal; }
 
+#slideshow a {
+  font-size: 0.8em; }
+
 #intro {
   color: #f24c4e;
-  padding-top: 1em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  width: 100%; }
-  #intro p {
-    margin: 0 auto;
-    display: inline-block; }
+  width: 100%;
+  padding: 0;
+  padding-top: 1em; }
 
 ul {
   padding: 0 1em 0 2.5em;
@@ -163,7 +173,7 @@ ul {
   line-height: 1em;
   text-align: justify; }
   ul li {
-    margin-bottom: 1em; }
+    margin-bottom: 0.3em; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-left: 0.5em; }
@@ -184,10 +194,11 @@ h2 {
 .myworkscontainer {
   position: absolute;
   top: 40%;
-  width: 90%; }
+  width: 100%; }
   .myworkscontainer p {
     display: block;
     text-align: center;
+    padding: 0;
     font-size: 2em; }
 
 .bold {
@@ -196,6 +207,16 @@ h2 {
 
 .italic {
   font-style: italic; }
+
+#lang-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em; }
+  #lang-menu span {
+    margin: 0 0.1em; }
+  #lang-menu a {
+    padding: 0.5em; }
 
 #menu-nav {
   position: absolute;
@@ -257,17 +278,6 @@ a:active {
   background-position: 50% 20%;
   background-size: 55%; }
 
-#helper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 3100%;
-  width: 1px; }
-
-.marker {
-  height: 4.76%;
-  width: 100%; }
-
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -320,6 +330,9 @@ a:active {
 
 .centered {
   text-align: center; }
+
+#srocket {
+  color: #ff3366; }
 
 #moreskillsdesc p {
   padding: 2em;

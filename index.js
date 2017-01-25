@@ -1,13 +1,33 @@
 var express = require('express');
 var app = express();
 
-
 app.set('views', './public/views')
 app.set('view engine', 'jade');
 
 app.use(express.static(__dirname + '/public'));
 
 var spanish_content = {
+  'about': 'Sobre',
+  'work': 'Trabajos',
+  'intro': 'Ingeniería Informática + diseño',
+  'english' : 'Inglés',
+  'selfassessment' : 'Autoevaluación de las habilidades lingüísticas',
+  'understanding' : 'Comprensión',
+  'speaking' : 'Habla',
+  'writing' : 'Escritura',
+  'listening' : 'Escucha',
+  'reading' : 'Lectura',
+  'spokenprod' : 'Producción hablada',
+  'spokenint' : 'Interacción hablada',
+  'b2' : 'B2 usuario independiente.',
+  'b1' : 'B1 usuario independiente.',
+  'langtitle' : 'Idiomas que hablo',
+  'mothertonguetitle' : 'Lengua nativa',
+  'mothertongues' : 'Español',
+  'otherlangtitle' : 'Otros idiomas',
+  'otherlangs' : 'Inglés',
+  'myworks' : 'No te preocupes, te enseñaré algunos de mis trabajos',
+  'slideshow' : '<a href="/es/static" title="Static version">¿Usas un navegador viejo? Click aquí para una versión estática.</a>',
   'education' : {
       'title' : 'Mi formación',
       'course_name': ["Grado en Ingeniería Informática:  itinerario en Computación e Inteligencia Artificial","Formación Profesional: Desarrollo de Aplicaciones Interactivas en entornos de 4ª generación y herramientas CASE"],
@@ -15,7 +35,7 @@ var spanish_content = {
       'course_begin':  [2011,2009],
       'course_end': [2016,2011]
     },
-    'complementary_education' : {
+    'complementaryeducation' : {
         'title' : 'Mi formación complementaria',
         'texts' : ["La mayor parte de mi formación complementaria está fuertemente basada en", "Aparte de eso, también tengo conocimiento de otras áreas como" ],
         'boldtexts' : ["ordenadores y tecnología","e-commerce, marketing y emprendeduría"],
@@ -89,49 +109,53 @@ var spanish_content = {
         'title' : 'Diseño y digitalización de logos',
         'texts' : ['Creo que esto un poco','a excepción de los iconos. Gracias a', 'por los iconos CSS', "Debajo puedes ver algunos"],
         'boldtexts' : ['auto-explicativo. Todas las imágenes y vectores de está página están hechas por mi','¡Son awesome!',"ejemplos de logos que he hecho en el pasado"],
-        'links' : ['<a href="http://fontawesome.io/icons/" title="FontAwesome"> FontAwesome</a>']
+        'links' : ['<a href="http://fontawesome.io/icons/" title="FontAwesome" target="_blank"> FontAwesome</a>']
       },
       'bogui' : {
         'title' : 'Bogui JS (2015)',
         'texts' : ['Esto fue un pequeño experimento que hice con mi amigo', 'Es un simple editor online para imágenes en blanco y negro hecho en su totalidad con','Puedes echar un vistazo al proyecto'],
         'boldtexts' : ['JQuery y JQuery UI.'],
-        'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/bogui/html/index.html" title="Bogui JS">aquí</a>']
+        'links' : ['<a href="https://es.linkedin.com/in/guillermo-rodríguez-70aa66b5" title="Guillermo Rivero\'s Linked Link" target="_blank">Guillermo Rivero</a>.','<a href="/bogui/html/index.html" title="Bogui JS" target="_blank">aquí</a>']
       },
       'scss' : {
         'title' : 'Simple CSS DSL (2014)',
         'texts' : ['Es un','Es similar a SASS, LESS y todos esos pre-procesadores CSS que existen a día de hoy. Fue un proyecto realizado mientras aún estaba en la Universidad junto a mi amigo','Puedes obtener más información y probar el proyecto'],
         'boldtexts' : ['Lengüaje de Dominio Específico (DSL) para escribir CSS, hecho 100% en Javascript con JISON.'],
-        'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/scss/index" title="Simple CSS">aquí</a>. Desafortunadamente esta en inglés ¡Lo siento!']
+        'links' : ['<a href="https://es.linkedin.com/in/guillermo-rodríguez-70aa66b5" title="Guillermo Rivero\'s Linked Link" target="_blank">Guillermo Rivero</a>.','<a href="/scss/index.htm" title="Simple CSS" target="_blank">aquí</a>. Desafortunadamente esta en inglés ¡Lo siento!']
       },
       'ttt' : {
         'title' : 'Tenerife Trending Topic (2014-2015)',
         'texts' : ['Web E-commerce realizada con',' Yo hice toda la parte tecnológica:','Finalmente en 2016','Aún así, puedes visitar su sitio web en este'],
         'boldtexts' : ['Prestashop.','un logo básico gratuito, una plantilla bootstrap personalizada, la configuración del servidor y la instalación de Prestashop junto con algunas modificaciones a la plataforma y los módulos.', 'hice la migración a WooCommerce pero no tuve nada que ver con el nuevo diseño ni experiencia de usuario'],
-        'links' : ['<a href="https://tenerifetrendingtopic.com/" title="Tenerife Trending Topic">enlace</a>.']
+        'links' : ['<a href="https://tenerifetrendingtopic.com/" title="Tenerife Trending Topic" target="_blank">enlace</a>.']
       },
       'recblock' : {
         'title' : 'Recblock (2016)',
         'texts' : ['Esto fue', 'Es un', 'que sirve como un', 'Tanto el código como el plug-in se encuentran disponibles en este', 'Para una información más detallada sobre proyecto puedes leer al completo la'],
         'boldtexts' : ['mi proyecto final de carrera.','plug-in PHP para Moodle', 'bloque recomendador de actividades basado en el estilo de aprendizaje y tipo de jugador del usuario.'],
-        'links' : ['<a href="https://github.com/borbalher/moodle-block_recblock" title="Recblock Plug-in de Moodle">repositorio de GitHub</a>.', '<a href="http://riull.ull.es/xmlui/handle/915/3080" title="Memoria TFG Recblock">Memoria del Trabajo de Fin de Grado</a>.']
+        'links' : ['<a href="https://github.com/borbalher/moodle-block_recblock" title="Recblock Plug-in de Moodle" target="_blank">repositorio de GitHub</a>.', '<a href="http://riull.ull.es/xmlui/handle/915/3080" title="Memoria TFG Recblock" target="_blank">Memoria del Trabajo de Fin de Grado</a>.']
       },
       'ateca' : {
         'title' : 'ATECA (2009-actualidad)',
         'texts' : ['Son ', 'en las ', 'en términos de', 'He hecho', 'también otros trabajos como:', 'Puedes echarle un vistazo a la web mediante este '],
         'boldtexts' : ['uno de los referentes','Islas Canarias', 'servicios industriales.', 'bastantes trabajos con ellos como técnico de ordenadores,', 'Digitalización del logo y creación de su primera página web corporativa (2010)', 'Plantilla personalizada para Google Sheets y presentación de sus servicios en inglés','Nueva página web corporativa en HTML5, CSS3 y con diseño responsivo (2016).' ],
-        'links' : ['<a href="http://ateca-sl.com" title="ATECA">enlace</a>.']
+        'links' : ['<a href="http://ateca-sl.com" title="ATECA" target="_blank">enlace</a>.']
       },
       'chicharro' : {
         'title' : 'Chicharro Tattoo Gallery (2017)',
-        'texts' : ['Plataforma e-commerce que hice para Chicharro Tattoo Gallery, el estudio de tatuaje de','Está hecho con', 'y una', 'De momento no está terminado pero puedes visitar su página'],
+        'texts' : ['Plataforma e-commerce en la que estoy trabajando para Chicharro Tattoo Gallery, el estudio de tatuaje de','Está hecho con', 'y una', 'De momento no está terminado pero puedes visitar su página'],
         'boldtexts' : ['Wordpress+Woocommerce','plantilla personalizada' ],
-        'links' : ['<a href="http://www.zez608.com/" title="Web de Diego Mena">Diego Mena</a>','<a href="http://www.chicharrotattoogallery.com/" title="Chicharro Tattoo Gallery">aquí</a>.']
+        'links' : ['<a href="http://www.zez608.com/" title="Web de Diego Mena" target="_blank">Diego Mena</a>','<a href="http://www.chicharrotattoogallery.com/" title="Chicharro Tattoo Gallery" target="_blank">aquí</a>.']
       },
       'wantmore' : {
         'title' : '¿Quieres más?',
         'texts' : ['Si la respuesta es: ','Puedes visitar mis repositorios de Github para ver mas código y otros proyectos:'],
         'boldtexts' : ['¡SÍ!'],
-        'links' : ['<a href="https://github.com/alu0100698411" title="Mi repositorio de estudiante">Mi repositorio de estudiante</a>', '<a href="https://github.com/borbalher" title="Mi repositorio personal">Mi repositorio personal</a>']
+        'links' : ['<a href="https://github.com/alu0100698411" title="Mi repositorio de estudiante" target="_blank">Mi repositorio de estudiante</a>', '<a href="https://github.com/borbalher" title="Mi repositorio personal" target="_blank">Mi repositorio personal</a>']
+      },
+      'download' :{
+        'title' : 'Descarga mi CV',
+        'links' : ['<a href="/pdf/es_cv.pdf" title="Mi CV" target="_blank">Formato resumido, una página</a>', '<a href="/pdf/es_cv_europass.pdf" title="Mi CV Europass" target="_blank">Formato Europass, más completo</a>']
       },
       'contact' : {
        'title' : 'Contacto',
@@ -140,6 +164,27 @@ var spanish_content = {
 };
 
 var english_content = {
+  'about': 'About me',
+  'work': 'Works',
+  'intro': 'Computer engineering + design',
+  'english' : 'English',
+  'selfassessment' : 'Self-assessment of language skills',
+  'understanding' : 'Understanding',
+  'speaking' : 'Speaking',
+  'writing' : 'Writing',
+  'listening' : 'Listening',
+  'reading' : 'Reading',
+  'spokenprod' : 'Spoken production',
+  'spokenint' : 'Spoken interaction',
+  'b2' : 'B2 Independent User.',
+  'b1' : 'B1 Independent User.',
+  'langtitle' : 'Languages that I spoke',
+  'mothertonguetitle' : 'Mother tongue',
+  'mothertongues' : 'Spanish',
+  'otherlangtitle' : 'Other languages',
+  'otherlangs' : 'English',
+  'myworks' : 'Don\'t worry, I\'ll show you some of my works.',
+  'slideshow' : '<a href="/en/static" title="Static version">Old browser? Click here for a static version.</a>',
   'education' : {
       'title' : 'My education',
       'course_name': ["Computer Engineering Degree:  Computation and Artificial intelligence","Professional Training: Interactive Applications Development in 4th generation environments and CASE tools"],
@@ -147,7 +192,7 @@ var english_content = {
       'course_begin':  [2011,2009],
       'course_end': [2016,2011]
     },
-    'complementary_education' : {
+    'complementaryeducation' : {
         'title' : 'My complementary education',
         'texts' : ["Most of my complementary education is heavily based in ", " Besides that, I have also knowledge in other areas like " ],
         'boldtexts' : ["computers and technology","e-commerce, marketing and business"],
@@ -221,221 +266,79 @@ var english_content = {
         'title' : 'Logo design and digitazion',
         'texts' : ['I guess this is a bit','except the icons. Thanks to', 'for the CSS icons,', "Below you can watch some"],
         'boldtexts' : ['self-explanatory. I made all the graphic stuff in this website','they\'re awesome!',"logo examples I\'ve made in the past"],
-        'links' : ['<a href="http://fontawesome.io/icons/" title="FontAwesome"> FontAwesome</a>']
+        'links' : ['<a href="http://fontawesome.io/icons/" title="FontAwesome" target="_blank"> FontAwesome</a>']
       },
       'bogui' : {
         'title' : 'Bogui JS (2015)',
         'texts' : ['This one was a little experiment I made with my friend', 'It\'s a simple online image editor  for black and white images using','You can check the project'],
         'boldtexts' : ['JQuery and JQuery UI.'],
-        'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/bogui/html/index.html" title="Bogui JS">here</a> but it\'s in spanish. Sorry!']
+        'links' : ['<a href="https://en.linkedin.com/in/guillermo-rodríguez-70aa66b5" title="Guillermo Rivero\'s Linked Link" target="_blank">Guillermo Rivero</a>.','<a href="/bogui/html/index.html" title="Bogui JS" target="_blank">here</a> but it\'s in spanish. Sorry!']
       },
       'scss' : {
         'title' : 'Simple CSS DSL (2014)',
         'texts' : ['It\'s a','It\'s similar to SASS and LESS and all that kind of CSS pre-processors that exist nowadays. It was made while I was at the university with my friend','You can check the project and get more info'],
         'boldtexts' : ['Domain Specific Language (DSL) for writing CSS, 100% done in Javascript with JISON.'],
-        'links' : ['<a href="http://fontawesome.io/icons/" title="Guillermo Rivero\'s Linked Link">Guillermo Rivero</a>.','<a href="/scss/index" title="Simple CSS">here</a>.']
+        'links' : ['<a href="https://en.linkedin.com/in/guillermo-rodríguez-70aa66b5" title="Guillermo Rivero\'s Linked Link" target="_blank">Guillermo Rivero</a>.','<a href="/scss/index" title="Simple CSS" target="_blank">here</a>.']
       },
       'ttt' : {
         'title' : 'Tenerife Trending Topic (2014-2015)',
         'texts' : ['E-commerce website using',' I made all the geeky stuff: ','Finally in 2016','Even so, you can check their website '],
         'boldtexts' : ['Prestashop.','free basic logo, custom bootstrap template, web server configuration and Prestashop installation along some Prestashop modules modifications.', 'I did the migration to WooCommerce but I got nothing to do with the new design'],
-        'links' : ['<a href="https://tenerifetrendingtopic.com/" title="Tenerife Trending Topic">here</a>.']
+        'links' : ['<a href="https://tenerifetrendingtopic.com/" title="Tenerife Trending Topic" target="_blank">here</a>.']
       },
       'recblock' : {
         'title' : 'Recblock (2016)',
         'texts' : ['This one was', 'It\'s a', 'that serves as a', ' The plug-in and code is available in this', 'For more detailed info about the project you can check its '],
         'boldtexts' : ['my final career project.','Moodle PHP plug-in', 'recommendation block based on user\'s playing type and learning style.'],
-        'links' : ['<a href="https://github.com/borbalher/moodle-block_recblock" title="Recblock Moodle Plug-in">GitHub repository</a>.', '<a href="http://riull.ull.es/xmlui/handle/915/3080" title="Recblock Thesis">thesis</a>.']
+        'links' : ['<a href="https://github.com/borbalher/moodle-block_recblock" title="Recblock Moodle Plug-in" target="_blank">GitHub repository</a>.', '<a href="http://riull.ull.es/xmlui/handle/915/3080" title="Recblock Thesis" target="_blank">thesis</a>.']
       },
       'ateca' : {
         'title' : 'ATECA (2009-current)',
         'texts' : ['They are ', 'in the', 'in terms of', 'I have made', 'other ones include:', 'You can give it a look'],
         'boldtexts' : ['one of the referents','Canary Islands', 'industrial services.', 'many works with them as computer technician,', 'Logo digitazion and creation of their first corporate webpage (2010)', 'Custom Google Sheets template and english showcase presentation','New corporate website using responsive design and HTML5 (2016).' ],
-        'links' : ['<a href="http://ateca-sl.com" title="ATECA">here</a>.']
+        'links' : ['<a href="http://ateca-sl.com" title="ATECA" target="_blank">here</a>.']
       },
       'chicharro' : {
         'title' : 'Chicharro Tattoo Gallery (2017)',
-        'texts' : ['E-commerce website I made for Chicharro Tattoo Gallery,','tattoo studio. It uses', 'with a', ' I\'m still working in this but it will be posted as soon as I finish. You can visit theri site'],
+        'texts' : ['E-commerce website I\'m making for Chicharro Tattoo Gallery,','tattoo studio. It uses', 'with a', ' I\'m still working in this but it will be posted as soon as I finish. You can visit theri site'],
         'boldtexts' : ['Wordpress+Woocommerce','custom template' ],
-        'links' : ['<a href="http://www.zez608.com/" title="Diego Mena\'s Personal Website">Diego Mena\'s</a>','<a href="http://www.chicharrotattoogallery.com/" title="Chicharro Tattoo Gallery">here</a>.']
+        'links' : ['<a href="http://www.zez608.com/" title="Diego Mena\'s Personal Website" target="_blank">Diego Mena\'s</a>','<a href="http://www.chicharrotattoogallery.com/" title="Chicharro Tattoo Gallery" target="_blank">here</a>.']
       },
       'wantmore' : {
         'title' : 'Do you want more?',
         'texts' : ['If the answer is: ','you can check out my github repositories for more code:'],
         'boldtexts' : ['YES!'],
-        'links' : ['<a href="https://github.com/alu0100698411" title="My student repository">My student repository</a>', '<a href="https://github.com/borbalher" title="My personal repository">My personal repository</a>']
+        'links' : ['<a href="https://github.com/alu0100698411" title="My student repository" target="_blank">My student repository</a>', '<a href="https://github.com/borbalher" title="My personal repository" target="_blank">My personal repository</a>']
+      },
+      'download' :{
+        'title' : 'Download my CV',
+        'links' : ['<a href="/pdf/en_cv.pdf" title="My CV" target="_blank">Short format, one page only</a>', '<a href="/pdf/en_cv_europass.pdf" title="My Europass CV" target="_blank">Europass format</a>']
       },
       'contact' : {
-       'title' : 'Contact me',
+       'title' : 'Contact',
        'links' : ['<a href="mailto:contact@borisballester.com?Subject=Hello%20again" title="My e-mail">contact@borisballester.com</a>']
      }
 };
 
-
-app.get('/en/interactive', function (req, res) {
-
-  res.render('interactive', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!',
-                          'about': 'About me',
-                          'work': 'My works',
-                          'intro': 'Computer engineering + design',
-                          'whoami' :english_content.whoami,
-                          'objectives' : english_content.objectives,
-                          'skills' : english_content.skills,
-                          'education' : english_content.education,
-                          'complementaryeducation' : english_content.complementary_education,
-                          'english' : 'English',
-                          'selfassessment' : 'Self-assessment of language skills',
-                          'understanding' : 'Understanding',
-                          'speaking' : 'Speaking',
-                          'writing' : 'Writing',
-                          'listening' : 'Listening',
-                          'reading' : 'Reading',
-                          'spokenprod' : 'Spoken production',
-                          'spokenint' : 'Spoken interaction',
-                          'b2' : 'B2 Independent User.',
-                          'b1' : 'B1 Independent User.',
-                          'langtitle' : 'Languages that I spoke',
-                          'mothertonguetitle' : 'Mother tongue',
-                          'mothertongues' : 'Spanish',
-                          'otherlangtitle' : 'Other languages',
-                          'otherlangs' : 'English',
-                          'workexperience' : english_content.workexperience,
-                          'myworks' : 'Don\'t worry, now I\'ll show you some of my works',
-                          'logodesign' : english_content.logodesign,
-                          'bogui' : english_content.bogui,
-                          'scss' : english_content.scss,
-                          'ttt' : english_content.ttt,
-                          'recblock' : english_content.recblock,
-                          'ateca' : english_content.ateca,
-                          'chicharro' : english_content.chicharro,
-                          'wantmore' : english_content.wantmore,
-                          'contact' : english_content.contact
-                      });
+app.get('/', function (req, res) {
+  res.render('slideshow', english_content);
 });
 
-app.get('/es/interactive', function (req, res) {
+app.get('/en/slideshow', function (req, res) {
+  res.render('slideshow', english_content);
+});
 
-  res.render('interactive', {   'title': 'Hola! Soy Boris Ballester. Bienvenidos a mi sitio web!',
-                          'about': 'Sobre mi',
-                          'work': 'Mis trabajos',
-                          'intro': 'Ingeniería Informática + diseño',
-                          'whoami' :spanish_content.whoami,
-                          'objectives' : spanish_content.objectives,
-                          'skills' : spanish_content.skills,
-                          'education' : spanish_content.education,
-                          'complementaryeducation' : spanish_content.complementary_education,
-                          'english' : 'Inglés',
-                          'selfassessment' : 'Autoevaluación de las habilidades lingüísticas',
-                          'understanding' : 'Comprensión',
-                          'speaking' : 'Habla',
-                          'writing' : 'Escritura',
-                          'listening' : 'Escucha',
-                          'reading' : 'Lectura',
-                          'spokenprod' : 'Producción hablada',
-                          'spokenint' : 'Interacción hablada',
-                          'b2' : 'B2 usuario independiente.',
-                          'b1' : 'B1 usuario independiente.',
-                          'langtitle' : 'Idiomas que hablo',
-                          'mothertonguetitle' : 'Lengua nativa',
-                          'mothertongues' : 'Español',
-                          'otherlangtitle' : 'Otros idiomas',
-                          'otherlangs' : 'Inglés',
-                          'workexperience' : spanish_content.workexperience,
-                          'myworks' : 'No te preocupes, te enseñaré algunos de mis trabajos',
-                          'logodesign' : spanish_content.logodesign,
-                          'bogui' : spanish_content.bogui,
-                          'scss' : spanish_content.scss,
-                          'ttt' : spanish_content.ttt,
-                          'recblock' : spanish_content.recblock,
-                          'ateca' : spanish_content.ateca,
-                          'chicharro' : spanish_content.chicharro,
-                          'wantmore' : spanish_content.wantmore,
-                          'contact' : spanish_content.contact
-                      });
+app.get('/es/slideshow', function (req, res) {
+  res.render('slideshow', spanish_content);
 });
 
 app.get('/en/static', function (req, res) {
-
-  res.render('static', {   'title': 'Hi! I\'m Boris Ballester. Welcome to my site!',
-                          'about': 'About me',
-                          'work': 'My works',
-                          'intro': 'Computer engineering + design',
-                          'whoami' :english_content.whoami,
-                          'objectives' : english_content.objectives,
-                          'skills' : english_content.skills,
-                          'education' : english_content.education,
-                          'complementaryeducation' : english_content.complementary_education,
-                          'english' : 'English',
-                          'selfassessment' : 'Self-assessment of language skills',
-                          'understanding' : 'Understanding',
-                          'speaking' : 'Speaking',
-                          'writing' : 'Writing',
-                          'listening' : 'Listening',
-                          'reading' : 'Reading',
-                          'spokenprod' : 'Spoken production',
-                          'spokenint' : 'Spoken interaction',
-                          'b2' : 'B2 Independent User.',
-                          'b1' : 'B1 Independent User.',
-                          'langtitle' : 'Languages that I spoke',
-                          'mothertonguetitle' : 'Mother tongue',
-                          'mothertongues' : 'Spanish',
-                          'otherlangtitle' : 'Other languages',
-                          'otherlangs' : 'English',
-                          'workexperience' : english_content.workexperience,
-                          'myworks' : 'Don\'t worry, now I\'ll show you some of my works',
-                          'logodesign' : english_content.logodesign,
-                          'bogui' : english_content.bogui,
-                          'scss' : english_content.scss,
-                          'ttt' : english_content.ttt,
-                          'recblock' : english_content.recblock,
-                          'ateca' : english_content.ateca,
-                          'chicharro' : english_content.chicharro,
-                          'wantmore' : english_content.wantmore,
-                          'contact' : english_content.contact
-                      });
+  res.render('static', english_content);
 });
 
 app.get('/es/static', function (req, res) {
-
-  res.render('static', {   'title': 'Hola! Soy Boris Ballester. Bienvenidos a mi sitio web!',
-                          'about': 'Sobre mi',
-                          'work': 'Mis trabajos',
-                          'intro': 'Ingeniería Informática + diseño',
-                          'whoami' :spanish_content.whoami,
-                          'objectives' : spanish_content.objectives,
-                          'skills' : spanish_content.skills,
-                          'education' : spanish_content.education,
-                          'complementaryeducation' : spanish_content.complementary_education,
-                          'english' : 'Inglés',
-                          'selfassessment' : 'Autoevaluación de las habilidades lingüísticas',
-                          'understanding' : 'Comprensión',
-                          'speaking' : 'Habla',
-                          'writing' : 'Escritura',
-                          'listening' : 'Escucha',
-                          'reading' : 'Lectura',
-                          'spokenprod' : 'Producción hablada',
-                          'spokenint' : 'Interacción hablada',
-                          'b2' : 'B2 usuario independiente.',
-                          'b1' : 'B1 usuario independiente.',
-                          'langtitle' : 'Idiomas que hablo',
-                          'mothertonguetitle' : 'Lengua nativa',
-                          'mothertongues' : 'Español',
-                          'otherlangtitle' : 'Otros idiomas',
-                          'otherlangs' : 'Inglés',
-                          'workexperience' : spanish_content.workexperience,
-                          'myworks' : 'No te preocupes, te enseñaré algunos de mis trabajos',
-                          'logodesign' : spanish_content.logodesign,
-                          'bogui' : spanish_content.bogui,
-                          'scss' : spanish_content.scss,
-                          'ttt' : spanish_content.ttt,
-                          'recblock' : spanish_content.recblock,
-                          'ateca' : spanish_content.ateca,
-                          'chicharro' : spanish_content.chicharro,
-                          'wantmore' : spanish_content.wantmore,
-                          'contact' : spanish_content.contact
-                      });
+  res.render('static', spanish_content);
 });
-
 
 app.get('/css/normalize.css', function (req, res) {
    res.sendFile(__dirname + '/node_modules/normalize.css/normalize.css');
@@ -457,12 +360,12 @@ app.get('/css/owl-carousel-theme.css', function (req, res) {
    res.sendFile(__dirname + '/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css');
 });
 
-app.get('/js/skrollr.js', function (req, res) {
-   res.sendFile(__dirname + '/node_modules/skrollr/dist/skrollr.min.js');
+app.get('/js/wow.js', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/wowjs/dist/wow.min.js');
 });
 
-app.get('/js/jquery.mousewheel.js', function (req, res) {
-   res.sendFile(__dirname + '/node_modules/jquery-mousewheel/jquery.mousewheel.js');
+app.get('/js/skrollr.js', function (req, res) {
+   res.sendFile(__dirname + '/node_modules/skrollr/dist/skrollr.min.js');
 });
 
 app.get('/js/skrollr-ie.js', function (req, res) {
@@ -497,8 +400,53 @@ app.get('/fonts/fontawesome-webfont.ttf', function (req, res) {
    res.sendFile(__dirname + '/node_modules/font-awesome/fonts/fontawesome-webfont.ttf');
 });
 
+function getFileName(fileName, extension){
+  if (process.env.NODE_ENV == "production") {
+    return fileName + '.min.'+extension;
+  } else {
+    return fileName + extension;
+  }
+}
+
+app.get('/js/load-skrollr.js', function (req, res) {
+  res.sendFile(__dirname + '/js/'+getFileName('load-skrollr','js'));
+});
+
+app.get('/js/load-wow.js', function (req, res) {
+  res.sendFile(__dirname + '/js/'+getFileName('load-wow','js'));
+});
+
+app.get('/js/load-owl-carousel.js', function (req, res) {
+  res.sendFile(__dirname + '/js/'+getFileName('load-owl-carousel','js'));
+});
+
+app.get('/js/jquery.mousewheel.js', function (req, res) {
+  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/'+getFileName('jquery.mousewheel','js'));
+});
+
+app.get('/js/jquery.mousewheel.js', function (req, res) {
+  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/'+getFileName('jquery.mousewheel'));
+});
+
+app.get('/css/main.css', function (req, res) {
+  res.sendFile(__dirname + '/css/'+getFileName('main','css'));
+});
+
+app.get('/css/skrollr.animations.css', function (req, res) {
+  res.sendFile(__dirname + '/css/'+getFileName('skrollr.animations','css'));
+});
 
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.get('/css/skrollr.css', function (req, res) {
+  res.sendFile(__dirname + '/css/'+getFileName('skrollr','css'));
+});
+
+
+app.get('/css/static.css', function (req, res) {
+  res.sendFile(__dirname + '/css/'+getFileName('static','css'));
+});
+
+
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
 });

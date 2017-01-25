@@ -42,6 +42,25 @@ $dpi2: "(min-resolution: 2dppx)";
   margin-top: 1em;
 }
 
+#wantmore{
+  ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    font-size: 1.5em;
+    margin: 0;
+    li{
+      width: 100%;
+      margin: 0;
+      a{
+        padding: 0.8em 0;
+        width: 100%;
+        display:block;
+      }
+    }
+  }
+}
+
 
 html, body {
     width:100%;
@@ -123,18 +142,10 @@ html, body {
   }
 }
 
-#wantmore {
-  ul{
-    text-align: center;
-    list-style: none;
-    font-size: 1.5em;
-  }
-}
-
 .contactmail{
   text-align: center;
   font-size: 2em;
-  width: 90%;
+  width: 100%;
   position: absolute;
   top: 45%;
   a{
@@ -232,19 +243,20 @@ p{
   white-space: normal;
 }
 
+#slideshow{
+  a{
+    font-size: 0.8em;
+  }
+}
+
 #intro{
   color: $button;
-  padding-top: 1em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
-
-  p{
-    margin: 0 auto;
-    display: inline-block;
-  }
-
+  padding: 0;
+  padding-top: 1em;
 }
 
 ul{
@@ -253,7 +265,7 @@ ul{
   line-height: 1em;
   text-align: justify;
   li{
-    margin-bottom: 1em;
+    margin-bottom: 0.3em;
   }
 }
 
@@ -279,10 +291,11 @@ h2{
 .myworkscontainer{
   position: absolute;
   top: 40%;
-  width: 90%;
+  width: 100%;
   p{
     display: block;
     text-align: center;
+    padding: 0;
     font-size: 2em;
   }
 }
@@ -293,6 +306,19 @@ h2{
 
 .italic{
   font-style: italic;
+}
+
+#lang-menu{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  span{
+    margin: 0 0.1em;
+  }
+  a{
+      padding: 0.5em;
+  }
 }
 
 #menu-nav{
@@ -375,19 +401,6 @@ a:active {
   background-size: 55%;
 }
 
-#helper {
-  position:absolute;
-  left:0;
-  top: 0;
-  height:3100%;
-  width: 1px;
-}
-
-.marker {
-  height: 4.76%;
-  width: 100%;
-}
-
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -446,6 +459,10 @@ a:active {
 
 .centered{
   text-align: center;
+}
+
+#srocket{
+  color: $red;
 }
 
 #moreskillsdesc{
