@@ -78,8 +78,18 @@ html, body {
     margin-top: 0.5em;
 }
 
+#bullseye,
+#mypicture,
+#scsslogo{
+  width: 50%;
+}
+
+#langimg{
+  width: 80%;
+}
+
 .imgresp{
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   display: block;
   text-align: center;
@@ -510,14 +520,10 @@ a:active {
   margin: 0 auto;
 }
 
-#ttt .imgrespheight,
-#bogui .imgrespheight{
-  height: 60%;
-}
-
-
 @media #{$portrait}{
-
+  .notfound{
+    font-size: 15vh;
+  }
   #menu-nav{
     bottom: 25%;
   }
@@ -533,7 +539,6 @@ a:active {
   #landing-bg{
     background-size: 45%;
   }
-
 }
 
 @media #{$tablet} {
