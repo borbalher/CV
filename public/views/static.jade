@@ -1,0 +1,242 @@
+doctype html
+html
+  head
+    title!= title
+
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(href='/css/owl-carousel.css', rel='stylesheet')
+    link(href='/css/owl-carousel-theme.css', rel='stylesheet')
+    link(href='/css/animate.css', rel='stylesheet')
+    link(href='/css/font-awesome.css', rel='stylesheet')
+    link(href='/css/main.css', rel='stylesheet')
+    link(href='/css/static.css', rel='stylesheet')
+    link(href='/css/normalize.css', rel='stylesheet')
+
+  body
+    div#landing-bg
+    #main-container
+      #sections
+        #landing
+          div#lang-menu
+            a(href="/es/static") #{mothertongues}
+            span |
+            a(href="/en/static") #{english}
+          nav#menu-nav
+            p#intro #{intro}
+            ul#menu
+              li
+                a(href="#whoami" data-menu-top="100p") #[i.fa.fw.fa-user-circle] #{about}
+              li
+                a(href="#workexperience") #[i.fa.fw.fa-briefcase] #{work}
+              li
+                a(href="#wantmore") #[i.fa.fw.fa-download] #{download.title}
+              li
+                a(href="#contact") #[i.fa.fw.fa-envelope] #{contact.title}
+          i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
+        #whoami
+          div.contentwrapper
+            h2 #{whoami.title}
+            p #{whoami.texts[0]} #[span.bold #{whoami.boldtexts[0]}]
+              | #{whoami.texts[1]} #[span.bold #{whoami.boldtexts[1]}]
+              | #{whoami.texts[2]} #[span.bold #{whoami.boldtexts[2]}]
+              | #{whoami.texts[3]} #[span.bold #{whoami.boldtexts[3]}]
+              | #{whoami.texts[4]} #[span.bold #{whoami.boldtexts[4]}]
+              | #{whoami.texts[5]} #[span.bold #{whoami.boldtexts[5]}]
+              | #[span.bold #{whoami.boldtexts[6]}]
+            div#mypicture.imgresp
+              img(src='/imgs/me.png' title='That\'s me \:3')
+        #objectives
+          div.contentwrapper
+            h2 #{objectives.title}
+            ul
+              li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
+              li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
+              li #[span.bold #{objectives.boldtexts[2]}]
+              li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
+            div#bullseye.imgresp.animated.swing
+              img(src='/imgs/bulls-eye.svg' title='Bull\'s eye')
+        #skills
+          div.contentwrapper
+            h2#skillstitle #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")] !{skills.title}
+            div#skillsdesc
+                p #{skills.texts[0]} #[span.bold #{skills.boldtexts[0]}] #{skills.texts[1]}
+                ul
+                  for skill in skills.skills
+                    li.bold #{skill}
+        #mskills
+          div.contentwrapper
+              div#moreskillsdesc
+                p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}] #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
+              div#msrocketcontainer #[i#msrocket.fa.fw.fa-rocket(aria-hidden="true")]
+        #education
+            div.contentwrapper
+              h2#educationtitle #{education.title}
+              div.facontainer#educationimg.wow.bounce(data-wow-delay="1s")
+                span.fa.fa-university(aria-hidden="true")
+              mixin fill_eduaction(name, institution, begin, end)
+                li
+                  span.coursename.bold !{name}
+                  ul.institutionlist
+                    li.courseinstitution
+                      span.italic  !{institution}
+                      span.courseduration [#{begin} - #{end}]
+              div#educationcontent
+                ul
+                  each course, i in education.course_name
+                    +fill_eduaction(course,education.course_institution[i],education.course_begin[i],education.course_end[i])
+        #complementaryeducation
+          div.contentwrapper
+            div#complementaryeducationcontent
+              h2 #{complementaryeducation.title}
+              p #{complementaryeducation.texts[0]}  #[span.bold #{complementaryeducation.boldtexts[0]}]:
+              mixin fill_complementary_education(name, institution, hours, year)
+                li
+                  span.coursename.bold !{name}
+                  ul.institutionlist
+                    li
+                      span.courseinstitution.italic  #{institution}
+                      span.courseduration    [#{hours} hours] [#{year}]
+              ul
+                - for (var i = 0; i < 4; ++i) {
+                    +fill_complementary_education(complementaryeducation.course_name[i],complementaryeducation.course_institution[i],complementaryeducation.course_hours[i],complementaryeducation.course_year[i])
+                - }
+        #morecomplementaryeducation
+          div.contentwrapper
+            div#morecomplementaryeducationcontent
+              p #{complementaryeducation.texts[1]}  #[span.bold #{complementaryeducation.boldtexts[1]}]:
+              ul
+                - for (var i = 4; i < complementaryeducation.course_name.length; ++i) {
+                    +fill_complementary_education(complementaryeducation.course_name[i],complementaryeducation.course_institution[i],complementaryeducation.course_hours[i],complementaryeducation.course_year[i])
+                - }
+        #languages
+          div.contentwrapper
+            h2 #[i.fa.fw.fa-comments(aria-hidden="true")] #{langtitle}
+            div#langimg.imgresp.wow.pulse(data-wow-delay="1s")
+              img(src='/imgs/langs.svg' title='My main languages')
+            div#languageskills.langboxcontainer
+              div.halflangbox
+                div.langtitle #{mothertonguetitle}
+                div.langvalue #{mothertongues}
+              div.halflangbox
+                div.langtitle #{otherlangtitle}
+                div.langvalue #{otherlangs}
+              div.middleborder
+        #morelanguages
+          div.contentwrapper
+            h2 #[i.fa.fw.fa-language(aria-hidden="true")] #{english}
+            h3 #{selfassessment} #[i.fa.fw.fa-check(aria-hidden="true")]
+            h4 #{understanding}
+            div#understandingskills.langboxcontainer
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-headphones(aria-hidden="true")] #{listening}
+                div.langvalue #{b2}
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-book(aria-hidden="true")] #{reading}:
+                div.langvalue #{b2}
+              div.middleborder
+            h4 #{speaking}
+            div#speakingskills.langboxcontainer
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-comments(aria-hidden="true")] #{spokenint}:
+                div.langvalue #{b2}
+              div.halflangbox
+                div.langtitle #[i.fa.fw.fa-commenting(aria-hidden="true")] #{spokenprod}:
+                div.langvalue #{b1}
+              div.middleborder
+            h4 #{writing}
+            div#writingskills.langboxcontainer
+              div.fulllangbox
+                div.langtitle  #[i.fa.fw.fa-pencil(aria-hidden="true")] #{writing}:
+                div.langvalue #{b1}
+        #workexperience
+          div.contentwrapper
+            h2 #{workexperience.title}
+            div.workexperience.wow.shake(data-wow-delay="1s")
+              span.notfound #{workexperience.texts[5]}
+              span.realexperience #{workexperience.texts[6]}
+            p  #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}] #{workexperience.texts[2]} #[span.bold #{workexperience.boldtexts[2]}] #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}]. #{workexperience.texts[4]}:
+            p.experienceparagraph #[span.bold #{workexperience.boldtexts[4]}]
+        #myworks
+          div.contentwrapper
+            div.myworkscontainer
+              p #{myworks}.
+        #logodesign
+          div.contentwrapper
+            h2 #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")] #{logodesign.title}
+            p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}] #{logodesign.texts[3]} #[span.bold #{logodesign.boldtexts[2]}].
+            div.owl-carousel
+              div
+                img(src='/imgs/my_logo.png' title='My signature')
+              div
+                img(src='/imgs/hg.png' title='Hood Geniuses')
+              div
+                img(src='/imgs/scb1.png' title='Scbonkers')
+              div
+                img(src='/imgs/bogui.png' title='Bogui JS')
+              div
+                img(src='/imgs/scss.png' title='Simple CSS')
+              div
+                img(src='/imgs/scb2.png' title='Scbonkers alternative')
+              div
+                img(src='/imgs/pdr.png' title='Predictive Recursive Descent Parser')
+              div
+                img(src='/imgs/tsc.png' title='TSC')
+        #bogui
+          div.contentwrapper
+            h2  #{bogui.title}
+            p #{bogui.texts[0]} !{bogui.links[0]} #{bogui.texts[1]} #[span.bold #{bogui.boldtexts[0]}] #{bogui.texts[2]} !{bogui.links[1]}
+            div.imgresp
+              img(src='/imgs/bogui_example.png' title='BoguiJS Image Editor')
+        #scss
+          div.contentwrapper
+            h2 #{scss.title}
+            p #{scss.texts[0]} #[span.bold #{scss.boldtexts[0]}] #{scss.texts[1]} !{scss.links[0]} #{scss.texts[2]} !{scss.links[1]}
+            div#scsslogo.imgresp
+              img(src='/imgs/scss.png' title='Simple CSS DSL')
+        #ttt
+          div.contentwrapper
+            h2 #{ttt.title}
+            p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]  #{ttt.texts[2]} #[span.bold #{ttt.boldtexts[2]}] #{ttt.texts[3]} !{ttt.links[0]}
+            div.imgresp
+              img(src='/imgs/ttt.png' title='Tenerife Trending Topic web-store')
+        #recblock
+          div.contentwrapper
+            h2 #{recblock.title}
+            p #{recblock.texts[0]} #[span.bold #{recblock.boldtexts[0]}] #{recblock.texts[1]} #[span.bold #{recblock.boldtexts[1]}] #{recblock.texts[2]} #[span.bold #{recblock.boldtexts[2]}] #{recblock.texts[3]} !{recblock.links[0]} #{recblock.texts[4]} !{recblock.links[1]}
+        #ateca
+          div.contentwrapper
+            h2 #{ateca.title}
+            p #{ateca.texts[0]} #[span.bold #{ateca.boldtexts[0]}]  #{ateca.texts[1]} #[span.bold #{ateca.boldtexts[1]}]  #{ateca.texts[2]} #[span.bold #{ateca.boldtexts[2]}]  #{ateca.texts[3]} #[span.bold #{ateca.boldtexts[3]}]  #{ateca.texts[4]}
+            ul
+              li #[span.bold #{ateca.boldtexts[4]}]
+              li #[span.bold #{ateca.boldtexts[5]}]. #[span.bold #{ateca.boldtexts[6]}] #{ateca.texts[5]} !{ateca.links[0]}
+            div.imgresp
+              img(src='/imgs/ateca.png' title='ATECA')
+        #chicharro
+          div.contentwrapper
+            h2 #{chicharro.title}
+            p #{chicharro.texts[0]} !{chicharro.links[0]} #{chicharro.texts[1]} #[span.bold #{chicharro.boldtexts[0]}] #{chicharro.texts[2]} #[span.bold #{chicharro.boldtexts[1]}]. #{chicharro.texts[3]} !{chicharro.links[1]}
+        #wantmore
+          div.contentwrapper
+            h2 #[i.fa.fw.fa-download(aria-hidden="true")] #{download.title}
+            ul
+              li.cv !{download.links[0]}
+              li.cv !{download.links[1]}
+            h2 #{wantmore.title}
+            p #{wantmore.texts[0]} #[span.bold.yes #{wantmore.boldtexts[0]}] #{wantmore.texts[1]}
+            ul
+              li !{wantmore.links[0]}
+              li !{wantmore.links[1]}
+        #contact
+          div.contentwrapper
+              h2 #{contact.title}
+              div.contactmail !{contact.links[0]}
+    script(src='/js/jquery.js')
+    script(src='/js/owl-carousel.js')
+    script(src='/js/jquery.mousewheel.js')
+    script(src='/js/load-owl-carousel.js')
+    script(src='/js/wow.js')
+    script(src='/js/load-wow.js')

@@ -1,0 +1,685 @@
+$slides_begin: 0;
+$slides_pause: 50;
+$landing_duration: 100;
+$slides_duration: 150;
+$whoami: $landing_duration;
+$objectives: $whoami + $slides_duration;
+$skills: $objectives + $slides_duration;
+$mskills: $skills + $slides_duration;
+$education: $mskills + $slides_duration;
+$complementary_education: $education + $slides_duration;
+$more_complementary_education: $complementary_education + $slides_duration;
+$languages: $more_complementary_education + $slides_duration;
+$more_languages: $languages + $slides_duration;
+$work_experience: $more_languages + $slides_duration;
+$my_works: $work_experience + $slides_duration;
+$logo_design: $my_works + $slides_duration;
+$bogui: $logo_design + $slides_duration;
+$scss: $bogui + $slides_duration;
+$ttt: $scss + $slides_duration;
+$recblock: $ttt + $slides_duration;
+$ateca: $recblock + $slides_duration;
+$chicharro: $ateca + $slides_duration;
+$want_more: $chicharro + $slides_duration;
+$contact: $want_more + $slides_duration;
+
+#paralax-sections{
+  -skrollr-animation-name:slideshow;
+}
+
+#intro{
+  -skrollr-animation-name:intro_animation;
+  -skrollr-anchor-target: '#helper';
+}
+
+#landing-bg{
+  -skrollr-animation-name:landing_bg;
+  -skrollr-anchor-target: '#helper';
+}
+
+#bullseye img{
+  -skrollr-animation-name:bullseye;
+  -skrollr-anchor-target: '#helper';
+}
+
+#srocket{
+  -skrollr-animation-name:srocket;
+  -skrollr-anchor-target: '#helper';
+}
+
+#msrocket{
+  -skrollr-animation-name:msrocket;
+  -skrollr-anchor-target: '#helper';
+}
+
+#educationimg{
+  -skrollr-animation-name:activate_animation_education;
+  -skrollr-anchor-target: '#helper';
+}
+
+#menu{
+  -skrollr-animation-name:intro_animation;
+  -skrollr-anchor-target: '#helper';
+}
+
+#slideshow{
+  -skrollr-animation-name:intro_animation;
+  -skrollr-anchor-target: '#helper';
+}
+
+#whoami .contentwrapper{
+  -skrollr-animation-name:who_am_i;
+  -skrollr-anchor-target: '#helper';
+}
+
+#objectives .contentwrapper{
+  -skrollr-animation-name:objectives;
+  -skrollr-anchor-target: '#helper';
+}
+
+#skills .contentwrapper{
+  -skrollr-animation-name:skills;
+  -skrollr-anchor-target: '#helper';
+}
+
+#mskills .contentwrapper{
+  -skrollr-animation-name:more_skills;
+  -skrollr-anchor-target: '#helper';
+}
+
+#education .contentwrapper{
+  -skrollr-animation-name:education;
+  -skrollr-anchor-target: '#helper';
+}
+
+#complementaryeducation .contentwrapper{
+  -skrollr-animation-name:complementary_education;
+  -skrollr-anchor-target: '#helper';
+}
+
+#morecomplementaryeducation .contentwrapper{
+  -skrollr-animation-name:more_complementary_education;
+  -skrollr-anchor-target: '#helper';
+}
+
+#languages .contentwrapper{
+  -skrollr-animation-name:languages;
+  -skrollr-anchor-target: '#helper';
+}
+
+#langimg{
+  -skrollr-animation-name:activate_animation_language;
+  -skrollr-anchor-target: '#helper';
+}
+
+#morelanguages .contentwrapper{
+  -skrollr-animation-name:more_languages;
+  -skrollr-anchor-target: '#helper';
+}
+
+#workexperience .contentwrapper{
+  -skrollr-animation-name:work_experience;
+  -skrollr-anchor-target: '#helper';
+}
+
+.workexperience{
+  -skrollr-animation-name:activate_animation_work;
+  -skrollr-anchor-target: '#helper';
+}
+
+#myworks .contentwrapper{
+  -skrollr-animation-name:my_works;
+  -skrollr-anchor-target: '#helper';
+}
+
+#logodesign .contentwrapper{
+  -skrollr-animation-name:logo_design;
+  -skrollr-anchor-target: '#helper';
+}
+
+#bogui .contentwrapper{
+  -skrollr-animation-name:bogui;
+  -skrollr-anchor-target: '#helper';
+}
+
+#ttt .contentwrapper{
+  -skrollr-animation-name:ttt;
+  -skrollr-anchor-target: '#helper';
+}
+
+#ateca .contentwrapper{
+  -skrollr-animation-name:ateca;
+  -skrollr-anchor-target: '#helper';
+}
+
+#chicharro .contentwrapper{
+  -skrollr-animation-name:chicharro;
+  -skrollr-anchor-target: '#helper';
+}
+
+#wantmore .contentwrapper{
+  -skrollr-animation-name:want_more;
+  -skrollr-anchor-target: '#helper';
+}
+
+@-skrollr-keyframes landing_bg {
+    skrollr-#{$slides_begin} {
+      transform:translate(0%, 0%);
+      opacity: 1;
+    }
+
+    skrollr-#{$slides_begin + $slides_pause}p{
+      transform:translate(0%, -10%);
+      opacity: 0;
+    }
+}
+
+@-skrollr-keyframes intro_animation {
+    skrollr-#{$slides_begin}p {
+      transform:translate(0%, 0%);
+      opacity: 1;
+    }
+
+    skrollr-#{$whoami - $slides_pause}p{
+      transform:translate(0%, 5%);
+      opacity: 0;
+    }
+}
+
+@-skrollr-keyframes who_am_i {
+
+  skrollr-#{$whoami}p {
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$whoami+ $slides_pause}p {
+    transform:translate(0%, 0%);
+    opacity: 1;
+  }
+
+  skrollr-#{$objectives}p {
+    transform:translate(0%, -10%);
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes objectives {
+
+  skrollr-#{$objectives}p {
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$objectives+ $slides_pause}p {
+    transform:translate(0%, 0%);
+    opacity: 1;
+  }
+
+  skrollr-#{$skills}p {
+    transform:translate(0%, -10%);
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes bullseye {
+  skrollr-#{$objectives}p {
+    transform:rotate(0deg);
+  }
+
+  skrollr-#{$objectives+ $slides_pause}p {
+    transform:rotate(-120deg);
+  }
+}
+
+
+@-skrollr-keyframes skills {
+
+  skrollr-#{$skills+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$mskills}p {
+    opacity: 0;
+  }
+
+}
+@-skrollr-keyframes srocket {
+  skrollr-#{$skills}p {
+    color: #ff3366;
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$mskills}p {
+    transform:translate(300%, -500%);
+  }
+
+}
+
+
+@-skrollr-keyframes more_skills {
+
+  skrollr-#{$mskills}p {
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$mskills+ $slides_pause}p {
+    transform:translate(0%, 0%);
+    opacity: 1;
+  }
+
+  skrollr-#{$education}p {
+    transform:translate(10%, -10%);
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes msrocket {
+  skrollr-#{$slides_begin}p {
+    color: #ff3366;
+    visibility: hidden;
+  }
+  skrollr-#{$mskills - $slides_pause}p {
+    visibility: visible;
+    transform:translate(0%, -400%) rotate(-45deg);
+  }
+
+  skrollr-#{$mskills + $slides_pause}p {
+    transform:translate(0%, 0%) rotate(-45deg);
+  }
+}
+
+@-skrollr-keyframes education {
+
+  skrollr-#{$education}p {
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$education+ $slides_pause}p {
+    transform:translate(0%, 0%);
+    opacity: 1;
+  }
+
+  skrollr-#{$complementary_education}p {
+    transform:translate(0%, -10%);
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes activate_animation_education {
+    skrollr-#{$slides_begin}p {
+      @active : 0;
+    }
+
+    skrollr-#{$education + 10}p{
+      @active : 1;
+    }
+
+}
+
+@-skrollr-keyframes complementary_education {
+
+  skrollr-#{$complementary_education+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$more_complementary_education}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes more_complementary_education {
+
+  skrollr-#{$more_complementary_education+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$languages}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes languages {
+
+  skrollr-#{$languages+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$more_languages}p {
+    opacity: 0;
+  }
+}
+
+@-skrollr-keyframes activate_animation_language {
+    skrollr-#{$slides_begin}p {
+      @active : 0;
+    }
+
+    skrollr-#{$languages + 10}p{
+      @active : 1;
+    }
+
+}
+
+@-skrollr-keyframes more_languages {
+
+  skrollr-#{$more_languages+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$work_experience}p {
+    opacity: 0;
+  }
+
+}
+
+
+
+@-skrollr-keyframes work_experience {
+
+  skrollr-#{$work_experience}p {
+    transform:translate(0%, 0%);
+  }
+
+  skrollr-#{$work_experience+ $slides_pause}p {
+    transform:translate(0%, 0%);
+    opacity: 1;
+  }
+
+  skrollr-#{$my_works}p {
+    transform:translate(0%, -10%);
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes activate_animation_work {
+    skrollr-#{$slides_begin}p {
+      @active : 0;
+    }
+
+    skrollr-#{$work_experience + 10}p{
+      @active : 1;
+    }
+
+}
+
+@-skrollr-keyframes my_works {
+
+  skrollr-#{$my_works+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$logo_design}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes logo_design {
+
+  skrollr-#{$logo_design+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$bogui}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes bogui {
+
+  skrollr-#{$bogui+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$scss}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes scss {
+
+  skrollr-#{$scss+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$ttt}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes ttt {
+
+  skrollr-#{$ttt+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$recblock}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes recblock {
+
+  skrollr-#{$recblock+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$ateca}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes ateca {
+
+  skrollr-#{$ateca+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$chicharro}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes chicharro {
+
+  skrollr-#{$chicharro+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$want_more}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes want_more {
+
+  skrollr-#{$want_more+ $slides_pause}p {
+    opacity: 1;
+  }
+
+  skrollr-#{$contact}p {
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes slideshow {
+  skrollr-#{$slides_begin}p {
+    transform:translate(0%,0%);
+  }
+
+  skrollr-#{$whoami}p {
+    transform:translate(0%,-50%);
+  }
+
+  skrollr-#{$whoami+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$objectives}p {
+    transform:translate(0%,-100%);
+  }
+
+  skrollr-#{$objectives+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$skills}p {
+    transform:translate(0%,-150%);
+  }
+
+  skrollr-#{$skills+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$mskills}p {
+    transform:translate(-50%,-150%);
+  }
+
+  skrollr-#{$mskills+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$education}p {
+    transform:translate(0%,-200%);
+  }
+
+  skrollr-#{$education+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$complementary_education}p {
+    transform:translate(0%,-250%);
+  }
+
+  skrollr-#{$complementary_education+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$more_complementary_education}p {
+    transform:translate(-50%,-250%);
+  }
+
+  skrollr-#{$more_complementary_education+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$languages}p {
+    transform:translate(0%,-300%);
+  }
+
+  skrollr-#{$languages+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$more_languages}p {
+    transform:translate(-50%,-300%);
+  }
+
+  skrollr-#{$more_languages+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$work_experience}p {
+    transform:translate(0%,-350%);
+  }
+
+  skrollr-#{$work_experience+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$my_works}p {
+    transform:translate(0%,-400%);
+  }
+
+  skrollr-#{$my_works+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$logo_design}p {
+    transform:translate(-50%,-400%);
+  }
+
+  skrollr-#{$logo_design+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$scss}p {
+    transform:translate(-50%,-450%);
+  }
+
+  skrollr-#{$scss+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$bogui}p {
+    transform:translate(0%,-450%);
+  }
+
+  skrollr-#{$bogui+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$ttt}p {
+    transform:translate(0%,-500%);
+  }
+
+  skrollr-#{$ttt+$slides_pause}p {
+    visibility: visible;
+  }
+
+
+  skrollr-#{$recblock}p {
+    transform:translate(-50%,-500%);
+  }
+
+  skrollr-#{$recblock+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$ateca}p {
+    transform:translate(0%,-550%);
+  }
+
+  skrollr-#{$ateca+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$chicharro}p {
+    transform:translate(-50%,-550%);
+  }
+
+  skrollr-#{$chicharro+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$want_more}p {
+    transform:translate(0%,-600%);
+  }
+
+  skrollr-#{$want_more+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$contact}p {
+    transform:translate(-50%,-600%);
+  }
+
+  skrollr-#{$contact+$slides_pause}p {
+    visibility: visible;
+  }
+
+}

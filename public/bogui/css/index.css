@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+html,body{
+    margin: 0;
+    height: 100%;
+	width: 100%;	
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+table tbody tr{
+	margin: 5px auto;
+}
+
+header{
+	padding: 0.38em;
+	margin: 0 auto;
+}
+
+label{
+	font-weight:bold;
+}
+
+img{
+	height:100%;
+}
+
+fieldset{
+	border:none;
+}
+
+footer{
+	position: absolute;
+	padding: 5px;
+	bottom:0;
+	left: 0;
+	background-color: #e6e6e6;
+	font-size: 0.8em;
+	font-weight: 500;	
+}
+
+
+#dropzone{
+	min-width: 1024px;
+	min-height: 400px;
+	height:100%;
+	width:100%;
+	z-index:10;
+}
+
+#logo{
+	height: 50px;
+	text-align:center;
+}
+
+#fileSelector{
+	display:none;
+}
+
+#workspace{
+	position:absolute; bottom:0px; top:83px ; width:100%; overflow:hidden;
+}
+
+#dropContent{
+	position:absolute;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size: 3.125em;
+	color: #d3eced;
+	opacity: 0.9;
+	padding:24px;
+   	background: linear-gradient(to bottom, #51bbd2 0%, #2d97af 100%);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	text-align:center;
+}
+
+#camara, #foto{
+    width: 320px;
+    min-height: 240px;
+    margin: 5px;
+}
+
+#bars{
+	background-color: #e6e6e6;
+	border: #d3d3d3 1px solid;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;	
+}
+
+#tools {
+	margin: 0;
+	margin-top: 5px;
+	padding: 0;
+}
+#tools li {
+	margin: 2px;
+	position: relative;
+	padding: 4px 0;
+	cursor: pointer;
+	float: left;
+	list-style: none;
+}
+#tools span.ui-icon {
+	float: left;
+	margin: 0 4px;
+}
+
+
+.canvasContainer{
+	position:relative;
+	background-image: url("../images/patronFondo.png");
+    background-repeat: repeat;
+}
+
+.relative {
+	position: relative;
+}
+
+.quarter{
+	width:35%;
+}
+
+.floatleft{
+	float:left;	
+}
+
+.threequarter{
+	width:65%;
+}
+
+ .overlay{
+	background: rgba(51,51,51,0.7);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+ }
+ 
+.noPointerEvents{
+	pointer-events: none;
+}
+
+.visible{
+	visibility: visible;
+}
+
+.hidden{
+	visibility: hidden;	
+}
+
+.noPointerEvents {
+  pointer-events: none;
+}
+
+.colorBlock{
+	width:14px;
+	height:14px;
+	display: block;
+	float:left;
+	margin-right:5px;
+}
+
+.imageInfo{
+	margin-top: 5px;
+	height: 14px;
+}
+
+.logoBackground{
+	position:absolute;
+	background-image: url("../images/logo-opacity-50.png");
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25%;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-close .ui-dialog-titlebar-close {
+	display: none;
+}
+
+.capaCanvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.capaCanvasReg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+
+.izq{
+	width:25%;
+	float:left;
+}
+.izq img{
+	width:80%;
+}
+.dcha{
+	width:75%;
+	float:left;
+}
+
+table{
+	table-layout: fixed;
+}
+
+table tbody tr td input {
+	width:100%;
+	margin: 0;
+}
+.saveImageAs table tbody tr td input {
+	width:100%;
+	margin: 0;
+}
+
+.tablaPuntos tbody tr td {
+	width:57px;
+}
+

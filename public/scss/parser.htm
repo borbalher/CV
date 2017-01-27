@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Simple CSS: A simple CSS DSL</title>
+
+		<!-- FAVICON -->
+		<link rel="icon" type="image/jpg" href="./public/imgs/logo.png" />
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./public/css/layout.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="./public/css/menu.css" type="text/css" media="screen" charset="utf-8" />
+
+
+		<!-- SCRIPTS -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                <script type="text/javascript" src="./public/js/gotop.js"></script>
+		<!-- HTML 5 ENABLING SCRIPT -->
+		<!--[if lt IE 9]>
+		<script src="http://HTML5shim.googlecode.com/svn/trunk/HTML5.js">
+		</script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<!-- Begin Header -->
+		<header>
+			<div id="header_contenido">
+				<div id="logo_contenedor">
+					<a href="/"><img src="./public/imgs/logo.png" title="Simple CSS DSL"/></a>
+				</div>
+				<!-- Begin Menu -->
+				<nav>
+					<div id="menu_contenido">
+						<div id='cssmenu'>
+							<ul>
+							   <li><a href="index.htm" title="Home" rel=""><span>Home</span></a></li>
+							   <li><a href='parser.htm'><span>Try it!</span></a></li>
+							   <li><a href='https://github.com/etsiiull/pl1-proyecto' target="_blank"><span>View project on Github</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<!-- End Menu -->
+				<div class="clearing"></div>
+			</div>
+		</header>
+
+		<!-- End Header -->
+
+		<!-- Begin Wrapper -->
+		<div id="wrapper">
+	                <a id="goTop">Go to top &uarr;</a>
+			<section>
+				<div id="content">
+	<link rel="stylesheet" href="./public/css/parser.css">
+	<!-- Create a simple CodeMirror instance -->
+	<link rel="stylesheet" href="./public/third-party/codemirror/codemirror.css">
+	<script src="./public/third-party/codemirror/codemirror.js"></script>
+	<script src="./public/third-party/codemirror/css.js"></script>
+	<div id="info">
+	<h1>SCSS Playground</h1>
+	<p>This is the playground for SCSS, the CSS  domain specific language. In the textareas below you can try and mess up some code.</p>
+	</div>
+	<div id="textareas" class="divdoble">
+		<div class="divmitad">
+			<div class="header noborderright"><h2>SCSS</h2></div>
+			<textarea id="input" name="input" autofocus></textarea>
+		</div>
+		<div class="divmitad">
+			<div class="header"><h2>CSS</h2></div>
+			<textarea id="output" name="output"></textarea>
+		</div>
+	</div>
+	<div>
+		<button id="wipe" class="button" type="button">CLEAR</button>
+		<button id="parse" class="button" type="button">PARSE</button>
+		<button id="download" class="button hidden right" type="button">DOWNLOAD</button>
+	</div>
+	<div id="error" class="hidden justified">
+
+	</div>
+</div>
+
+<!-- Script para el CodeMirror -->
+<script>
+    var editorInput = CodeMirror.fromTextArea(document.getElementById("input"), {
+	lineNumbers: true,
+	mode:  "css"
+    });
+    var editorOutput = CodeMirror.fromTextArea(document.getElementById("output"), {
+	lineNumbers: true,
+	mode:  "css",
+        readOnly: true
+    });
+</script>
+<script type="text/javascript" src="./public/js/scssParserUtilities.js"></script>
+<script type="text/javascript" src="./public/js/scssFunctions.js"></script>
+<script type="text/javascript" src="./public/js/scss.js"></script>
+<script type="text/javascript" src="./public/js/main.js"></script>
+<script type="text/javascript" src="./public/js/scssParserUtilities.js"></script>
+
+			</section>
+		</div>
+	   <!-- End Wrapper -->
+                <div class="clearing"></div>
+           <!-- Begin Footer -->
+		<footer>
+		<div id="footer_contenido">
+		This project was created and is being developed by <a href="mailto:bowasiel@gmail.com?subject=SCSS"> Boris Ballester Hernández</a> and <a href="mailto:guillermotegueste@gmail.com?subject=SCSS" target="">Guillermo Rivero Rodriguez</a>. All rights reserved.
+		</div>
+                </footer>
+           <!-- End Footer -->
+	</body>
+</html>

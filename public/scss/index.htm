@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Simple CSS: A simple CSS DSL</title>
+
+	<!-- FAVICON -->
+	<link rel="icon" type="image/jpg" href="./public/imgs/logo.png" />
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./public/css/layout.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" href="./public/css/menu.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" href="./public/css/index.css">
+
+	<!-- SCRIPTS -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./public/js/gotop.js"></script>
+	<!-- HTML 5 ENABLING SCRIPT -->
+	<!--[if lt IE 9]>
+	<script src="http://HTML5shim.googlecode.com/svn/trunk/HTML5.js">
+	</script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!-- Begin Header -->
+	<header>
+		<div id="header_contenido">
+			<div id="logo_contenedor">
+				<a href="/index.htm"><img src="./public/imgs/logo.png" title="Simple CSS DSL"/></a>
+			</div>
+			<!-- Begin Menu -->
+			<nav>
+				<div id="menu_contenido">
+					<div id='cssmenu'>
+						<ul>
+							<li><a href="index.htm" title="Home" rel=""><span>Home</span></a></li>
+							<li><a href='parser.htm'><span>Try it!</span></a></li>
+							<li><a href='https://github.com/etsiiull/pl1-proyecto' target="_blank"><span>View project on Github</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- End Menu -->
+			<div class="clearing"></div>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- Begin Wrapper -->
+	<div id="wrapper">
+		<a id="goTop">Go to top &uarr;</a>
+		<section>
+			<div id="content">
+
+				<div id="textareas" class="divdoble">
+					<div class="divizq">
+						<div class="textos">
+							<h1>Simple CSS: A DSL for Cascading Style Sheets</h1>
+
+							<p>SCSS is an emerging domain specific language for cascading style sheets. It's a powerful professional tool that could be in constant evolving.</p>
+							<p>SCSS boasts more features and abilities than regular CSS language out there. This is a list of SCSS first features:</p>
+							<ul>
+								<li>Nesting</li>
+								<li>Variables</li>
+								<li>SCSS functions</li>
+							</ul>
+							<p>
+								<span class="important">IMPORTANT!</span> SCSS is not a CSS parser/validator, we assume you know how to write CSS files but don't worry, it  could be one of the upcoming features. Sounds tasty, right? Peep another features that could been added in the list below:
+							</p>
+							<ul>
+								<li>More SCSS functions.</li>
+								<li>Parsing and validator.</li>
+								<li>Improved grammar.</li>
+								<li>Console integration.</li>
+							</ul>
+
+							<p>Now you must be wondering, <strong>how SCSS works?  </strong>Luckily we have a number of examples that will allow you to understand the simplicity and powerfulness of this language.</p>
+
+							<h2> Example 1: "Nested classes"</h2>
+
+							<p>This example will help you understand how to do some nesting in SCSS:</p>
+
+							<div class="codeArea">
+								<pre class="code">
+#wrapper {
+    font-family = "Times New Roman", Times, serif;
+    font-weight = bold;
+    height = 40 in;
+    width = 100%;
+    margin = 0 auto;
+    %%.linkRojo{
+        color = #123123;
+        %%&[target=_blank]{
+            color = #aaa;
+        }
+    }
+    %%>a{
+        text-decoration= none;
+        %%&:hover{
+            font-size = 18px;
+        }
+   }
+}
+								</pre>
+							</div>
+
+							<p>Don't be afraid, the syntax will be explained later. Let's see the translation to CSS:</p>
+							<div class="codeArea">
+								<pre class="code">
+#wrapper {
+    font-family : "Times New Roman", Times, serif;
+    font-weight : bold;
+    height : 40 in;
+    width : 100%;
+    margin : 0 auto;
+}
+
+#wrapper linkRojo{
+    color : #123123;
+}
+
+#wrapper linkRojo[target=_blank]{
+    color : #aaa;
+}
+
+#wrapper >a{
+    text-decoration: none;
+}
+
+#wrapper >a:hover{
+    font-size: 18px;
+}
+								</pre>
+							</div>
+
+							<p>As you can see the code hass been reduced a lot! But there was something weird, right? What the heck were those percentages doing there? Let us introduce you to... </p>
+							<h2> Example1.1: "SCSS Operator"</h2>
+							<p>The SCSS Operator <strong>"%%"</strong>, which can be followed by the <strong>&</strong> character is the nesting mode. If you choose the first one the nested selector will be placed in the css separated by a space, while the other will add the selector  immediately after its parent without separation.</p>
+
+							<h2> Example 2: "Using variables and '@'key rules"</h2>
+
+							<p>This example will help you understand how vars work in SCSS and the fundamentals of the SCSS block. </p>
+							<p>The SCSS block is an optional structure where we will be defining inside all the vars and <stong>'@'</strong> key rules like @import or @charset. The SCSS block is always at the beginning of the file, inside two SCSS operators.</p><p></p>
+							<div class="codeArea">
+								<pre class="code">
+%%
+$my-color = red;
+$your-color = blue;
+
+@imports url(anothercss.css) print,screen;
+@charset "UTF-8";
+%%
+//Your SCSS code here
+								</pre>
+							</div>
+
+							<h2> Example 3: "SCSS functions"</h2>
+							<p>In this example we are going to cover the extended funcionalities that SCSS has. The first ones implemented are:</p>
+							<ul>
+								<li><strong>Inheritance.</strong></li>
+								<li><strong>Shading a color.</strong></li>
+							</ul>
+							<p> The first one is <strong>%%extends(#id)</strong> or <strong>%%extends(.class)</strong>.  It's used like a full CSS attribute and it serves for extending all the attributes from the specified class or id to the derived selector.</p>
+							<div class="codeArea">
+								<pre class="code">
+.persona{
+    width= 50%;
+    height= 70%;
+}
+
+#paco{
+    %%extends(".persona");
+}
+								</pre>
+							</div>
+
+							<p> The second one is <strong>%%shade(color, percentage)</strong> and it is used like an attribute value. Given a hex or RGB color and a percentage between -100~100 the function will return the related shade/tint.</p>
+							<div class="codeArea">
+								<pre class="code">
+.colorful{
+    background-color = %%shade(#0083ff,35);
+}
+								</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="divdcha">
+						<img src="./public/imgs/logo.png" title="Simple CSS DSL"/>
+					</div>
+
+					<div class="clearing"></div>
+				</div>
+			</div>
+
+		</section>
+	</div>
+	<!-- End Wrapper -->
+	<div class="clearing"></div>
+	<!-- Begin Footer -->
+	<footer>
+		<div id="footer_contenido">
+		This project was created and and developed by <a href="mailto:borbalher@gmail.com?subject=SCSS"> Boris Ballester Hern&aacute;ndez</a> and <a href="mailto:guillermotegueste@gmail.com?subject=SCSS">Guillermo Rivero Rodriguez</a>. All rights reserved.
+		</div>
+	</footer>
+	<!-- End Footer -->
+	</body>
+</html>

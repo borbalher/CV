@@ -1,0 +1,174 @@
+html, body {
+  height: 100% !important; }
+
+.imgresp {
+  width: 100%;
+  height: 50%;
+  text-align: center; }
+
+.imgresp img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 100%; }
+
+.bg-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0%, -100%);
+  -ms-transform: translate(0%, -100%);
+  transform: translate(0%, -100%); }
+
+/* full width/height container */
+#main-container {
+  width: 100%;
+  height: 100% !important;
+  overflow: hidden; }
+
+/* double the height/width of a viewport, uses position-fixed so we dont need
+#skrollr-body for mobile support*/
+#paralax-sections {
+  width: 200%;
+  height: 200%;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.paralax-section {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  overflow: hidden; }
+
+#educationimg[active="1"] {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom; }
+
+#langimg[active="1"] {
+  -webkit-animation-name: pulse;
+  animation-name: pulse; }
+
+.workexperience[active="1"] {
+  -webkit-animation-name: shake;
+  animation-name: shake; }
+
+#whoami {
+  -webkit-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%); }
+
+#objectives {
+  -webkit-transform: translate(0%, 200%);
+  -ms-transform: translate(0%, 200%);
+  transform: translate(0%, 200%); }
+
+#skills {
+  -webkit-transform: translate(0%, 300%);
+  -ms-transform: translate(0%, 300%);
+  transform: translate(0%, 300%); }
+
+#mskills {
+  -webkit-transform: translate(100%, 300%);
+  -ms-transform: translate(100%, 300%);
+  transform: translate(100%, 300%); }
+
+#education {
+  -webkit-transform: translate(0%, 400%);
+  -ms-transform: translate(0%, 400%);
+  transform: translate(0%, 400%); }
+
+#complementaryeducation {
+  -webkit-transform: translate(0%, 500%);
+  -ms-transform: translate(0%, 500%);
+  transform: translate(0%, 500%); }
+
+#morecomplementaryeducation {
+  -webkit-transform: translate(100%, 500%);
+  -ms-transform: translate(100%, 500%);
+  transform: translate(100%, 500%); }
+
+#workexperience {
+  -webkit-transform: translate(0%, 700%);
+  -ms-transform: translate(0%, 700%);
+  transform: translate(0%, 700%); }
+
+#myworks {
+  -webkit-transform: translate(0%, 800%);
+  -ms-transform: translate(0%, 800%);
+  transform: translate(0%, 800%); }
+
+#logodesign {
+  -webkit-transform: translate(100%, 800%);
+  -ms-transform: translate(100%, 800%);
+  transform: translate(100%, 800%); }
+
+#bogui {
+  -webkit-transform: translate(0%, 900%);
+  -ms-transform: translate(0%, 900%);
+  transform: translate(0%, 900%); }
+
+#scss {
+  -webkit-transform: translate(100%, 900%);
+  -ms-transform: translate(100%, 900%);
+  transform: translate(100%, 900%); }
+
+#ttt {
+  -webkit-transform: translate(0%, 1000%);
+  -ms-transform: translate(0%, 1000%);
+  transform: translate(0%, 1000%); }
+
+#recblock {
+  -webkit-transform: translate(100%, 1000%);
+  -ms-transform: translate(100%, 1000%);
+  transform: translate(100%, 1000%); }
+
+#ateca {
+  -webkit-transform: translate(0%, 1100%);
+  -ms-transform: translate(0%, 1100%);
+  transform: translate(0%, 1100%); }
+
+#chicharro {
+  -webkit-transform: translate(100%, 1100%);
+  -ms-transform: translate(100%, 1100%);
+  transform: translate(100%, 1100%); }
+
+#wantmore {
+  -webkit-transform: translate(0%, 1200%);
+  -ms-transform: translate(0%, 1200%);
+  transform: translate(0%, 1200%); }
+
+#contact {
+  -webkit-transform: translate(100%, 1200%);
+  -ms-transform: translate(100%, 1200%);
+  transform: translate(100%, 1200%); }
+
+#languages {
+  -webkit-transform: translate(0%, 600%);
+  -ms-transform: translate(0%, 600%);
+  transform: translate(0%, 600%); }
+
+#morelanguages {
+  -webkit-transform: translate(100%, 600%);
+  -ms-transform: translate(100%, 600%);
+  transform: translate(100%, 600%); }
+
+#helper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3100%;
+  width: 1px; }
+
+.marker {
+  height: 4.74%;
+  width: 100%; }
