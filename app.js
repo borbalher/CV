@@ -183,7 +183,7 @@ var english_content = {
   'mothertongues' : 'Spanish',
   'otherlangtitle' : 'Other languages',
   'otherlangs' : 'English',
-  'myworks' : 'Don\'t worry, I\'ll show you some of my works.',
+  'myworks' : 'Don\'t worry, I\'ll show you some of my works',
   'slideshow' : '<a href="/en/static" title="Static version">Old browser? Click here for a static version.</a>',
   'education' : {
       'title' : 'My education',
@@ -402,7 +402,7 @@ app.get('/fonts/fontawesome-webfont.ttf', function (req, res) {
 
 function getFileName(fileName, extension){
   if (process.env.NODE_ENV == "production") {
-    return fileName + '.min.'+extension;
+    return fileName + '.min.'+ extension;
   } else {
     return fileName + extension;
   }
@@ -425,7 +425,7 @@ app.get('/js/jquery.mousewheel.js', function (req, res) {
 });
 
 app.get('/js/jquery.mousewheel.js', function (req, res) {
-  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/'+getFileName('jquery.mousewheel'));
+  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/'+getFileName('jquery.mousewheel','js'));
 });
 
 app.get('/css/main.css', function (req, res) {

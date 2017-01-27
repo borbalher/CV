@@ -2,7 +2,7 @@
   "name": "my-personal-page",
   "version": "1.0.0",
   "description": "My personal page and cv.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build-all-css": "concurrently  \"npm run build-main-css\" \"npm run build-skrollr-css\" \"npm run build-slideshow-css\" \"npm run build-static-css\"  ",
     "build-main-css": "bin\\build-main-css.bat",
