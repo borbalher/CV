@@ -30,7 +30,7 @@
     "skrollr-ie": "github:prinzhorn/skrollr-ie",
     "skrollr-menu": "github:prinzhorn/skrollr-menu",
     "skrollr-stylesheets": "github:prinzhorn/skrollr-stylesheets",
-    "wowjs": "git+github:matthieua/WOW"
+    "wowjs": "github:matthieua/WOW"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",
