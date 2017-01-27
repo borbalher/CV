@@ -194,7 +194,7 @@ var english_content = {
     },
     'complementaryeducation' : {
         'title' : 'My complementary education',
-        'texts' : ["Most of my complementary education is heavily based in ", " Besides that, I have also knowledge in other areas like " ],
+        'texts' : ["Most of my complementary education is heavily based on ", " Besides that, I have also knowledge in other areas like " ],
         'boldtexts' : ["computers and technology","e-commerce, marketing and business"],
         'course_name': [
           "Introduction to Web Development using CAKEPHP",
@@ -404,7 +404,7 @@ function getFileName(fileName, extension){
   if (process.env.NODE_ENV == "production") {
     return fileName + '.min.'+ extension;
   } else {
-    return fileName + extension;
+    return fileName + '.'+ extension;
   }
 }
 
