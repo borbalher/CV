@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.set('views', './public/views')
-app.set('view engine', 'pug');
+app.set('view engine', 'jade');
 
 app.use(express.static(__dirname + '/public'));
 
