@@ -1,4 +1,17 @@
 $portrait: "(orientation: portrait)";
+$laptop: "only screen and (min-width: 1024px)";
+
+@media #{$laptop} {
+  #bullseye,
+  #mypicture,
+  #scsslogo{
+    width: 30%;
+  }
+
+  #langimg{
+    width: 50%;
+  }
+}
 
 @media #{$portrait}{
     .contactmail{
