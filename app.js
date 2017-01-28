@@ -421,7 +421,7 @@ app.get('/js/load-owl-carousel.js', function (req, res) {
 });
 
 app.get('/js/jquery.mousewheel.js', function (req, res) {
-  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/query.mousewheel');
+  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/query.mousewheel.js');
 });
 
 app.get('/css/main.css', function (req, res) {
@@ -440,6 +440,10 @@ app.get('/css/skrollr.css', function (req, res) {
 
 app.get('/css/static.css', function (req, res) {
   res.sendFile(__dirname + '/css/'+getFileName('static','css'));
+});
+
+app.get('/favicon.png', function (req, res) {
+  res.sendFile(__dirname + '/favicon.png');
 });
 
 
