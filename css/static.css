@@ -4,6 +4,8 @@
   #scsslogo {
     width: 30%; }
   #langimg {
+    width: 50%; }
+  .imgresp {
     width: 50%; } }
 
 @media (orientation: portrait) {
@@ -20,6 +22,16 @@
 
 #msrocket {
   display: none; }
+
+@media only screen and (min-width: 2000px) and (min-resolution: 2dppx) {
+  #bullseye,
+  #mypicture,
+  #scsslogo {
+    width: 15%; }
+  #langimg {
+    width: 25%; }
+  #educationimg span {
+    font-size: 15vw; } }
 
 html, body {
   overflow-x: hidden; }

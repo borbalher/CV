@@ -1,5 +1,9 @@
 $portrait: "(orientation: portrait)";
 $laptop: "only screen and (min-width: 1024px)";
+$bigscreens: "only screen and (min-width: 2000px)";
+$dpi2: "(min-resolution: 2dppx)";
+
+
 
 @media #{$laptop} {
   #bullseye,
@@ -9,6 +13,10 @@ $laptop: "only screen and (min-width: 1024px)";
   }
 
   #langimg{
+    width: 50%;
+  }
+
+  .imgresp{
     width: 50%;
   }
 }
@@ -31,6 +39,22 @@ $laptop: "only screen and (min-width: 1024px)";
 #msrocket{
   display: none;
 }
+
+@media #{$bigscreens} and #{$dpi2}{
+  #bullseye,
+  #mypicture,
+  #scsslogo{
+    width: 15%;
+  }
+
+  #langimg{
+    width: 25%;
+  }
+  #educationimg span{
+    font-size: 15vw;
+  }
+}
+
 
 html,body{
   overflow-x: hidden;
