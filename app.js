@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.set('views', './public/views')
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/public'));
 
@@ -421,11 +421,7 @@ app.get('/js/load-owl-carousel.js', function (req, res) {
 });
 
 app.get('/js/jquery.mousewheel.js', function (req, res) {
-  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/'+getFileName('jquery.mousewheel','js'));
-});
-
-app.get('/js/jquery.mousewheel.js', function (req, res) {
-  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/'+getFileName('jquery.mousewheel','js'));
+  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/query.mousewheel');
 });
 
 app.get('/css/main.css', function (req, res) {
