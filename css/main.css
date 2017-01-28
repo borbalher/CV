@@ -395,14 +395,12 @@ a:active {
   .img-container:before {
     height: 100vh; } }
 
-@media (min-resolution: 2dppx) {
-  body {
-    font-size: 2vmax !important; } }
-
 @media only screen and (min-width: 1440px) and (orientation: landscape) {
   #landing-bg {
     background-size: 35% !important; } }
 
-@media only screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+@media only screen and (min-width: 2000px) and (min-resolution: 2dppx) {
+  #landing-bg {
+    background-size: 25% !important; }
   body {
     font-size: 1vmax !important; } }

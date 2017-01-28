@@ -17,7 +17,7 @@ $portrait-tablet: "only screen and (min-width: 768px)";
 $tablet: "only screen and (min-width: 961px)";
 $laptop: "only screen and (min-width: 1024px)";
 $laptop-large: "only screen and (min-width: 1440px)";
-$bigscreens: "only screen and (min-width: 2560px)";
+$bigscreens: "only screen and (min-width: 2000px)";
 
 $landscape: "(orientation: landscape)";
 $portrait: "(orientation: portrait)";
@@ -552,21 +552,16 @@ a:active {
   }
 }
 
-@media #{$dpi2}{
-  body{
-    font-size: 2vmax !important;
-  }
-}
-
 @media #{$laptop-large} and #{$landscape}{
-
-
     #landing-bg{
       background-size: 35% !important;
     }
 }
 
-@media #{$laptop-large} and #{$dpi2}{
+@media #{$bigscreens} and #{$dpi2}{
+  #landing-bg{
+    background-size: 25% !important;
+  }
   body{
     font-size: 1vmax !important;
   }

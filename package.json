@@ -36,5 +36,9 @@
     "concurrently": "^3.1.0",
     "node-sass": "^3.13.0",
     "nodemon": "^1.11.0"
-  }
+  },
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/borbalher/CV.git"
+}
 }
