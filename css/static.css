@@ -1,3 +1,11 @@
+@media only screen and (min-width: 1024px) {
+  #bullseye,
+  #mypicture,
+  #scsslogo {
+    width: 30%; }
+  #langimg {
+    width: 50%; } }
+
 @media (orientation: portrait) {
   .contactmail {
     font-size: 1.5em; } }
