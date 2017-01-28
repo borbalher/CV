@@ -421,7 +421,7 @@ app.get('/js/load-owl-carousel.js', function (req, res) {
 });
 
 app.get('/js/jquery.mousewheel.js', function (req, res) {
-  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/query.mousewheel.js');
+  res.sendFile(__dirname + '/node_modules/jquery-mousewheel/jquery.mousewheel.js');
 });
 
 app.get('/css/main.css', function (req, res) {
