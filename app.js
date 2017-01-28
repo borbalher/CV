@@ -200,7 +200,7 @@ var english_content = {
           "Google Actívate: Cloud Computing",
           "Google Actívate: Introduction to Web Design",
           "Google Actívate: Web Analytics",
-          "Google Actívate;vate: Basic Marketing",
+          "Google Actívate: Basic Marketing",
           "LaunchTF: Startup's pre-acceleration program",
           "E-commerce: an alternative for sales"
         ],
