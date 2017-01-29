@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+.facebook {
+  margin-left: 0.5em; }
+
+.contactmail a {
+  display: block; }
+
+.socialnetworks a {
+  display: inline-block !important; }
+
 .yes {
   color: #ff3366 !important;
   font-size: 1.5em; }
@@ -111,7 +120,7 @@ html, body {
 
 .halflangbox {
   width: 50%;
-  display: inline-block;
+  display: table-cell;
   text-align: center;
   margin: 0.5em 0; }
 
@@ -121,8 +130,7 @@ html, body {
 .fulllangbox {
   width: 100%;
   display: inline-block;
-  text-align: center;
-  margin: 0.5em 0; }
+  text-align: center; }
 
 .middleborder {
   position: absolute;
@@ -134,9 +142,12 @@ html, body {
   margin: 0.5em 0; }
 
 .langboxcontainer {
+  display: table;
   position: relative;
   border-top: 1px solid #eab126;
-  border-bottom: 1px solid #eab126; }
+  border-bottom: 1px solid #eab126;
+  padding: 0.5em 0;
+  width: 100%; }
 
 #educationimg span {
   color: #333333;
@@ -383,7 +394,10 @@ a:active {
   body {
     font-size: 2vmax; }
   #educationimg span {
-    font-size: 50vw; } }
+    font-size: 50vw; }
+  .imgresp img {
+    height: auto !important;
+    width: 100% !important; } }
 
 @media (orientation: landscape) {
   #landing-bg {

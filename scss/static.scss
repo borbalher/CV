@@ -6,18 +6,9 @@ $dpi2: "(min-resolution: 2dppx)";
 
 
 @media #{$laptop} {
-  #bullseye,
-  #mypicture,
-  #scsslogo{
-    width: 30%;
-  }
-
-  #langimg{
-    width: 50%;
-  }
 
   .imgresp{
-    width: 50%;
+    width: 30%;
   }
 }
 
@@ -96,10 +87,10 @@ html,body{
 }
 
 .contactmail{
+  padding: 1em;  
   width: 100%;
   position: static;
   a{
     display: block;
-    padding: 1em;
   }
 }

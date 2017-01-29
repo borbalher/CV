@@ -7,6 +7,7 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 
 var spanish_content = {
+  'title': 'Hola! Soy Boris Ballester, bienvenido a mi sitio web.',
   'about': 'Sobre',
   'work': 'Trabajos',
   'intro': 'Ingeniería Informática + diseño',
@@ -163,6 +164,7 @@ var spanish_content = {
 };
 
 var english_content = {
+  'title': 'Hi! I\'m Boris Ballester, welcome to my website.',
   'about': 'About me',
   'work': 'Works',
   'intro': 'Computer engineering + design',

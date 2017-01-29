@@ -27,6 +27,11 @@ $contact: $want_more + $slides_duration;
   -skrollr-animation-name:slideshow;
 }
 
+#landing{
+  -skrollr-animation-name:landing_fix;
+  -skrollr-anchor-target: '#helper';
+}
+
 #intro{
   -skrollr-animation-name:intro_animation;
   -skrollr-anchor-target: '#helper';
@@ -174,6 +179,16 @@ $contact: $want_more + $slides_duration;
     }
 }
 
+@-skrollr-keyframes landing_fix {
+    skrollr-#{$slides_begin}p {
+      display: block;
+    }
+
+    skrollr-#{$whoami}p{
+      display:none
+    }
+}
+
 @-skrollr-keyframes intro_animation {
     skrollr-#{$slides_begin}p {
       transform:translate(0%, 0%);
@@ -189,6 +204,7 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes who_am_i {
 
   skrollr-#{$whoami}p {
+    display: block;
     transform:translate(0%, 0%);
   }
 
@@ -200,6 +216,7 @@ $contact: $want_more + $slides_duration;
   skrollr-#{$objectives}p {
     transform:translate(0%, -10%);
     opacity: 0;
+    display: none;
   }
 
 }
@@ -207,6 +224,7 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes objectives {
 
   skrollr-#{$objectives}p {
+    display: block;
     transform:translate(0%, 0%);
   }
 
@@ -218,6 +236,7 @@ $contact: $want_more + $slides_duration;
   skrollr-#{$skills}p {
     transform:translate(0%, -10%);
     opacity: 0;
+    display: none;
   }
 
 }
@@ -236,10 +255,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes skills {
 
   skrollr-#{$skills+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$mskills}p {
+    display: none;
     opacity: 0;
   }
 
@@ -260,6 +281,7 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes more_skills {
 
   skrollr-#{$mskills}p {
+    display: block;
     transform:translate(0%, 0%);
   }
 
@@ -271,6 +293,7 @@ $contact: $want_more + $slides_duration;
   skrollr-#{$education}p {
     transform:translate(10%, -10%);
     opacity: 0;
+    display: none;
   }
 
 }
@@ -293,6 +316,7 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes education {
 
   skrollr-#{$education}p {
+    display: block;
     transform:translate(0%, 0%);
   }
 
@@ -304,6 +328,7 @@ $contact: $want_more + $slides_duration;
   skrollr-#{$complementary_education}p {
     transform:translate(0%, -10%);
     opacity: 0;
+    display: none;
   }
 
 }
@@ -322,11 +347,13 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes complementary_education {
 
   skrollr-#{$complementary_education+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$more_complementary_education}p {
     opacity: 0;
+    display: none;
   }
 
 }
@@ -334,11 +361,13 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes more_complementary_education {
 
   skrollr-#{$more_complementary_education+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$languages}p {
     opacity: 0;
+    display: none;
   }
 
 }
@@ -346,10 +375,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes languages {
 
   skrollr-#{$languages+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$more_languages}p {
+    display: none;
     opacity: 0;
   }
 }
@@ -368,10 +399,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes more_languages {
 
   skrollr-#{$more_languages+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$work_experience}p {
+    display: none;
     opacity: 0;
   }
 
@@ -382,17 +415,13 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes work_experience {
 
   skrollr-#{$work_experience}p {
-    transform:translate(0%, 0%);
-  }
-
-  skrollr-#{$work_experience+ $slides_pause}p {
-    transform:translate(0%, 0%);
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$my_works}p {
-    transform:translate(0%, -10%);
     opacity: 0;
+    display: none;
   }
 
 }
@@ -411,11 +440,13 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes my_works {
 
   skrollr-#{$my_works+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$logo_design}p {
     opacity: 0;
+    display: none;
   }
 
 }
@@ -423,10 +454,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes logo_design {
 
   skrollr-#{$logo_design+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$bogui}p {
+    display: none;
     opacity: 0;
   }
 
@@ -435,10 +468,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes bogui {
 
   skrollr-#{$bogui+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$scss}p {
+    display: none;
     opacity: 0;
   }
 
@@ -447,10 +482,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes scss {
 
   skrollr-#{$scss+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$ttt}p {
+    display: none;
     opacity: 0;
   }
 
@@ -459,10 +496,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes ttt {
 
   skrollr-#{$ttt+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$recblock}p {
+    display: none;
     opacity: 0;
   }
 
@@ -471,10 +510,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes recblock {
 
   skrollr-#{$recblock+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$ateca}p {
+    display: none;
     opacity: 0;
   }
 
@@ -483,10 +524,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes ateca {
 
   skrollr-#{$ateca+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$chicharro}p {
+    display: none;
     opacity: 0;
   }
 
@@ -495,10 +538,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes chicharro {
 
   skrollr-#{$chicharro+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$want_more}p {
+    display: none;
     opacity: 0;
   }
 
@@ -507,10 +552,12 @@ $contact: $want_more + $slides_duration;
 @-skrollr-keyframes want_more {
 
   skrollr-#{$want_more+ $slides_pause}p {
+    display: block;
     opacity: 1;
   }
 
   skrollr-#{$contact}p {
+    display: none;
     opacity: 0;
   }
 
@@ -522,7 +569,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$whoami}p {
-    transform:translate(0%,-50%);
+    transform:translate(0%,-5%);
   }
 
   skrollr-#{$whoami+$slides_pause}p {
@@ -530,7 +577,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$objectives}p {
-    transform:translate(0%,-100%);
+    transform:translate(0%,-10%);
   }
 
   skrollr-#{$objectives+$slides_pause}p {
@@ -538,7 +585,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$skills}p {
-    transform:translate(0%,-150%);
+    transform:translate(0%,-15%);
   }
 
   skrollr-#{$skills+$slides_pause}p {
@@ -546,7 +593,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$mskills}p {
-    transform:translate(-50%,-150%);
+    transform:translate(-5%,-15%);
   }
 
   skrollr-#{$mskills+$slides_pause}p {
@@ -554,7 +601,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$education}p {
-    transform:translate(0%,-200%);
+    transform:translate(0%,-20%);
   }
 
   skrollr-#{$education+$slides_pause}p {
@@ -562,7 +609,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$complementary_education}p {
-    transform:translate(0%,-250%);
+    transform:translate(0%,-25%);
   }
 
   skrollr-#{$complementary_education+$slides_pause}p {
@@ -570,7 +617,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$more_complementary_education}p {
-    transform:translate(-50%,-250%);
+    transform:translate(-5%,-25%);
   }
 
   skrollr-#{$more_complementary_education+$slides_pause}p {
@@ -578,7 +625,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$languages}p {
-    transform:translate(0%,-300%);
+    transform:translate(0%,-30%);
   }
 
   skrollr-#{$languages+$slides_pause}p {
@@ -586,7 +633,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$more_languages}p {
-    transform:translate(-50%,-300%);
+    transform:translate(-5%,-30%);
   }
 
   skrollr-#{$more_languages+$slides_pause}p {
@@ -594,7 +641,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$work_experience}p {
-    transform:translate(0%,-350%);
+    transform:translate(0%,-35%);
   }
 
   skrollr-#{$work_experience+$slides_pause}p {
@@ -602,7 +649,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$my_works}p {
-    transform:translate(0%,-400%);
+    transform:translate(-5%,-35%);
   }
 
   skrollr-#{$my_works+$slides_pause}p {
@@ -610,31 +657,31 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$logo_design}p {
-    transform:translate(-50%,-400%);
+    transform:translate(-5%,-40%);
   }
 
   skrollr-#{$logo_design+$slides_pause}p {
     visibility: visible;
   }
 
-  skrollr-#{$scss}p {
-    transform:translate(-50%,-450%);
-  }
-
-  skrollr-#{$scss+$slides_pause}p {
-    visibility: visible;
-  }
-
   skrollr-#{$bogui}p {
-    transform:translate(0%,-450%);
+    transform:translate(0%,-40%);
   }
 
   skrollr-#{$bogui+$slides_pause}p {
     visibility: visible;
   }
 
+  skrollr-#{$scss}p {
+    transform:translate(0%,-45%);
+  }
+
+  skrollr-#{$scss+$slides_pause}p {
+    visibility: visible;
+  }
+
   skrollr-#{$ttt}p {
-    transform:translate(0%,-500%);
+    transform:translate(-5%,-45%);
   }
 
   skrollr-#{$ttt+$slides_pause}p {
@@ -643,7 +690,7 @@ $contact: $want_more + $slides_duration;
 
 
   skrollr-#{$recblock}p {
-    transform:translate(-50%,-500%);
+    transform:translate(-5%,-50%);
   }
 
   skrollr-#{$recblock+$slides_pause}p {
@@ -651,7 +698,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$ateca}p {
-    transform:translate(0%,-550%);
+    transform:translate(0%,-50%);
   }
 
   skrollr-#{$ateca+$slides_pause}p {
@@ -659,7 +706,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$chicharro}p {
-    transform:translate(-50%,-550%);
+    transform:translate(0%,-55%);
   }
 
   skrollr-#{$chicharro+$slides_pause}p {
@@ -667,7 +714,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$want_more}p {
-    transform:translate(0%,-600%);
+    transform:translate(-5%,-55%);
   }
 
   skrollr-#{$want_more+$slides_pause}p {
@@ -675,7 +722,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$contact}p {
-    transform:translate(-50%,-600%);
+    transform:translate(-5%,-60%);
   }
 
   skrollr-#{$contact+$slides_pause}p {
