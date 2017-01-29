@@ -1,12 +1,6 @@
 @media only screen and (min-width: 1024px) {
-  #bullseye,
-  #mypicture,
-  #scsslogo {
-    width: 30%; }
-  #langimg {
-    width: 50%; }
   .imgresp {
-    width: 50%; } }
+    width: 30%; } }
 
 @media (orientation: portrait) {
   .contactmail {
@@ -65,8 +59,8 @@ html, body {
   text-align: center; }
 
 .contactmail {
+  padding: 1em;
   width: 100%;
   position: static; }
   .contactmail a {
-    display: block;
-    padding: 1em; }
+    display: block; }

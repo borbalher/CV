@@ -23,14 +23,23 @@ $landscape: "(orientation: landscape)";
 $portrait: "(orientation: portrait)";
 
 $dpi2: "(min-resolution: 2dppx)";
-//@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
-//@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-//@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-//@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-//@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-//@media (min-width:1281px) { /* hi-res laptops and desktops */ }
-//@media (min-width:2560px) { /* 4k screens */ }
 
+
+.facebook{
+  margin-left: 0.5em;
+}
+
+.contactmail{
+  a{
+    display:block;
+  }
+}
+
+.socialnetworks{
+  a{
+    display: inline-block !important;
+  }
+}
 
 .yes{
   color: $red !important;
@@ -187,7 +196,7 @@ html, body {
 
 .halflangbox{
   width: 50%;
-  display:inline-block;
+  display:table-cell;
   text-align:center;
   margin: 0.5em 0;
 }
@@ -202,7 +211,6 @@ html, body {
   width: 100%;
   display:inline-block;
   text-align:center;
-  margin: 0.5em 0;
 }
 
 .middleborder{
@@ -216,9 +224,12 @@ html, body {
 }
 
 .langboxcontainer{
+  display:table;
   position: relative;
   border-top: 1px solid $border;
   border-bottom: 1px solid $border;
+  padding: 0.5em 0;
+  width: 100%;
 }
 
 #educationimg{
@@ -532,6 +543,10 @@ a:active {
   }
   #educationimg span{
     font-size: 50vw;
+  }
+  .imgresp img{
+    height: auto !important;
+    width: 100% !important;
   }
 }
 

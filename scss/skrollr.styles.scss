@@ -1,3 +1,11 @@
+$landscape: "(orientation: landscape)";
+
+@media #{$landscape}{
+    .imgresp{
+        height: 50%;
+    }
+}
+
 html, body {
     height: 100% !important;
 }
@@ -5,7 +13,6 @@ html, body {
 
 .imgresp {
   width: 100%;
-  height: 50%;
   text-align: center; }
   .imgresp img {
     display: block;
@@ -38,8 +45,8 @@ html, body {
 /* double the height/width of a viewport, uses position-fixed so we dont need
 #skrollr-body for mobile support*/
 #paralax-sections {
-    width: 200%;
-    height: 200%;
+    width: 2000%;
+    height: 2000%;
     position: fixed;
     top: 0;
     left: 0;
@@ -50,8 +57,8 @@ html, body {
     position:absolute;
     top:0;
     left:0;
-    width:50%;
-    height:50%;
+    width:5%;
+    height:5%;
     overflow: hidden;
 }
 
@@ -122,9 +129,9 @@ html, body {
 }
 
 #myworks{
-  -webkit-transform: translate(0%,800%);
-  -ms-transform: translate(0%,800%);
-  transform: translate(0%,800%);
+  -webkit-transform: translate(100%,700%);
+  -ms-transform: translate(100%,700%);
+  transform: translate(100%,700%);
 }
 
 #logodesign{
@@ -134,21 +141,21 @@ html, body {
 }
 
 #bogui{
+  -webkit-transform: translate(0%,800%);
+  -ms-transform: translate(0%,800%);
+  transform: translate(0%,800%);
+}
+
+#scss{
   -webkit-transform: translate(0%,900%);
   -ms-transform: translate(0%,900%);
   transform: translate(0%,900%);
 }
 
-#scss{
+#ttt{
   -webkit-transform: translate(100%,900%);
   -ms-transform: translate(100%,900%);
   transform: translate(100%,900%);
-}
-
-#ttt{
-  -webkit-transform: translate(0%,1000%);
-  -ms-transform: translate(0%,1000%);
-  transform: translate(0%,1000%);
 }
 
 
@@ -159,21 +166,21 @@ html, body {
 }
 
 #ateca{
+  -webkit-transform: translate(0%,1000%);
+  -ms-transform: translate(0%,1000%);
+  transform: translate(0%,1000%);
+}
+
+#chicharro{
   -webkit-transform: translate(0%,1100%);
   -ms-transform: translate(0%,1100%);
   transform: translate(0%,1100%);
 }
 
-#chicharro{
+#wantmore{
   -webkit-transform: translate(100%,1100%);
   -ms-transform: translate(100%,1100%);
   transform: translate(100%,1100%);
-}
-
-#wantmore{
-  -webkit-transform: translate(0%,1200%);
-  -ms-transform: translate(0%,1200%);
-  transform: translate(0%,1200%);
 }
 
 #contact{
@@ -202,7 +209,11 @@ html, body {
   width: 1px;
 }
 
-.marker {
-  height: 4.74%;
-  width: 100%;
+
+#contact.paralax-section{
+  display: table;
+  .contentwrapper{
+    display: table-cell;
+    vertical-align: middle;
+  }
 }

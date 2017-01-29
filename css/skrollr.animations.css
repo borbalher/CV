@@ -1,6 +1,10 @@
 #paralax-sections {
   -skrollr-animation-name: slideshow; }
 
+#landing {
+  -skrollr-animation-name: landing_fix;
+  -skrollr-anchor-target: '#helper'; }
+
 #intro {
   -skrollr-animation-name: intro_animation;
   -skrollr-anchor-target: '#helper'; }
@@ -117,6 +121,12 @@
     transform: translate(0%, -10%);
     opacity: 0; } }
 
+@-skrollr-keyframes landing_fix {
+  skrollr-0p {
+    display: block; }
+  skrollr-100p {
+    display: none; } }
+
 @-skrollr-keyframes intro_animation {
   skrollr-0p {
     transform: translate(0%, 0%);
@@ -127,23 +137,27 @@
 
 @-skrollr-keyframes who_am_i {
   skrollr-100p {
+    display: block;
     transform: translate(0%, 0%); }
   skrollr-150p {
     transform: translate(0%, 0%);
     opacity: 1; }
   skrollr-250p {
     transform: translate(0%, -10%);
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes objectives {
   skrollr-250p {
+    display: block;
     transform: translate(0%, 0%); }
   skrollr-300p {
     transform: translate(0%, 0%);
     opacity: 1; }
   skrollr-400p {
     transform: translate(0%, -10%);
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes bullseye {
   skrollr-250p {
@@ -153,8 +167,10 @@
 
 @-skrollr-keyframes skills {
   skrollr-450p {
+    display: block;
     opacity: 1; }
   skrollr-550p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes srocket {
@@ -166,13 +182,15 @@
 
 @-skrollr-keyframes more_skills {
   skrollr-550p {
+    display: block;
     transform: translate(0%, 0%); }
   skrollr-600p {
     transform: translate(0%, 0%);
     opacity: 1; }
   skrollr-700p {
     transform: translate(10%, -10%);
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes msrocket {
   skrollr-0p {
@@ -186,13 +204,15 @@
 
 @-skrollr-keyframes education {
   skrollr-700p {
+    display: block;
     transform: translate(0%, 0%); }
   skrollr-750p {
     transform: translate(0%, 0%);
     opacity: 1; }
   skrollr-850p {
     transform: translate(0%, -10%);
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes activate_animation_education {
   skrollr-0p {
@@ -202,20 +222,26 @@
 
 @-skrollr-keyframes complementary_education {
   skrollr-900p {
+    display: block;
     opacity: 1; }
   skrollr-1000p {
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes more_complementary_education {
   skrollr-1050p {
+    display: block;
     opacity: 1; }
   skrollr-1150p {
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes languages {
   skrollr-1200p {
+    display: block;
     opacity: 1; }
   skrollr-1300p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes activate_animation_language {
@@ -226,19 +252,19 @@
 
 @-skrollr-keyframes more_languages {
   skrollr-1350p {
+    display: block;
     opacity: 1; }
   skrollr-1450p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes work_experience {
   skrollr-1450p {
-    transform: translate(0%, 0%); }
-  skrollr-1500p {
-    transform: translate(0%, 0%);
+    display: block;
     opacity: 1; }
   skrollr-1600p {
-    transform: translate(0%, -10%);
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes activate_animation_work {
   skrollr-0p {
@@ -248,138 +274,156 @@
 
 @-skrollr-keyframes my_works {
   skrollr-1650p {
+    display: block;
     opacity: 1; }
   skrollr-1750p {
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 
 @-skrollr-keyframes logo_design {
   skrollr-1800p {
+    display: block;
     opacity: 1; }
   skrollr-1900p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes bogui {
   skrollr-1950p {
+    display: block;
     opacity: 1; }
   skrollr-2050p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes scss {
   skrollr-2100p {
+    display: block;
     opacity: 1; }
   skrollr-2200p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes ttt {
   skrollr-2250p {
+    display: block;
     opacity: 1; }
   skrollr-2350p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes recblock {
   skrollr-2400p {
+    display: block;
     opacity: 1; }
   skrollr-2500p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes ateca {
   skrollr-2550p {
+    display: block;
     opacity: 1; }
   skrollr-2650p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes chicharro {
   skrollr-2700p {
+    display: block;
     opacity: 1; }
   skrollr-2800p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes want_more {
   skrollr-2850p {
+    display: block;
     opacity: 1; }
   skrollr-2950p {
+    display: none;
     opacity: 0; } }
 
 @-skrollr-keyframes slideshow {
   skrollr-0p {
     transform: translate(0%, 0%); }
   skrollr-100p {
-    transform: translate(0%, -50%); }
+    transform: translate(0%, -5%); }
   skrollr-150p {
     visibility: visible; }
   skrollr-250p {
-    transform: translate(0%, -100%); }
+    transform: translate(0%, -10%); }
   skrollr-300p {
     visibility: visible; }
   skrollr-400p {
-    transform: translate(0%, -150%); }
+    transform: translate(0%, -15%); }
   skrollr-450p {
     visibility: visible; }
   skrollr-550p {
-    transform: translate(-50%, -150%); }
+    transform: translate(-5%, -15%); }
   skrollr-600p {
     visibility: visible; }
   skrollr-700p {
-    transform: translate(0%, -200%); }
+    transform: translate(0%, -20%); }
   skrollr-750p {
     visibility: visible; }
   skrollr-850p {
-    transform: translate(0%, -250%); }
+    transform: translate(0%, -25%); }
   skrollr-900p {
     visibility: visible; }
   skrollr-1000p {
-    transform: translate(-50%, -250%); }
+    transform: translate(-5%, -25%); }
   skrollr-1050p {
     visibility: visible; }
   skrollr-1150p {
-    transform: translate(0%, -300%); }
+    transform: translate(0%, -30%); }
   skrollr-1200p {
     visibility: visible; }
   skrollr-1300p {
-    transform: translate(-50%, -300%); }
+    transform: translate(-5%, -30%); }
   skrollr-1350p {
     visibility: visible; }
   skrollr-1450p {
-    transform: translate(0%, -350%); }
+    transform: translate(0%, -35%); }
   skrollr-1500p {
     visibility: visible; }
   skrollr-1600p {
-    transform: translate(0%, -400%); }
+    transform: translate(-5%, -35%); }
   skrollr-1650p {
     visibility: visible; }
   skrollr-1750p {
-    transform: translate(-50%, -400%); }
+    transform: translate(-5%, -40%); }
   skrollr-1800p {
     visibility: visible; }
-  skrollr-2050p {
-    transform: translate(-50%, -450%); }
-  skrollr-2100p {
-    visibility: visible; }
   skrollr-1900p {
-    transform: translate(0%, -450%); }
+    transform: translate(0%, -40%); }
   skrollr-1950p {
     visibility: visible; }
+  skrollr-2050p {
+    transform: translate(0%, -45%); }
+  skrollr-2100p {
+    visibility: visible; }
   skrollr-2200p {
-    transform: translate(0%, -500%); }
+    transform: translate(-5%, -45%); }
   skrollr-2250p {
     visibility: visible; }
   skrollr-2350p {
-    transform: translate(-50%, -500%); }
+    transform: translate(-5%, -50%); }
   skrollr-2400p {
     visibility: visible; }
   skrollr-2500p {
-    transform: translate(0%, -550%); }
+    transform: translate(0%, -50%); }
   skrollr-2550p {
     visibility: visible; }
   skrollr-2650p {
-    transform: translate(-50%, -550%); }
+    transform: translate(0%, -55%); }
   skrollr-2700p {
     visibility: visible; }
   skrollr-2800p {
-    transform: translate(0%, -600%); }
+    transform: translate(-5%, -55%); }
   skrollr-2850p {
     visibility: visible; }
   skrollr-2950p {
-    transform: translate(-50%, -600%); }
+    transform: translate(-5%, -60%); }
   skrollr-3000p {
     visibility: visible; } }
