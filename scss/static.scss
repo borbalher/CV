@@ -6,9 +6,8 @@ $dpi2: "(min-resolution: 2dppx)";
 
 
 @media #{$laptop} {
-
   .imgresp{
-    width: 30%;
+    width: 30% !important;
   }
 }
 
@@ -87,7 +86,7 @@ html,body{
 }
 
 .contactmail{
-  padding: 1em;  
+  padding: 1em;
   width: 100%;
   position: static;
   a{
