@@ -102,8 +102,8 @@ var spanish_content = {
       },
       'workexperience' : {
         'title': 'Experiencia laboral',
-        'texts' : ['No tengo','como informático a tiempo completo y...',' Estoy muy emocionado y con ganas de hacer cosas grandes. Sin embargo, he estado','como freelancer','Estos son algunos de los servicios que presto', '404', 'Experiencia laboral "real" no encontrada.'],
-        'boldtexts' : ['ninguna experiencia laboral en un entorno de trabajo real','¡Estoy deseando empezar!','ofreciendo mis servicios','desde 2010', 'Diseño de logos y web, soluciones e-commerce, configuración de redes y servidores,  formateo y reparación de ordenadores, recuperación de datos, eliminación de virus/malware, clases particulares...']
+        'texts' : ['Pero llevo','como freelancer','Estos son algunos de los servicios que presto', 'Actualmente','en','como','ofreciendo soluciones en','para diversas empresas','Las','que más suelo usar aquí son:'],
+        'boldtexts' : ['ofreciendo mis servicios','desde 2010', 'Diseño de logos y web, soluciones e-commerce, configuración de redes y servidores,  formateo y reparación de ordenadores, recuperación de datos, eliminación de virus/malware, clases particulares...','me encuentro trabajando','Raona','Consultor Junior','SharePoint On-Premises y SharePoint 365', 'tecnologías', 'C#, Javascript, HTML5, CSS3, AngularJS, Jquery, ASP.net, CSOM, JSOM, Handlebars, Bootstrap, Materialize CSS... ']
       },
       'logodesign' : {
         'title' : 'Diseño y digitalización de logos',
@@ -259,8 +259,8 @@ var english_content = {
       },
       'workexperience' : {
         'title': 'Work experience',
-        'texts' : ['I haven\'t got','with a full-time job as programmer and','I’m very excited and looking forward to make big things. Nevertheless, I’ve been','as freelancer','These are some of the services I give', '404', '"Real" work experience not found.'],
-        'boldtexts' : ['any work experience in a real laboral environment','I really want to start!','offering my services','since 2010', 'Logo and web design, e-commerce solutions, server and network configuration,  PC formatting and repairing, data recovery, virus/malware removal, private tutoring…']
+        'texts' : ['But I’ve been','as freelancer','These are some of the services I give','I am','in','as','offering solutions in','for various companies','The', 'I use most here are:'],
+        'boldtexts' : ['offering my services','since 2010', 'Logo and web design, e-commerce solutions, server and network configuration,  PC formatting and repairing, data recovery, virus/malware removal, private tutoring…','currently working','Raona','Junior Consultant','SharePoint On-Premises and SharePoint 365', 'technologies', 'C#, Javascript, HTML5, CSS3, AngularJS, Jquery, ASP.net, CSOM, JSOM, Handlebars, Bootstrap, Materialize CSS... ']
       },
       'logodesign' : {
         'title' : 'Logo design and digitazion',

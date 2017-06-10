@@ -1,6 +1,18 @@
+.socialnetworks a {
+  margin: 0 10px; }
+
 @media only screen and (min-width: 1024px) {
   .imgresp {
-    width: 30%; } }
+    width: 50% !important; } }
+
+#mypicture {
+  width: 25% !important; }
+
+#bullseye, #scsslogo {
+  width: 30% !important; }
+
+#langimg {
+  width: 40% !important; }
 
 @media (orientation: portrait) {
   .contactmail {
