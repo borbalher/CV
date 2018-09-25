@@ -12,12 +12,13 @@ html
     link(href='/css/animate.css', rel='stylesheet')
     link(href='/css/font-awesome.css', rel='stylesheet')
     link(href='/css/main.css', rel='stylesheet')
-    link(href='/css/skrollr.css', rel='stylesheet')
+    link(href='/css/skrollr.styles.css', rel='stylesheet')
     link(href='/css/skrollr.animations.css', rel='stylesheet' data-skrollr-stylesheet)
     link(href='/css/normalize.css', rel='stylesheet')
 
     link(rel='shortcut icon', href='/favicon.png', type='image/x-icon')
   body
+    span#scroll-top #[i.fa.fa-angle-double-up]
     div#landing-bg.bg-wrapper
     #main-container
       #paralax-sections
@@ -34,45 +35,37 @@ html
               li
                 a(href="#workexperience" data-menu-top="1450p") #[i.fa.fw.fa-briefcase] #{work}
               li
-                a(href="#wantmore" data-menu-top="2800p") #[i.fa.fw.fa-download] #{download.title}
+                a(href="#wantmore" data-menu-top="3150p") #[i.fa.fw.fa-download] #{download.title}
               li
-                a(href="#contact" data-menu-top="2950p") #[i.fa.fw.fa-envelope] #{contact.title}
+                a(href="#contact" data-menu-top="3300p") #[i.fa.fw.fa-envelope] #{contact.title}
             div#slideshow !{slideshow}
           i#scroll-down.fa.fw.fa-angle-double-down.animated.bounce.infinite(aria-hidden="true")
         #whoami.paralax-section
           div.contentwrapper
             h2 #{whoami.title}
-            p #{whoami.texts[0]} #[span.bold #{whoami.boldtexts[0]}]
-              | #{whoami.texts[1]} #[span.bold #{whoami.boldtexts[1]}]
-              | #{whoami.texts[2]} #[span.bold #{whoami.boldtexts[2]}]
-              | #{whoami.texts[3]} #[span.bold #{whoami.boldtexts[3]}]
-              | #{whoami.texts[4]} #[span.bold #{whoami.boldtexts[4]}]
-              | #{whoami.texts[5]} #[span.bold #{whoami.boldtexts[5]}]
-              | #[span.bold #{whoami.boldtexts[6]}]
+            p !{whoami.texts[0]}
             div#mypicture.imgresp
               img(src='/imgs/me.png' title='That\'s me \:3')
         #objectives.paralax-section
           div.contentwrapper
             h2 #{objectives.title}
             ul
-              li #[span.bold #{objectives.boldtexts[0]}] #{objectives.texts[0]}
-              li #[span.bold #{objectives.boldtexts[1]}] #{objectives.texts[1]}
-              li #[span.bold #{objectives.boldtexts[2]}]
-              li #{objectives.texts[2]} #[span.bold #{objectives.boldtexts[3]}]
+              for objective in objectives.objectives
+                li !{objective}
             div#bullseye.imgresp.animated.swing
               img(src='/imgs/bulls-eye.svg' title='Bull\'s eye')
         #skills.paralax-section
           div.contentwrapper
             h2#skillstitle #[i#srocket.fa.fw.fa-rocket(aria-hidden="true")] !{skills.title}
             div#skillsdesc
-                p #{skills.texts[0]} #[span.bold #{skills.boldtexts[0]}] #{skills.texts[1]}
+                p !{skills.texts[0]}
                 ul
                   for skill in skills.skills
                     li.bold #{skill}
         #mskills.paralax-section
           div.contentwrapper
               div#moreskillsdesc
-                p #{skills.texts[2]}  #[span.bold #{skills.boldtexts[1]}] #{skills.texts[3]} #[span.bold #{skills.boldtexts[2]}] #{skills.texts[4]} #[span.bold #{skills.boldtexts[3]}]
+                p !{skills.texts[1]}
               div#msrocketcontainer #[i#msrocket.fa.fw.fa-rocket(aria-hidden="true")]
         #education.paralax-section
             div.contentwrapper
@@ -94,7 +87,7 @@ html
           div.contentwrapper
             div#complementaryeducationcontent
               h2 #{complementaryeducation.title}
-              p #{complementaryeducation.texts[0]}  #[span.bold #{complementaryeducation.boldtexts[0]}]:
+              p !{complementaryeducation.texts[0]}
               mixin fill_complementary_education(name, institution, hours, year)
                 li
                   span.coursename.bold !{name}
@@ -109,7 +102,7 @@ html
         #morecomplementaryeducation.paralax-section
           div.contentwrapper
             div#morecomplementaryeducationcontent
-              p #{complementaryeducation.texts[1]}  #[span.bold #{complementaryeducation.boldtexts[1]}]:
+              p !{complementaryeducation.texts[1]}
               ul
                 - for (var i = 4; i < complementaryeducation.course_name.length; ++i) {
                     +fill_complementary_education(complementaryeducation.course_name[i],complementaryeducation.course_institution[i],complementaryeducation.course_hours[i],complementaryeducation.course_year[i])
@@ -157,8 +150,8 @@ html
         #workexperience.paralax-section
           div.contentwrapper
             h2 #{workexperience.title}
-            p #{workexperience.texts[3]} #[span.bold #{workexperience.boldtexts[3]}] #{workexperience.texts[4]} #[span.bold.raona #{workexperience.boldtexts[4]}] #{workexperience.texts[5]} #[span.bold #{workexperience.boldtexts[5]}] #{workexperience.texts[6]} #[span.bold #{workexperience.boldtexts[6]}] #{workexperience.texts[7]}. #{workexperience.texts[8]} #[span.bold #{workexperience.boldtexts[7]}] #{workexperience.texts[9]} #[span.bold #{workexperience.boldtexts[8]}] #{workexperience.texts[0]} #[span.bold #{workexperience.boldtexts[0]}] #{workexperience.texts[1]} #[span.bold #{workexperience.boldtexts[1]}]. #{workexperience.texts[2]}:
-            p.experienceparagraph #[span.bold #{workexperience.boldtexts[2]}]
+            p !{workexperience.texts[0]} 
+            p.experienceparagraph !{workexperience.texts[1]}
         #myworks.paralax-section
           div.contentwrapper
             div.myworkscontainer
@@ -166,7 +159,7 @@ html
         #logodesign.paralax-section
           div.contentwrapper
             h2 #[i.fa.fw.fa-pencil-square-o(aria-hidden="true")] #{logodesign.title}
-            p #{logodesign.texts[0]} #[span.bold #{logodesign.boldtexts[0]}] #{logodesign.texts[1]} !{logodesign.links[0]} #{logodesign.texts[2]} #[span.bold #{logodesign.boldtexts[1]}] #{logodesign.texts[3]} #[span.bold #{logodesign.boldtexts[2]}].
+            p !{logodesign.texts[0]}
             div.owl-carousel
               div
                 img(src='/imgs/my_logo.png' title='My signature')
@@ -189,49 +182,61 @@ html
         #bogui.paralax-section
           div.contentwrapper
             h2  #{bogui.title}
-            p #{bogui.texts[0]} !{bogui.links[0]} #{bogui.texts[1]} #[span.bold #{bogui.boldtexts[0]}] #{bogui.texts[2]} !{bogui.links[1]}
+            p !{bogui.texts[0]}
             div.imgresp
               img(src='/imgs/bogui_example.png' title='BoguiJS Image Editor')
         #scss.paralax-section
           div.contentwrapper
             h2 #{scss.title}
-            p #{scss.texts[0]} #[span.bold #{scss.boldtexts[0]}] #{scss.texts[1]} !{scss.links[0]} #{scss.texts[2]} !{scss.links[1]}
+            p !{scss.texts[0]}
             div#scsslogo.imgresp
               img(src='/imgs/scss.png' title='Simple CSS DSL')
         #ttt.paralax-section
           div.contentwrapper
             h2 #{ttt.title}
-            p  #{ttt.texts[0]} #[span.bold #{ttt.boldtexts[0]}]  #{ttt.texts[1]} #[span.bold #{ttt.boldtexts[1]}]  #{ttt.texts[2]} #[span.bold #{ttt.boldtexts[2]}] #{ttt.texts[3]} !{ttt.links[0]}
+            p  !{ttt.texts[0]}
             div.imgresp
               img(src='/imgs/ttt.png' title='Tenerife Trending Topic web-store')
         #recblock.paralax-section
           div.contentwrapper
             h2 #{recblock.title}
-            p #{recblock.texts[0]} #[span.bold #{recblock.boldtexts[0]}] #{recblock.texts[1]} #[span.bold #{recblock.boldtexts[1]}] #{recblock.texts[2]} #[span.bold #{recblock.boldtexts[2]}] #{recblock.texts[3]} !{recblock.links[0]} #{recblock.texts[4]} !{recblock.links[1]}
+            p !{recblock.texts[0]}
         #ateca.paralax-section
           div.contentwrapper
             h2 #{ateca.title}
-            p #{ateca.texts[0]} #[span.bold #{ateca.boldtexts[0]}]  #{ateca.texts[1]} #[span.bold #{ateca.boldtexts[1]}]  #{ateca.texts[2]} #[span.bold #{ateca.boldtexts[2]}]  #{ateca.texts[3]} #[span.bold #{ateca.boldtexts[3]}]  #{ateca.texts[4]}
+            p !{ateca.texts[0]}
             ul
-              li #[span.bold #{ateca.boldtexts[4]}]
-              li #[span.bold #{ateca.boldtexts[5]}]. #[span.bold #{ateca.boldtexts[6]}] #{ateca.texts[5]} !{ateca.links[0]}
+              each work in ateca.works
+                li !{work}              
             div.imgresp
               img(src='/imgs/ateca.png' title='ATECA')
         #chicharro.paralax-section
           div.contentwrapper
             h2 #{chicharro.title}
-            p #{chicharro.texts[0]} !{chicharro.links[0]} #{chicharro.texts[1]} #[span.bold #{chicharro.boldtexts[0]}] #{chicharro.texts[2]} #[span.bold #{chicharro.boldtexts[1]}]. #{chicharro.texts[3]} !{chicharro.links[1]}
+            p !{chicharro.texts[0]}
+        #belloneo.paralax-section
+          div.contentwrapper
+            h2 #{belloneo.title}
+            p !{belloneo.texts[0]}         
+            div.imgresp
+              img(src='/imgs/bello-neo.png' title='Bello Neo')
+        #microgreen.paralax-section
+          div.contentwrapper
+            h2 #{microgreen.title}
+            p !{microgreen.texts[0]}         
+            div.imgresp
+              img(src='/imgs/microgreen.png' title='Microgreen')                       
         #wantmore.paralax-section
           div.contentwrapper
             h2 #[i.fa.fw.fa-download(aria-hidden="true")] #{download.title}
             ul
-              li.cv !{download.links[0]}
-              li.cv !{download.links[1]}
+              each link in download.links
+                li !{link}    
             h2 #{wantmore.title}
-            p #{wantmore.texts[0]} #[span.bold.yes #{wantmore.boldtexts[0]}] #{wantmore.texts[1]}
+            p !{wantmore.texts[0]}
             ul
-              li !{wantmore.links[0]}
-              li !{wantmore.links[1]}
+              each link in wantmore.links
+                li !{link}              
         #contact.paralax-section
           div.contentwrapper
               div.contactmail
@@ -240,6 +245,7 @@ html
                   a(href="https://www.linkedin.com/in/boris-ballester-hern%C3%A1ndez-0b8973137" title="My LinkedIn") #[i.fa.fw.fa-linkedin-square(aria-hidden="true")]
                   a.facebook(href="https://www.facebook.com/borisbalher" title="My Facebook") #[i.fa.fw.fa-facebook-square(aria-hidden="true")]
     div#helper
+      .marker
       .marker
       .marker
       .marker
@@ -270,3 +276,4 @@ html
     script(src='/js/skrollr-ie.js')
     script(src='/js/skrollr-menu.js')
     script(src='/js/load-skrollr.js')
+    script(src='/js/load-scroll-top.js')

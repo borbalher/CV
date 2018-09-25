@@ -20,11 +20,18 @@ $ttt: $scss + $slides_duration;
 $recblock: $ttt + $slides_duration;
 $ateca: $recblock + $slides_duration;
 $chicharro: $ateca + $slides_duration;
-$want_more: $chicharro + $slides_duration;
+$belloneo: $chicharro + $slides_duration;
+$microgreen: $belloneo + $slides_duration;
+$want_more: $microgreen + $slides_duration;
 $contact: $want_more + $slides_duration;
 
 #paralax-sections{
   -skrollr-animation-name:slideshow;
+}
+
+#scroll-top{
+  -skrollr-animation-name:scroll_top;
+  -skrollr-anchor-target: '#helper';
 }
 
 #landing{
@@ -162,6 +169,16 @@ $contact: $want_more + $slides_duration;
   -skrollr-anchor-target: '#helper';
 }
 
+#belloneo .contentwrapper{
+  -skrollr-animation-name:belloneo;
+  -skrollr-anchor-target: '#helper';
+}
+
+#microgreen .contentwrapper{
+  -skrollr-animation-name:microgreen;
+  -skrollr-anchor-target: '#helper';
+}
+
 #wantmore .contentwrapper{
   -skrollr-animation-name:want_more;
   -skrollr-anchor-target: '#helper';
@@ -200,6 +217,17 @@ $contact: $want_more + $slides_duration;
       opacity: 0;
     }
 }
+
+@-skrollr-keyframes scroll_top {
+  skrollr-#{$slides_begin}p {    
+    opacity: 0;
+  }
+
+  skrollr-#{$whoami - $slides_pause}p{    
+    opacity: 1;
+  }
+}
+
 
 @-skrollr-keyframes who_am_i {
 
@@ -542,6 +570,35 @@ $contact: $want_more + $slides_duration;
     opacity: 1;
   }
 
+  skrollr-#{$belloneo}p {
+    display: none;
+    opacity: 0;
+  }
+
+}
+
+@-skrollr-keyframes belloneo {
+
+  skrollr-#{$belloneo+ $slides_pause}p {
+    display: block;
+    opacity: 1;
+  }
+
+  skrollr-#{$microgreen}p {
+    display: none;
+    opacity: 0;
+  }
+
+}
+
+
+@-skrollr-keyframes microgreen {
+
+  skrollr-#{$microgreen+ $slides_pause}p {
+    display: block;
+    opacity: 1;
+  }
+
   skrollr-#{$want_more}p {
     display: none;
     opacity: 0;
@@ -713,8 +770,24 @@ $contact: $want_more + $slides_duration;
     visibility: visible;
   }
 
-  skrollr-#{$want_more}p {
+  skrollr-#{$belloneo}p {
     transform:translate(-5%,-55%);
+  }
+
+  skrollr-#{$belloneo+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$microgreen}p {
+    transform:translate(-5%,-60%);
+  }
+
+  skrollr-#{$microgreen+$slides_pause}p {
+    visibility: visible;
+  }
+
+  skrollr-#{$want_more}p {
+    transform:translate(-5%,-65%);
   }
 
   skrollr-#{$want_more+$slides_pause}p {
@@ -722,7 +795,7 @@ $contact: $want_more + $slides_duration;
   }
 
   skrollr-#{$contact}p {
-    transform:translate(-5%,-60%);
+    transform:translate(-5%,-70%);
   }
 
   skrollr-#{$contact+$slides_pause}p {

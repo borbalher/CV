@@ -110,7 +110,8 @@ html, body {
   /* selected link */ }
   .contactmail a {
     text-decoration: none;
-    color: #ff3366; }
+    color: #ff3366;
+    display: inline-block; }
   .contactmail a:link {
     color: #ff3366; }
   .contactmail a:visited {
@@ -120,6 +121,8 @@ html, body {
     background: #e1e1e1; }
   .contactmail a:active {
     color: #ff3366; }
+  .contactmail i {
+    padding: 0.3em; }
 
 .halflangbox {
   width: 50%;
@@ -421,3 +424,17 @@ a:active {
     background-size: 25% !important; }
   body {
     font-size: 1vmax !important; } }
+
+#scroll-top {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  padding: 0.5em 0.7em;
+  background: #1fb58f;
+  cursor: pointer;
+  z-index: 999;
+  color: #fff; }
+
+#scroll-top:hover {
+  background: #1b7b34;
+  color: #e1e1e1; }
