@@ -75,7 +75,7 @@ module.exports = {
     },
     'workexperience': {
         'title': 'Experiencia laboral',
-        'texts': ['Actualmente trabajo en <span class="bold raona">Raona</span> como <span class="bold">desarrollador Full Stack</span> aunque mi fuerte es el <span class="bold">Frontend.</span>. Las tecnologías que uso más son: <span class="bold">Node/Javascript</span> (Express, Jquery, AngularJS, Angular, React, Handlebars), <span class="bold">Sharepoint Online</span> (JSOM), <span class="bold">HTML5, CSS</span> (Bootstrap, Materialize, SASS, Animate, Skrollr), <span class="bold">C#, ASP.NET, ASP MVC</span>... Pero he estado <span class="bold">ofreciendo mis servicios</span> como freelancer <span class="bold">desde 2010</span>. Estos son algunos de los servicios que ofrezco:',
+        'texts': ['Actualmente trabajo en <span class="bold raona">Raona</span> como <span class="bold">desarrollador Frontend</span> aunque también hago trabajos como <span class="bold">Full-stack</span>. Las tecnologías que uso más son: <span class="bold">Node/Javascript</span> (Express, Jquery, AngularJS, Angular, React, Handlebars), <span class="bold">Sharepoint Online</span> (JSOM), <span class="bold">HTML5, CSS</span> (Bootstrap, Materialize, SASS, Animate, Skrollr), <span class="bold">C#, ASP.NET, ASP MVC</span>... Pero he estado <span class="bold">ofreciendo mis servicios</span> como freelancer <span class="bold">desde 2010</span>. Estos son algunos de los servicios que ofrezco:',
             '<span class="bold">Diseño web y logotipos, soluciones de comercio electrónico, configuración de servidores y redes, formateo y reparación de PC, recuperación de datos, eliminación de virus/malware, clases particulares…</span>'
         ],
     },

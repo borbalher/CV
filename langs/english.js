@@ -74,7 +74,7 @@ module.exports = {
     },
     'workexperience': {
         'title': 'Work experience',
-        'texts': ['I am currently working at <span class="bold raona">Raona</span> as <span class="bold">Full Stack developer</span> although my strong area is <span class="bold raona">Frontend.</span> The technologies that I use the most are: <span class="bold">Node/Javascript</span> (Express, Jquery, AngularJS, Angular, React, Handlebars...), <span class="bold">Sharepoint Online</span> (JSOM), <span class="bold">HTML5, CSS</span> (Bootstrap, Materialize, SASS, Animate, Angular material...), <span class="bold">C#, ASP.NET, ASP MVC...</span> But I’ve been <span class="bold">offering my services</span> as freelancer <span class="bold">since 2010</span>. These are some of the services I offer:',
+        'texts': ['I am currently working at <span class="bold raona">Raona</span> as <span class="bold">Frontend developer</span> although I also do jobs as <span class="bold raona">Full-stack.</span> The technologies that I use the most are: <span class="bold">Node/Javascript</span> (Express, Jquery, AngularJS, Angular, React, Handlebars...), <span class="bold">Sharepoint Online</span> (JSOM), <span class="bold">HTML5, CSS</span> (Bootstrap, Materialize, SASS, Animate, Angular material...), <span class="bold">C#, ASP.NET, ASP MVC...</span> But I’ve been <span class="bold">offering my services</span> as freelancer <span class="bold">since 2010</span>. These are some of the services I offer:',
             '<span class="bold">Logo and web design, e-commerce solutions, server and network configuration,  PC formatting and repairing, data recovery, virus/malware removal, private tutoring…</span>'
         ],
     },
