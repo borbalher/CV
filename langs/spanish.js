@@ -74,10 +74,27 @@ module.exports = {
         'texts': ['Soy <span class="bold">Boris Ballester</span>, un chico joven de un pequeño paraíso conocido como las <span class="bold">Islas Canarias</span> y ubicado en <span class="bold">España.</span> He estado rodeado de <span class="bold">tecnología</span> toda mi vida y es una de mis pasiones junto con al <span class="bold">arte digital y crear cosas. Para mí, hacer casi cualquier cosa no es imposible. ¡Es solo cuestión de tiempo!</span>']
     },
     'workexperience': {
-        'title': 'Experiencia laboral',
-        'texts': ['Actualmente trabajo en <span class="bold raona">Raona</span> como <span class="bold">desarrollador Frontend</span> aunque también hago trabajos como <span class="bold">Full-stack</span>. Las tecnologías que uso más son: <span class="bold">Node/Javascript</span> (Express, Jquery, AngularJS, Angular, React, Handlebars), <span class="bold">Sharepoint Online</span> (JSOM), <span class="bold">HTML5, CSS</span> (Bootstrap, Materialize, SASS, Animate, Skrollr), <span class="bold">C#, ASP.NET, ASP MVC</span>... Pero he estado <span class="bold">ofreciendo mis servicios</span> como freelancer <span class="bold">desde 2010</span>. Estos son algunos de los servicios que ofrezco:',
-            '<span class="bold">Diseño web y logotipos, soluciones de comercio electrónico, configuración de servidores y redes, formateo y reparación de PC, recuperación de datos, eliminación de virus/malware, clases particulares…</span>'
-        ],
+        title      : 'Experiencia laboral',
+        experience : [
+            {
+                place   : 'Freelance',
+                city    : '<span class="italic">San Cristóbal de La Laguna</span>',
+                date    : '<span class="courseduration">Desde 2010</span>',
+                details : '<span class="bold">Disño de logos</span>, <span class="bold">sitios web personalizados</span>,<span class="bold"> Wordpress</span>, soluciones e-commerce con <span class="bold">Woocommerce/Prestashop</span>, <span class="bold">clases particulares…</span>'
+            },
+            {
+                place   : 'Raona',
+                city    : '<span class="italic">Barcelona</span>',
+                date    : '<span class="courseduration">[Febrero 2017 - Noviembre 2018]</span>',
+                details : 'Desarrollos de <span class="bold">APIs</span> e <span class="bold">intranets</span> con <span class="bold">Sharepoint</span> y <span class="bold">Sharepoint Online</span> con <span class="bold">C#, ASP .NET, ASP MVC, Entity Framework, MySQL, React, AngularJS, Express…</span>'
+            },
+            {
+                place   : 'Adamo',
+                city    : '<span class="italic">Barcelona</span>',
+                date    : '<span class="courseduration">[Noviembre 2018 - Present]</span>',
+                details : 'Mantenimiento y <span class="bold">desarrollo de microservicios</span> en <span class="bold">Docker</span> con <span class="bold">Node JS, ECMAScript 6, Handlebars, Domain Driven Design, Event storming...</span>'
+            }
+        ]
     },
     'logodesign': {
         'title': 'Diseño y digitalización de logos',
