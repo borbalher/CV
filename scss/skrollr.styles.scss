@@ -122,6 +122,18 @@ html, body {
   transform: translate(100%,500%);
 }
 
+#languages{
+  -webkit-transform: translate(0%,600%);
+  -ms-transform: translate(0%,600%);
+  transform: translate(0%,600%);
+}
+
+#morelanguages{
+  -webkit-transform: translate(100%,600%);
+  -ms-transform: translate(100%,600%);
+  transform: translate(100%,600%);
+}
+
 #workexperience{
   -webkit-transform: translate(0%,700%);
   -ms-transform: translate(0%,700%);
@@ -201,23 +213,13 @@ html, body {
   transform: translate(100%,1400%);
 }
 
-#languages{
-  -webkit-transform: translate(0%,600%);
-  -ms-transform: translate(0%,600%);
-  transform: translate(0%,600%);
-}
 
-#morelanguages{
-  -webkit-transform: translate(100%,600%);
-  -ms-transform: translate(100%,600%);
-  transform: translate(100%,600%);
-}
 
 #helper {
   position:absolute;
   left:0;
   top: 0;
-  height:2300%;
+  height:3400%;
   width: 1px;
 }
 
