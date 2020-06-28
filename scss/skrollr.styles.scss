@@ -177,16 +177,28 @@ html, body {
   transform: translate(0%,1100%);
 }
 
-#wantmore{
+#belloneo{
   -webkit-transform: translate(100%,1100%);
   -ms-transform: translate(100%,1100%);
   transform: translate(100%,1100%);
 }
 
-#contact{
+#microgreen{
   -webkit-transform: translate(100%,1200%);
   -ms-transform: translate(100%,1200%);
   transform: translate(100%,1200%);
+}
+
+#wantmore{
+  -webkit-transform: translate(100%,1300%);
+  -ms-transform: translate(100%,1300%);
+  transform: translate(100%,1300%);
+}
+
+#contact{
+  -webkit-transform: translate(100%,1400%);
+  -ms-transform: translate(100%,1400%);
+  transform: translate(100%,1400%);
 }
 
 #languages{
@@ -205,7 +217,7 @@ html, body {
   position:absolute;
   left:0;
   top: 0;
-  height:3100%;
+  height:2300%;
   width: 1px;
 }
 

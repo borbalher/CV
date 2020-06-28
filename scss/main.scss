@@ -24,6 +24,9 @@ $portrait: "(orientation: portrait)";
 
 $dpi2: "(min-resolution: 2dppx)";
 
+.raona{
+  color: #f5a600 !important;
+}
 
 .facebook{
   margin-left: 0.5em;
@@ -128,6 +131,14 @@ html, body {
   text-align: center;
   color: $red;
   text-transform: uppercase;
+  &__place
+  {
+    margin-top: 1em;
+  }
+  &__details
+  {
+    margin-top: 0.5em;
+  }
 }
 
 .realexperience{
@@ -170,6 +181,7 @@ html, body {
   a{
     text-decoration: none;
     color: $red;
+    display:inline-block;
   }
 
   /* unvisited link */
@@ -191,6 +203,10 @@ html, body {
   /* selected link */
   a:active {
     color: $red;
+  }
+
+  i{
+    padding: 0.3em;
   }
 }
 
@@ -581,3 +597,21 @@ a:active {
     font-size: 1vmax !important;
   }
 }
+
+#scroll-top{
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  padding: 0.5em 0.7em;
+  background: $link;
+  cursor:pointer;
+  z-index: 999;
+  color: #fff;
+}
+
+#scroll-top:hover{
+  background: $linkhover;
+  color: #e1e1e1;
+}
+
+

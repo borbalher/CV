@@ -4,17 +4,7 @@
   "description": "My personal page and cv.",
   "main": "app.js",
   "scripts": {
-    "build-all-css": "concurrently  \"npm run build-main-css\" \"npm run build-skrollr-css\" \"npm run build-slideshow-css\" \"npm run build-static-css\"  ",
-    "build-main-css": "bin\\build-main-css.bat",
-    "build-skrollr-css": "bin\\build-skrollr-css.bat",
-    "build-slideshow-css": "bin\\build-slideshow-css.bat",
-    "build-static-css": "bin\\build-static-css.bat",
-    "build-all-css-min": "concurrently  \"npm run build-main-css-min\" \"npm run build-skrollr-css-min\" \"npm run build-slideshow-css-min\" \"npm run build-static-css-min\" ",
-    "build-main-css-min": "bin\\build-main-css-min.bat",
-    "build-skrollr-css-min": "bin\\build-skrollr-css-min.bat",
-    "build-slideshow-css-min": "bin\\build-slideshow-css-min.bat",
-    "build-static-css-min": "bin\\build-static-css-min.bat",
-    "watch-css": "bin\\watch-css.bat"
+    "start-develop": "gulp"
   },
   "author": "@borbalher",
   "license": "ISC",
@@ -23,6 +13,7 @@
     "express": "^4.14.0",
     "font-awesome": "^4.7.0",
     "jquery-mousewheel": "github:jquery/jquery-mousewheel",
+    "morgan": "^1.9.1",
     "normalize.css": "^5.0.0",
     "owl.carousel": "^2.2.0",
     "pug": "^2.0.0-beta9",
@@ -35,6 +26,10 @@
   "devDependencies": {
     "concurrently": "^3.1.0",
     "node-sass": "4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-remove-code": "^3.0.4",
+    "gulp-sass": "^4.0.1",
     "nodemon": "^1.11.0"
   },
   "repository": {

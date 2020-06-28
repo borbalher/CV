@@ -4,12 +4,31 @@ $bigscreens: "only screen and (min-width: 2000px)";
 $dpi2: "(min-resolution: 2dppx)";
 
 
+.socialnetworks a{
+  margin: 0 10px;
+}
 
 @media #{$laptop} {
-
   .imgresp{
-    width: 30%;
+    width: 50% !important;
   }
+
+}
+
+#belloneo .imgresp{
+  width: 25% !important;
+}
+
+#mypicture{
+  width: 25% !important;
+}
+
+#bullseye, #scsslogo{
+  width: 30% !important;
+}
+
+ #langimg{
+  width: 40% !important;
 }
 
 @media #{$portrait}{
@@ -87,7 +106,7 @@ html,body{
 }
 
 .contactmail{
-  padding: 1em;  
+  padding: 1em;
   width: 100%;
   position: static;
   a{
