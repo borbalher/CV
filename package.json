@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "animate.css": "^3.5.2",
-    "express": "^4.14.0",
+    "express": "^4.17.3",
     "font-awesome": "^4.7.0",
     "jquery-mousewheel": "github:jquery/jquery-mousewheel",
     "morgan": "^1.9.1",
